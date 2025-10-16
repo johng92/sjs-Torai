@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: [container-start] repeat(12, minmax(min-content, 12.5rem))[container-end];
+  justify-content: center;
+}
+.page-width {
+  grid-column: container-start/container-end;
+}
+
+
+

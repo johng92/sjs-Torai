@@ -1,0 +1,18 @@
+
+// In _sec-link.scss
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.cta {
+color: clrs.color-link("1");
+background-color: clrs.color-theme("2");
+
+font-size: type.font-size-st(sc);
+padding: pad.padding-st-v(s)  pad.padding-st-h(l);
+
+&:hover {
+  background-color: clrs.color-theme("6");
+}
+}

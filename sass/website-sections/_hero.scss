@@ -1,0 +1,44 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.hero {
+  display: flex;
+  gap: 1rem;
+
+  &__content {
+    flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h1 {
+      font-size: type.font-size-d(lc);
+      line-height: 1.2;
+    }
+    span {
+      color: clrs.color-theme("3");
+    }
+    h3 {
+      font-size: type.font-size-st(m);
+    }
+  }
+
+  &__image {
+    flex-basis: 50%;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 2rem;
+
+
+  }
+}
+

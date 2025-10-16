@@ -1,0 +1,41 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.43rem;
+  // padding: 0 1.5rem;
+  
+  a {
+    img {
+      width: 20%;
+      border-radius: 50%;
+    }
+  }
+
+  .main-nav {
+    &-list {
+    display: flex;
+    gap: 2rem;
+
+
+
+    li a {
+      font-size: large;
+      font-weight: 600;
+
+      &:hover {
+        color: clrs.color-theme("3");
+      }
+      
+    }
+  }
+  }
+
+  .btn-mobile-nav {
+    display: none;
+  }
+}

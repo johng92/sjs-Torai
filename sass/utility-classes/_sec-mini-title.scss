@@ -1,0 +1,28 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+.sec-mini-title {
+    font-size: type.font-size-st(sc);
+    color: clrs.color-type("3");
+
+    position: relative;
+    display: inline-block;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 0.2rem;
+        width: 2rem;
+        transform: translateY(-50%);
+        background-color: clrs.color-theme("2");
+    }
+
+    &::before {
+        left: -60%;
+    }
+
+    &::after {
+        right: -60%;
+    }
+}

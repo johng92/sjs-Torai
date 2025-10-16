@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="up/css/admin-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="container">
+    <nav class="admin-nav padd">
+      <a href="admin.html">
+        <img src="/up/images/logo.png" alt="logo" class="admin-nav__logo" />
+      </a>
+
+       <ul class="admin-nav__links">
+        <li class="admin-nav__links-link">
+          <a href="admin.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+          </a>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="blogs.html"
+            ><i class="fa-solid fa-blog"></i>
+            <span>News</span>
+          </a>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="admin.html"
+            ><i class="fa-solid fa-image"></i>
+            <span>Gallery</span>
+          </a>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="admin.html"
+            ><i class="fa-solid fa-address-card"></i>
+            <span>Contacts</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="admin-nav__links admin-nav__logout">
+        <li class="admin-nav__links-link">
+          <a href="admin.html"
+            ><i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+        <section class="admin-nav__phone padd">
+      <a href="#" class="admin-nav__phone-logo">
+        <img src="/up/images/logo.png" alt="" class="logo" />
+      </a>
+
+      <ul class="admin-nav__phone-links">
+        <li class="admin-nav__phone-link">
+          <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-image"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-address-card"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </section>
+
+
+    <header class="header padd">
+      <div class="header__greeting">
+        <h3 class="sec-sub-title">Good morning</h3>
+        <h2 class="sec-title">Principal</h2>
+      </div>
+
+      <div class="header__icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-envelope"></i>
+
+        <figure class="header__icons-profile">
+          <img src="./up/images/click.jpg" alt="" />
+        </figure>
+      </div>
+    </header>
+
+    
+
+    <main class="main blogs padd">
+      <div class="blogs__list">
+        <p class="sec-sub-para">Post</p>
+        <span class="sec-sub-para">></span>
+        <p class="sec-sub-para">List</p>
+      </div>
+      <div class="blogs__title">
+        <h2 class="sec-sub-title ">Posts</h2>
+        <a class="sec-link" href="new-post.html">New Post</a>
+      </div>
+
+      <section class="blogs__headers">
+        <div class="blogs__search">
+          <fieldset>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="search" />
+          </fieldset>
+
+          <i>
+            <i class="fa-solid fa-filter"></i>
+            <i class="fa-solid fa-layer-group"></i>
+          </i>
+        </div>
+
+        <div class="blogs__headers">
+          <div class="blogs__grid">
+            <div class="blogs__row blogs__row--header blogs__header">
+              <h3 class="sec-sub-title">Image</h3>
+              <h3 class="sec-sub-title">Title</h3>
+              <h3 class="sec-sub-title">Author</h3>
+              <h3 class="sec-sub-title">Status</h3>
+              <h3 class="sec-sub-title">Date</h3>
+              <h3 class="sec-sub-title">View</h3>
+              <h3 class="sec-sub-title">Edit</h3>
+              <h3 class="sec-sub-title">Delete</h3>
+            </div>
+
+            <div class="blogs__row">
+              <div>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="news"
+                  class="blog-img"
+                />
+              </div>
+              <div>Gopikandar me mela</div>
+              <div>Pankaj kumar</div>
+              <div>Draft</div>
+              <div>2-10-2025</div>
+            <a href="#" class="blogs__row-view">
+              <i class="fa-solid fa-eye"></i> View
+            </a>
+            <a href="#" class="blogs__row-edit">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </a>
+            <a href="#" class="blogs__row-icon">
+            <i class="fa-solid fa-trash"></i> Delete
+            </a>
+            </div>
+            <div class="blogs__row">
+              <div>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="news"
+                  class="blog-img"
+                />
+              </div>
+              <div>durgapur me mela</div>
+              <div>slaman khan</div>
+              <div>Draft</div>
+              <div>7-10-2025</div>
+            <a href="#" class="blogs__row-view">
+              <i class="fa-solid fa-eye"></i> View
+            </a>
+            <a href="#" class="blogs__row-edit">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </a>
+            <a href="#" class="blogs__row-icon">
+            <i class="fa-solid fa-trash"></i> Delete
+            </a>
+            </div>
+            <div class="blogs__row">
+              <div>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="news"
+                  class="blog-img"
+                />
+              </div>
+              <div>deoghar me mela</div>
+              <div> akshy kumar</div>
+              <div>Draft</div>
+              <div>2-10-2025</div>
+            <a href="#" class="blogs__row-view">
+              <i class="fa-solid fa-eye"></i> View
+            </a>
+            <a href="#" class="blogs__row-edit">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </a>
+            <a href="#" class="blogs__row-icon">
+            <i class="fa-solid fa-trash"></i> Delete
+            </a>
+            </div>
+            <div class="blogs__row">
+              <div>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="news"
+                  class="blog-img"
+                />
+              </div>
+              <div>sahebganj me mela</div>
+              <div>ajay kumar</div>
+              <div>Draft</div>
+              <div>2-10-2025</div>
+            <a href="#" class="blogs__row-view">
+              <i class="fa-solid fa-eye"></i> View
+            </a>
+            <a href="#" class="blogs__row-edit">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </a>
+            <a href="#" class="blogs__row-icon">
+            <i class="fa-solid fa-trash"></i> Delete
+            </a>
+            </div>
+            <div class="blogs__row">
+              <div>
+                <img
+                  src="https://picsum.photos/200"
+                  alt="news"
+                  class="blog-img"
+                />
+              </div>
+              <div>Gopikandar me mela</div>
+              <div>Pankaj kumar</div>
+              <div>Draft</div>
+              <div>2-10-2025</div>
+            <a href="#" class="blogs__row-view">
+              <i class="fa-solid fa-eye"></i> View
+            </a>
+            <a href="#" class="blogs__row-edit">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </a>
+            <a href="#" class="blogs__row-icon">
+            <i class="fa-solid fa-trash"></i> Delete
+            </a>
+            </div>
+           
+         
+            <!-- Repeat .blogs__row for each post -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>

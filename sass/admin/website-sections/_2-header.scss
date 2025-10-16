@@ -1,0 +1,106 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.header {
+  display: grid;
+  grid-column: 3 / 13;
+
+  
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+
+  // border: 1px solid clrs.color-type("3");
+  
+  &__greeting {
+    text-align: center;
+    align-items: center;
+  }
+
+
+
+  &__icons {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+
+
+    i {
+      background-color: rgb(243, 233, 233);
+      font-size: type.font-size-d("s");
+      padding: 1rem 2.5rem 1rem 1rem;
+         border-radius: 50%;
+
+    }
+
+    
+   
+
+  &-profile {
+    width: 6rem;
+    
+    img {
+      width: 70%;
+      height: 4rem;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid clrs.color-type("4");
+
+    
+    }
+
+  }
+  }
+
+
+
+
+}
+
+
+// admin-nav__phone ke liye 
+
+.admin-nav__phone {
+  background-color: black;
+
+ 
+  grid-column: 3 / 13;
+  
+  display: flex;
+  justify-content: space-between;
+
+
+  &-logo {
+     display: block;
+     max-width: 120px;
+     align-self: center;
+    
+
+     .logo {
+        width: 100%;
+        height: auto;
+     }
+  }
+
+  &-links {
+    display: flex;
+    gap: 1.7rem;
+    align-self: center;
+
+    
+  }
+
+  &-link {
+    a {
+      color: clrs.color-type("1");
+      font-size: 1.5rem;
+  
+    }
+  }
+}
+
+.admin-nav__phone {
+  display: none;
+}
+

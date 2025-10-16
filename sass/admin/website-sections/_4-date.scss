@@ -1,0 +1,15 @@
+
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.data {
+    display: grid;
+    grid-column: 3 / 13;
+    grid-row: 2 / 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // place-content: start;
+
+}

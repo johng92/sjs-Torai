@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="up/css/admin-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="container">
+    <nav class="admin-nav padd">
+      <a href="admin.html">
+        <img src="/up/images/logo.png" alt="logo" class="admin-nav__logo" />
+      </a>
+
+      <ul class="admin-nav__links">
+        <li class="admin-nav__links-link">
+          <a href="admin.html"><i class="fa-solid fa-house"></i></a>
+          <span>Home</span>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
+          <span>Blogs</span>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="admin.html"><i class="fa-solid fa-image"></i></a>
+          <span>Gallery</span>
+        </li>
+        <li class="admin-nav__links-link">
+          <a href="admin.html"><i class="fa-solid fa-address-card"></i></a>
+          <span>Contact</span>
+        </li>
+      </ul>
+
+      <ul class="admin-nav__links admin-nav__logout">
+        <li class="admin-nav__links-link">
+          <a href="admin.html"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></a>
+          <span>Logout</span>
+        </li>
+      </ul>
+    </nav>
+
+    
+        <section class="admin-nav__phone padd">
+      <a href="admin.html" class="admin-nav__phone-logo">
+        <img src="/up/images/logo.png" alt="" class="logo" />
+      </a>
+
+      <ul class="admin-nav__phone-links">
+        <li class="admin-nav__phone-link">
+          <a href="index.html"><i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-image"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-address-card"></i></a>
+        </li>
+        <li class="admin-nav__phone-link">
+          <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </li>
+      </ul>
+    </section>
+
+    <header class="header padd">
+      <div class="header__greeting">
+        <h3 class="sec-sub-title">Good morning</h3>
+        <h2 class="sec-title">Principal</h2>
+      </div>
+
+      <div class="header__icons">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-envelope"></i>
+
+        <figure class="header__icons-profile">
+          <img src="./up/images/click.jpg" alt="" />
+        </figure>
+      </div>
+    </header>
+
+    <form class="add-blog padd">
+
+       <h2 class="sec-title">Add Blog</h2>
+      <fieldset class="add-blog__title">
+        <label class="sec-sub-title">Blog Title</label>
+        <input type="text" placeholder="Enter blog title">
+      </fieldset>
+       
+      <div class="content">
+      <fieldset class="content__author">
+        <label class="sec-sub-title">Author</label>
+        <input type="text" placeholder="Joe smith">
+      </fieldset>
+
+      <fieldset class="content__moderator">
+        <label class="sec-sub-title">Blog moderator</label>
+        <input type="text" placeholder="Joe smith">
+        <p class="sec-sub-para">Blog comments wil be sant to the moderator</p>
+      </fieldset>
+
+      <fieldset class="content__date">
+        <label class="sec-sub-title">Publish date</label>
+        <input type="date" name="" id="">
+      </fieldset>
+      </div>
+
+      <fieldset class="add-blog__comments">
+
+        <p>
+        <input type="checkbox" name="" id="">
+        <label class="sec-sub-title">Allow comments</label>
+        </p>
+        <textarea placeholder="Type something"></textarea>
+      </fieldset>
+
+      <div class="add-blog__create">
+        <i>
+          <i class="fa-solid fa-plus"></i>
+         
+        </i>
+         <fieldset class="add-blog__create-btn">
+          <input type="button" value=" CANCEL" class="cancel">
+          <input type="button" value="SAVE" class="save">
+         </fieldset>
+      </div>
+    </form>
+
+
+
+
+  </body>
+</html>

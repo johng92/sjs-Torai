@@ -1,0 +1,59 @@
+@use "sass:map";
+
+//Sass Color Variables (part-vi)
+// $color-theme   [is colors Object here, like a group of colors]
+
+$colors-theme: (
+  "1" : hsl(216 33% 97%),
+  "2" : hsl(327 97% 48%),
+  "3" : hsl(253 82% 42%),
+  "4" : hsl(0 0% 100%),
+  "5" : hsl(0, 0%, 80%),
+);
+
+@function color-theme($clr-theme) {
+  @return map.get($colors-theme, $clr-theme);
+}
+// color-theme [is function name]  &  $clr-theme [is function argument]
+// @function>>   color-theme($color-theme-1) this argument would not be reusable
+
+//Write 1 function and use it millions times.
+
+$colors-type: (
+  "1" : hsl(0 0% 100%),
+  "2" : hsl(238 50% 13%),
+  "3" : hsl(327 97% 48%),
+  "4" : hsl(253 82% 42%),
+  "5" : hsl(0 0% 45%),
+  "7" : hsl(118, 49%, 37%),
+);
+
+
+@function color-type($clr-type) {
+  @return map.get($colors-type, $clr-type);
+} 
+
+$color-links: (
+  "1" : hsl(0 0% 100%),
+  "2" : hsl(327 97% 48%),
+  "3" : hsl(253 82% 42%),
+  "4" : hsl(238 50% 13%),
+);
+@function color-link($clr-link) {
+  @return map.get($color-links, $clr-link);
+} 
+
+$colors-social: (
+  "facebook" :hsl(221 44% 42%),
+  "twitter" :hsl(206 82% 63%),
+  "linkedin" :hsl(201 100% 35%),
+  "instagram" :hsl(329 100% 50%),
+);
+
+
+@function color-social($clr-social) {
+  @return map.get($colors-social, $clr-social);
+}
+
+
+
