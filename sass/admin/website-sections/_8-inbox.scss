@@ -1,0 +1,51 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.main {
+    display: grid;
+   grid-column: 3 / 13;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+
+
+ .inbox {
+
+
+
+
+
+.inbox__search{
+    display: flex;
+    justify-content: space-between;
+
+    &-btn {
+        display: flex;
+        gap: 2rem;
+
+        a {
+            padding: pad.padding-st-v("s");
+            border: 1px solid clrs.color-type("5");
+            color: clrs.color-type("2");
+            
+            
+        }
+    }
+
+    fieldset {
+        display: flex;
+        gap: 1rem;
+        
+        border: 1px solid clrs.color-type("3");
+        padding: pad.padding-st-v("s") ;
+
+  
+        input {
+   
+        }
+    }
+  }
+
+ }
+}

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="up/css/admin-style.css" />
+    <!-- <link rel="stylesheet" href="up/css/admin-style.css" /> -->
+        <link rel="stylesheet" href="/up/css/admin-style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -13,53 +14,65 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="container">
     <nav class="admin-nav padd">
       <a href="admin.html">
-        <img src="/up/images/logo.png" alt="logo" class="admin-nav__logo" />
+        <img
+          src="/up/images/sjsToraiLogo1.png"
+          alt="logo"
+          class="admin-nav__logo"
+        />
       </a>
 
       <ul class="admin-nav__links">
         <li class="admin-nav__links-link">
-          <a href="admin.html"><i class="fa-solid fa-house"></i></a>
-          <span>Home</span>
+          <a href="admin.html">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+          </a>
         </li>
         <li class="admin-nav__links-link">
-          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
-          <span>Blogs</span>
+          <a href="blogs-listing.html"
+            ><i class="fa-solid fa-blog"></i>
+            <span>News</span>
+          </a>
         </li>
         <li class="admin-nav__links-link">
-          <a href="admin.html"><i class="fa-solid fa-image"></i></a>
-          <span>Gallery</span>
+          <a href="admin.html"
+            ><i class="fa-solid fa-image"></i>
+            <span>Gallery</span>
+          </a>
         </li>
         <li class="admin-nav__links-link">
-          <a href="admin.html"><i class="fa-solid fa-address-card"></i></a>
-          <span>Contact</span>
+          <a href="admin-contact.html"
+            ><i class="fa-solid fa-address-card"></i>
+            <span>Contacts</span>
+          </a>
         </li>
       </ul>
 
       <ul class="admin-nav__links admin-nav__logout">
         <li class="admin-nav__links-link">
           <a href="admin.html"
-            ><i class="fa-solid fa-right-from-bracket"></i
-          ></a>
-          <span>Logout</span>
+            ><i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+          </a>
         </li>
       </ul>
     </nav>
 
-    
-        <section class="admin-nav__phone padd">
-      <a href="admin.html" class="admin-nav__phone-logo">
-        <img src="/up/images/logo.png" alt="" class="logo" />
+    <section class="admin-nav__phone padd">
+      <a href="#" class="admin-nav__phone-logo">
+        <img src="/up/images/sjsToraiLogo1.png" alt="" class="logo" />
       </a>
 
       <ul class="admin-nav__phone-links">
         <li class="admin-nav__phone-link">
-          <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          <a href="admin.html"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="admin-nav__phone-link">
-          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
+          <a href="blogs-listing.html"><i class="fa-solid fa-blog"></i></a>
         </li>
         <li class="admin-nav__phone-link">
           <a href="#"><i class="fa-solid fa-image"></i></a>
@@ -68,7 +81,9 @@
           <a href="#"><i class="fa-solid fa-address-card"></i></a>
         </li>
         <li class="admin-nav__phone-link">
-          <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+          <a href="admin-contact.html"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></a>
         </li>
       </ul>
     </section>
@@ -85,60 +100,37 @@
         <i class="fa-solid fa-envelope"></i>
 
         <figure class="header__icons-profile">
-          <img src="./up/images/click.jpg" alt="" />
+          <img src="./up/images/userProPic.png" alt="" />
         </figure>
       </div>
     </header>
 
     <form class="add-blog padd">
-
-       <h2 class="sec-title">Add Blog</h2>
+      <h2 class="sec-title">Add Blog</h2>
       <fieldset class="add-blog__title">
         <label class="sec-sub-title">Blog Title</label>
-        <input type="text" placeholder="Enter blog title">
+        <input type="text" placeholder="Enter blog title" />
       </fieldset>
-       
-      <div class="content">
-      <fieldset class="content__author">
-        <label class="sec-sub-title">Author</label>
-        <input type="text" placeholder="Joe smith">
-      </fieldset>
-
-      <fieldset class="content__moderator">
-        <label class="sec-sub-title">Blog moderator</label>
-        <input type="text" placeholder="Joe smith">
-        <p class="sec-sub-para">Blog comments wil be sant to the moderator</p>
-      </fieldset>
-
-      <fieldset class="content__date">
-        <label class="sec-sub-title">Publish date</label>
-        <input type="date" name="" id="">
-      </fieldset>
-      </div>
 
       <fieldset class="add-blog__comments">
-
         <p>
-        <input type="checkbox" name="" id="">
-        <label class="sec-sub-title">Allow comments</label>
+          <input type="checkbox" name="" id="" />
+          <label class="sec-sub-title">Blog description</label>
         </p>
         <textarea placeholder="Type something"></textarea>
       </fieldset>
 
       <div class="add-blog__create">
-        <i>
-          <i class="fa-solid fa-plus"></i>
-         
-        </i>
-         <fieldset class="add-blog__create-btn">
-          <input type="button" value=" CANCEL" class="cancel">
-          <input type="button" value="SAVE" class="save">
-         </fieldset>
+        <fieldset class="add-blog__create-btn">
+          <label class="sec-sub-title">Add Imeges</label>
+          <input type="file">
+        </fieldset>
+
+        <fieldset class="add-blog__create-btn">
+          <input type="button" value=" CANCEL" class="cancel" />
+          <input type="button" value="PUBLISH" class="save" />
+        </fieldset>
       </div>
     </form>
-
-
-
-
   </body>
 </html>

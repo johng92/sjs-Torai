@@ -59,10 +59,14 @@
 }
 
 
+// *********************************************************************************
+// admin-nav phone ke liye he styling he 
+// *********************************************************************************
+
 // admin-nav__phone ke liye 
 
 .admin-nav__phone {
-  background-color: black;
+  background-color: clrs.color-type("5");
 
  
   grid-column: 3 / 13;
@@ -79,7 +83,7 @@
 
      .logo {
         width: 100%;
-        height: auto;
+        height: 7rem;
      }
   }
 
@@ -93,7 +97,7 @@
 
   &-link {
     a {
-      color: clrs.color-type("1");
+      color: clrs.color-type("2");
       font-size: 1.5rem;
   
     }

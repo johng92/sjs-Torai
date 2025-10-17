@@ -5,10 +5,12 @@
 
 $colors-theme: (
   "1" : hsl(216 33% 97%),
-  "2" : hsl(327 97% 48%),
-  "3" : hsl(253 82% 42%),
-  "4" : hsl(0 0% 100%),
-  "5" : hsl(0, 0%, 80%),
+  "2" :hsl(126, 30%, 58%),
+  "3" : hsl(219, 49%, 47%),
+  "4" : hsl(39, 100%, 50%),
+  "5" :  hsl(180, 50%, 91%),
+  "6" : hsl(126, 38%, 65%),
+  "7" : hsl(22, 93%, 42%),
 );
 
 @function color-theme($clr-theme) {
@@ -22,10 +24,10 @@ $colors-theme: (
 $colors-type: (
   "1" : hsl(0 0% 100%),
   "2" : hsl(238 50% 13%),
-  "3" : hsl(327 97% 48%),
-  "4" : hsl(253 82% 42%),
-  "5" : hsl(0 0% 45%),
-  "7" : hsl(118, 49%, 37%),
+  "3" : hsl(126, 30%, 58%),
+  "4" : hsl(220, 48%, 27%),
+  "5" : hsl(178, 66%, 84%),
+  "6" : hsl(180, 50%, 91%),
 );
 
 
@@ -35,9 +37,10 @@ $colors-type: (
 
 $color-links: (
   "1" : hsl(0 0% 100%),
-  "2" : hsl(327 97% 48%),
-  "3" : hsl(253 82% 42%),
-  "4" : hsl(238 50% 13%),
+  "2" :hsl(126, 30%, 58%),
+  "3" :hsl(126, 38%, 65%),
+  "4" : hsl(253 82% 42%),
+  "5" : hsl(238 50% 13%),
 );
 @function color-link($clr-link) {
   @return map.get($color-links, $clr-link);
@@ -55,5 +58,15 @@ $colors-social: (
   @return map.get($colors-social, $clr-social);
 }
 
+// This BELOW codes were for testing purpose
+// h1 {
+//   color: color-type(color-type-4);
+// }
 
+// a {
+//   color: color-link(color-link-3);
+// }
+// body {
+//   background-color: color-theme(color-theme-1);
+// }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
-    <link rel="stylesheet" href="up/css/admin-style.css" />
+  <link rel="stylesheet" href="/up/css/admin-style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -16,7 +16,11 @@
   <body class="container">
     <nav class="admin-nav padd">
       <a href="admin.html">
-        <img src="/up/images/logo.png" alt="logo" class="admin-nav__logo" />
+        <img
+          src="/up/images/sjsToraiLogo1.png"
+          alt="logo"
+          class="admin-nav__logo"
+        />
       </a>
 
       <ul class="admin-nav__links">
@@ -27,7 +31,7 @@
           </a>
         </li>
         <li class="admin-nav__links-link">
-          <a href="blogs.html"
+          <a href="blogs-listing.html"
             ><i class="fa-solid fa-blog"></i>
             <span>News</span>
           </a>
@@ -39,7 +43,7 @@
           </a>
         </li>
         <li class="admin-nav__links-link">
-          <a href="admin.html"
+          <a href="admin-contact.html"
             ><i class="fa-solid fa-address-card"></i>
             <span>Contacts</span>
           </a>
@@ -55,18 +59,18 @@
         </li>
       </ul>
     </nav>
-    
-     <section class="admin-nav__phone padd">
+
+    <section class="admin-nav__phone padd">
       <a href="#" class="admin-nav__phone-logo">
-        <img src="/up/images/logo.png" alt="" class="logo" />
+        <img src="/up/images/sjsToraiLogo1.png" alt="" class="logo" />
       </a>
 
       <ul class="admin-nav__phone-links">
         <li class="admin-nav__phone-link">
-          <a href="index.html"><i class="fa-solid fa-house"></i></a>
+          <a href="admin.html"><i class="fa-solid fa-house"></i></a>
         </li>
         <li class="admin-nav__phone-link">
-          <a href="blogs.html"><i class="fa-solid fa-blog"></i></a>
+          <a href="blogs-listing.html"><i class="fa-solid fa-blog"></i></a>
         </li>
         <li class="admin-nav__phone-link">
           <a href="#"><i class="fa-solid fa-image"></i></a>
@@ -75,11 +79,12 @@
           <a href="#"><i class="fa-solid fa-address-card"></i></a>
         </li>
         <li class="admin-nav__phone-link">
-          <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+          <a href="admin-contact.html"
+            ><i class="fa-solid fa-right-from-bracket"></i
+          ></a>
         </li>
       </ul>
     </section>
-
 
     <header class="header padd">
       <div class="header__greeting">
@@ -93,23 +98,29 @@
         <i class="fa-solid fa-envelope"></i>
 
         <figure class="header__icons-profile">
-          <img src="./up/images/click.jpg" alt="" />
+          <img src="./up/images/userProPic.png" alt="" />
         </figure>
       </div>
     </header>
 
-
-    <main class="main">
+    <main class="main padd">
       <h2 class="sec-title">inbox</h2>
 
       <section class="inbox">
-        
-
+      <div class="inbox__search">
+        <ul class="inbox__search-btn">
+          <li><a href="#"  class="">Team</a></li>
+          <li><a href="#" class="">Project</a></li>
+          <li><a href="#" class="">People</a></li>
+        </ul>
+        <fieldset>
+          <input
+            type="text"
+            placeholder="Search by name,location,website, phone..."/>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </fieldset>
+      </div>
       </section>
-
     </main>
-
-
-  
   </body>
 </html>
