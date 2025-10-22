@@ -36,17 +36,21 @@
     gap: 2rem;
   }
 
-  &__icons {
+  .acadamics__socials {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: repeat(2, auto);
 
-    li {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: repeat(3, min-content);
+    align-items: center;
 
+    div {
       i {
-        grid-column: 1 / 2;
-        color: clrs.color-theme("2");
+        font-size: type.font-size-st(l);
+        color: clrs.color-theme("6");
+      }
+      p {
+        font-size: type.font-size-st(m);
       }
     }
   }
-}
+  }

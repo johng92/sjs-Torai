@@ -331,14 +331,18 @@ textarea {
   display: flex;
   gap: 2rem;
 }
-.acadamics__icons li {
+.acadamics .acadamics__socials {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, min-content);
+  grid-template-columns: repeat(7, auto);
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
 }
-.acadamics__icons li i {
-  grid-column: 1/2;
-  color: hsl(126, 30%, 58%);
+.acadamics .acadamics__socials div i {
+  font-size: 3rem;
+  color: hsl(126, 38%, 65%);
+}
+.acadamics .acadamics__socials div p {
+  font-size: 2rem;
 }
 
 .gallery {
