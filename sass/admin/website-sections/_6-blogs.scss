@@ -43,12 +43,12 @@
   display: flex;
   gap: 1rem;
   padding: pad.padding-st-v("s");
-  background-color: clrs.color-theme("4");
+  background-color: clrs.color-theme("8");
   align-items: center;
   justify-content: space-between;
 
   &__field {
-    box-shadow: 0rem 0.1rem 0.3rem 0.2rem #f1f1f1;
+    box-shadow: 0rem 0.1rem 0.3rem 0.2rem #d8d7d7;
     padding: pad.padding-st-v("s");
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@
   }
 
   &__filters i {
-    color: clrs.color-theme("5");
+    color: clrs.color-theme("2");
     margin-left: 0.5rem;
     cursor: pointer;
   }
@@ -89,7 +89,7 @@
     }
 
   &__cell {
-    font-size: type.font-size-st(s);
+    font-size: type.font-size-st(sc);
     display: flex;
     align-items: center;
     padding: 0.5rem;
