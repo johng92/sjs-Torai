@@ -1,0 +1,68 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.parents {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    &__head {
+    font-size: type.font-size-d(m);
+    font-weight: type.font-weight(black-fw);
+    color: clrs.color-type("4");
+    text-align: center;
+    }
+&__cards {
+    flex-basis: 50%;
+    display: flex;
+    gap: 2rem;
+}
+&__card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+&__title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: clrs.color-theme("6");
+    border-radius: 5px;
+}
+
+&__icons {
+    display: flex;
+    gap: 1rem;
+    font-size: type.font-size-st("m");
+
+    i {
+        color: clrs.color-theme("3");
+    }
+}
+
+&__girl {
+
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    figure {
+        width: 15%;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+}
+
+&__quote {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    
+    i {
+        font-size: type.font-size-d(l);
+    }
+}
+
+}

@@ -1,0 +1,23 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.inquiry {
+
+    &__one {
+        display: flex;
+        gap: 2rem;
+
+        fieldset {
+            label,
+            input {
+                display: block;
+                padding: pad.padding-st-h(m);
+            }
+            input {
+                background-color: rgb(233, 183, 183);
+            }
+        }
+    }
+}
