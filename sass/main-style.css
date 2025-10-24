@@ -570,15 +570,31 @@ textarea {
   font-size: calc(2rem + 3vw);
 }
 
+.inquiry {
+  background-color: aqua;
+  text-align: center;
+}
+.inquiry .form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-self: center;
+}
 .inquiry__one {
   display: flex;
   gap: 2rem;
 }
-.inquiry__one fieldset label,
-.inquiry__one fieldset input {
-  display: block;
-  padding: 2.5rem;
+.inquiry__one fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inquiry__one fieldset label {
+  color: rebeccapurple;
+  font-size: 2rem;
+  text-align: start;
 }
 .inquiry__one fieldset input {
-  background-color: rgb(233, 183, 183);
+  border: 1px solid red;
+  padding: 1rem;
 }/*# sourceMappingURL=main-style.css.map */

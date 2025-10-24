@@ -4,20 +4,38 @@
 
 
 .inquiry {
+    background-color: aqua;
+    text-align: center;
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-self: center;
+    }
 
     &__one {
-        display: flex;
-        gap: 2rem;
+        // background-color: orange;
+         display: flex;
+         gap: 2rem;
 
-        fieldset {
-            label,
-            input {
-                display: block;
-                padding: pad.padding-st-h(m);
+         fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            label {
+                color: rebeccapurple;
+                font-size: 2rem;
+                text-align: start;
             }
+
             input {
-                background-color: rgb(233, 183, 183);
+                border: 1px solid red;
+                padding: pad.padding-st-v(s);
             }
-        }
+         }
     }
+
 }
