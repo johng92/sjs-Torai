@@ -1,0 +1,51 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.upcoming {
+
+    &-box {
+        max-width: 11rem;
+        background-color: aqua;
+    }
+    &__title {
+        text-align: center;
+    }
+
+    // margin: 0 auto;
+    // width: 80rem;
+
+    &__icons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        font-size: large;
+        color: clrs.color-theme("2");
+
+
+        i {
+            width: 3rem;
+            height: 3rem;
+            background-color: clrs.color-theme("2");
+            color: clrs.color-theme("1");
+            border-radius: 50%;
+        }
+    }
+
+    // upcoming table begins
+    .upcoming-box__table {
+        max-width: 11rem;
+        margin: 0 auto;
+        background-color: aqua;
+    }
+    .upcoming-box__header {
+        padding: pad.padding-st-v(m);
+        border: 1px soild red;
+
+        th {
+            font-size: type.font-size-d(m);
+        }
+    }
+}
+
+/* Parents begin */

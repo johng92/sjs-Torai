@@ -1,0 +1,41 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.inquiry {
+    background-color: aqua;
+    text-align: center;
+
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-self: center;
+    }
+
+    &__one {
+        // background-color: orange;
+         display: flex;
+         gap: 2rem;
+
+         fieldset {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            label {
+                color: rebeccapurple;
+                font-size: 2rem;
+                text-align: start;
+            }
+
+            input {
+                border: 1px solid red;
+                padding: pad.padding-st-v(s);
+            }
+         }
+    }
+
+}
