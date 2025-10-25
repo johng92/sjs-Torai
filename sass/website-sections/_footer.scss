@@ -1,0 +1,41 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.footer {
+
+    background-color: #fcd8ff;
+
+    &__head {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+
+    }
+    &__card {
+        width: 35rem;
+        padding: pad.padding-st-h(m);
+
+
+         div {
+        display: flex;
+        gap: 1rem;
+
+
+    i {
+        font-size: type.font-size-st(m);
+        color: clrs.color-type("1");
+    }
+    }
+
+    }
+
+   &__end {
+    width: 35rem;
+    text-align: center;
+    margin: 0 auto;
+    padding: pad.padding-st-v(m);
+   }
+
+}
