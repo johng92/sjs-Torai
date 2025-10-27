@@ -86,7 +86,7 @@ textarea {
   font-size: calc(1rem + 2vw);
   font-weight: 900;
   color: hsl(220, 48%, 27%);
-  text-align: center;
+  text-align: start;
 }
 
 .sec-title-h {
@@ -667,4 +667,27 @@ textarea {
   text-align: center;
   margin: 0 auto;
   padding: 1.5rem;
+}
+
+.admission {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.adm-fee table {
+  width: 50rem;
+  background-color: #ffc4c4;
+  border: 1px solid black;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.adm-fee table thead tr th {
+  text-align: start;
+  border: 1px solid black;
+  padding: 1rem;
+}
+.adm-fee table tbody tr td {
+  border: 1px solid black;
+  padding: 1rem;
 }/*# sourceMappingURL=main-style.css.map */

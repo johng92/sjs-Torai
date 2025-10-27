@@ -1,0 +1,34 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.adm-fee {
+table {
+    width: 50rem;
+    background-color: #ffc4c4;
+    border: 1px solid black;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    thead {
+       tr {
+        th {
+            text-align: start;
+            border: 1px solid black;
+               padding: pad.padding-st-v(s);
+        }
+       }
+    }
+
+    tbody {
+        tr {
+            td {
+                border: 1px solid black;
+                padding: pad.padding-st-v(s);
+            }
+        }
+    }
+}
+
+}
