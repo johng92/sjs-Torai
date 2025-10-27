@@ -334,6 +334,9 @@ textarea {
 .acadamics__title h2 {
   color: hsl(0, 0%, 45%);
 }
+.acadamics__title .cta {
+  align-self: start;
+}
 .acadamics__content {
   display: flex;
   gap: 2rem;

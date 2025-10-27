@@ -23,12 +23,17 @@
     flex-direction: column;
     gap: 1.5rem;
 
+
     p {
       line-height: 1.9;
       color: clrs.color-theme("3");
     }
     h2 {
       color: clrs.color-type("5");
+    }
+
+    .cta {
+      align-self: start;
     }
   }
   &__content{
