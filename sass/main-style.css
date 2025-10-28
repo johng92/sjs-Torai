@@ -675,19 +675,44 @@ textarea {
   gap: 3rem;
 }
 
+.adm-fee {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .adm-fee table {
-  width: 50rem;
-  background-color: #ffc4c4;
-  border: 1px solid black;
+  width: 80rem;
   margin: 0 auto;
   border-collapse: collapse;
 }
+.adm-fee table thead {
+  background-color: #d9f4ff;
+}
 .adm-fee table thead tr th {
   text-align: start;
-  border: 1px solid black;
+  border: 1px solid hsl(0, 0%, 45%);
+  font-size: 2rem;
   padding: 1rem;
 }
 .adm-fee table tbody tr td {
-  border: 1px solid black;
+  border: 1px solid hsl(0, 0%, 45%);
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.tuition table {
+  width: 40rem;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.tuition table thead tr th {
+  text-align: start;
+  border: 1px solid hsl(0, 0%, 45%);
+  font-size: 2rem;
+  padding: 1rem;
+}
+.tuition table tbody tr td {
+  border: 1px solid hsl(0, 0%, 45%);
+  font-size: 2rem;
   padding: 1rem;
 }/*# sourceMappingURL=main-style.css.map */
