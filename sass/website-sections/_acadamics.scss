@@ -5,6 +5,10 @@
 
 .acadamics {
 
+  .acadamics-btn {
+    align-self: start;
+  }
+
   h2 {
     color: clrs.color-theme("3");
   }
@@ -32,9 +36,6 @@
       color: clrs.color-type("5");
     }
 
-    .cta {
-      align-self: start;
-    }
   }
   &__content{
     display: flex;

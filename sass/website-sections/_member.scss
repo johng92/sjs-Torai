@@ -3,9 +3,16 @@
 @use "../general-styles/typography" as type;
 
 .member {
+
   display: flex;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: center;
+
+  &__key {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+  }
 
   overflow-x: hidden;
 
@@ -14,7 +21,8 @@
     text-align: center;
     color: clrs.color-type("5");
   }
-  &__post{
+
+  &__post {
     font-size: type.font-size-st(m);
     text-align: center;
     color: clrs.color-type("5");
@@ -29,12 +37,13 @@
     h2 {
       color: clrs.color-type("1");
     }
+
     figure {
       justify-self: center;
-      
+
       img {
         width: 10rem;
-        border-radius: 50%; 
+        border-radius: 50%;
         border: 4px solid clrs.color-theme("4");
       }
     }
@@ -44,11 +53,11 @@
   &__left-chevron {
     font-size: type.font-size-d(m);
     align-self: center;
-    
+
     i {
       color: clrs.color-theme("3");
     }
   }
 
-  
+
 }

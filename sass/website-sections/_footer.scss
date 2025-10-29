@@ -4,7 +4,8 @@
 
 .footer {
 
-    background-color: #fcd8ff;
+    background-color: clrs.color-type("4");
+    padding: pad.padding-st-v(m);
 
     &__head {
       display: flex;
@@ -16,6 +17,13 @@
     &__card {
         width: 35rem;
         padding: pad.padding-st-h(m);
+
+        .sec-title {
+            color: clrs.color-type("1");
+        }
+        .sec-sub-title {
+            color: clrs.color-type("1");
+        }
 
 
          div {
@@ -38,4 +46,11 @@
     padding: pad.padding-st-v(m);
    }
 
+   .sec-sub-title {
+    color: clrs.color-type("1");
+
+    a {
+          color: clrs.color-type("3");
+    }
+   }
 }

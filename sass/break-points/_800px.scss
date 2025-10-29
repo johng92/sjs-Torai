@@ -2,3 +2,12 @@
 @use "../general-styles/gradient" as grad;
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/typography" as type;
+
+@media screen and (max-width: 800px) {
+    
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

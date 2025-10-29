@@ -222,9 +222,14 @@ textarea {
 
 .member {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+.member__key {
+  display: flex;
   gap: 2rem;
   justify-content: center;
-  overflow-x: hidden;
 }
 .member__name {
   font-size: 2rem;
@@ -311,6 +316,9 @@ textarea {
   border-radius: 5px;
 }
 
+.acadamics .acadamics-btn {
+  align-self: start;
+}
 .acadamics h2 {
   color: hsl(219, 49%, 47%);
 }
@@ -333,9 +341,6 @@ textarea {
 }
 .acadamics__title h2 {
   color: hsl(0, 0%, 45%);
-}
-.acadamics__title .cta {
-  align-self: start;
 }
 .acadamics__content {
   display: flex;
@@ -643,7 +648,8 @@ textarea {
 }
 
 .footer {
-  background-color: #fcd8ff;
+  background-color: hsl(220, 48%, 27%);
+  padding: 1.5rem;
 }
 .footer__head {
   display: flex;
@@ -653,6 +659,12 @@ textarea {
 .footer__card {
   width: 35rem;
   padding: 2.5rem;
+}
+.footer__card .sec-title {
+  color: hsl(0, 0%, 100%);
+}
+.footer__card .sec-sub-title {
+  color: hsl(0, 0%, 100%);
 }
 .footer__card div {
   display: flex;
@@ -667,6 +679,12 @@ textarea {
   text-align: center;
   margin: 0 auto;
   padding: 1.5rem;
+}
+.footer .sec-sub-title {
+  color: hsl(0, 0%, 100%);
+}
+.footer .sec-sub-title a {
+  color: hsl(126, 30%, 58%);
 }
 
 .admission {
@@ -710,9 +728,32 @@ textarea {
   border: 1px solid hsl(0, 0%, 45%);
   font-size: 2rem;
   padding: 1rem;
+  background-color: #d9f4ff;
 }
 .tuition table tbody tr td {
   border: 1px solid hsl(0, 0%, 45%);
   font-size: 2rem;
   padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .principle {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }/*# sourceMappingURL=main-style.css.map */
