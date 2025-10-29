@@ -2,7 +2,7 @@
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
 
-.principle {
+.principal {
   display: flex;
 
   figure {
@@ -20,8 +20,12 @@
       border-radius: 50%;
     }
   }
+
+  &__subtitle {
+    font-size: type.font-size-st(m);
+  }
   &__card {
-    width: 60%;
+    // width: 60%;
 
     display: flex;
     flex-direction: column;

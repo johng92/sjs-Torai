@@ -4,12 +4,14 @@
 @use "../general-styles/typography" as type;
 
 @media screen and (max-width: 600px) {
-    
-    .principle {
-        display: flex;
+
+    .principal {
         flex-direction: column;
         gap: 2rem;
-        align-items: center;
+
+        &__desc {
+            
+        }
     }
 
 
@@ -17,6 +19,8 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        align-items: center;
     }
+
+    /*********************Form*************************/
+
 }
