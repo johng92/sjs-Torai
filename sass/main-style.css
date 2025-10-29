@@ -183,8 +183,8 @@ textarea {
 .header .main-nav-list li a:hover {
   color: hsl(219, 49%, 47%);
 }
-.header .btn-mobile-nav {
-  display: none;
+.header .hamburger {
+  position: fixed;
 }
 
 .hero {
@@ -224,7 +224,6 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  overflow-x: hidden;
 }
 .member__key {
   display: flex;
@@ -307,12 +306,6 @@ textarea {
   display: flex;
   gap: 4rem;
   background-color: hsl(180, 50%, 91%);
-}
-.about__content {
-  width: 50%;
-}
-.about__image {
-  width: 50%;
 }
 .about__image img {
   border-radius: 5px;
@@ -751,6 +744,70 @@ textarea {
   /*********************Form*************************/
 }
 @media screen and (max-width: 800px) {
+  .main-nav-list {
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(2rem + 12vh) calc(1rem + 6vw);
+    background-color: hsl(219, 49%, 47%);
+    color: hsl(0, 0%, 100%);
+    transition: all 0.35s ease-in-out;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(40rem);
+    z-index: 9;
+  }
+  .main-nav-list li a {
+    color: hsl(0, 0%, 100%);
+  }
+  .hamburger {
+    height: 5rem;
+    width: 8rem;
+    /* position: fixed; is already done in global line-180  */
+    top: 2rem;
+    right: 5rem;
+    background-color: hsl(206, 91%, 82%);
+    padding: calc(1rem + 2vw);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+  .hamburger__line {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(134, 12, 63);
+  }
+  .hamburger__line:first-child {
+    transition: all 0.25s ease-in-out;
+    width: 3rem; /* 60% of 3rem */
+  }
+  .hamburger__line:nth-child(2) {
+    transition: all 0.1s ease-in-out;
+    width: 2.4rem; /* 40% of 3rem */
+  }
+  .hamburger__line:last-child {
+    transition: all 0.25s ease-in-out;
+    width: 1.4rem; /* 40% of 3rem */
+  }
+  /* dynamic classes */
+  .display__nav {
+    transform: translateY(0);
+  }
+  .hamburger__line-1 {
+    transform: rotate(45deg) translateX(0.9rem) translateY(1rem);
+    width: 3rem;
+  }
+  .hamburger__line-2 {
+    visibility: hidden;
+  }
+  .hamburger__line.hamburger__line-3 {
+    transform: rotate(-45deg) translateX(0.8rem) translateY(-0.9rem);
+    width: 3rem;
+  }
   .hero {
     display: flex;
     flex-direction: column;

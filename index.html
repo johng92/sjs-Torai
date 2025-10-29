@@ -24,10 +24,7 @@
     <a href="index.html">
       <img src="up/images/sjsToraiLogo1.png" width="80px" class="logo" alt="" /></a>
 
-    <div class="header__nav-hamburger">
-      <div class="line-1"></div>
-      <div class="line-2"></div>
-    </div>
+
 
     <nav class="main-nav">
       <ul class="main-nav-list">
@@ -43,10 +40,11 @@
         </li>
       </ul>
     </nav>
-    <button class="btn-mobile-nav">
-      <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-      <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-    </button>
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+    </div>
   </header>
 
   <!--HEADERCONTAINER ENDS-->
@@ -264,7 +262,7 @@
 
     <section class="gallery padd">
       <h2>GALLERY</h2>
-      <div class="gallery__content">
+      <div class="gallery__content-continer responsive-grid">
         <div class="gallery__card">
           <figure>
             <img src="up/images/Fr.giftingStaffs.jpg" alt="">
@@ -346,7 +344,7 @@
 
     <section class="teachers padd page-width">
       <h2 class="teachers__head">Our Awesome Teachers</h2>
-      <div class="teachers__cards">
+      <div class="teachers__container responsive-grid">
         <div class="teachers__card">
           <figure>
             <img src="up/images/Stephan.jpg" alt="">
@@ -428,7 +426,7 @@
 
     <section class="parents padd page-width">
       <h2 class="parents__head">What Parents Say</h2>
-      <div class="parents__cards">
+      <div class="parents__cards-container responsive-grid">
         <div class="parents__card">
           <div class="parents__title padd">
             <div class="parents__quote">
@@ -492,7 +490,7 @@
 
     <section class="form padd page-width">
       <h2 class="form__title">Enquiry Form</h2>
-      <form class="form__contact">
+      <form class="form__contact-container">
         <div class="form__div">
           <fieldset>
             <label for="name">First Name</label>
@@ -562,7 +560,7 @@
 
   </main>
   <footer class="page-width"></footer>
-  <script src="js/app.js"></script>
+  <script src="/up/js/app.js"></script>
 </body>
 
 </html>
