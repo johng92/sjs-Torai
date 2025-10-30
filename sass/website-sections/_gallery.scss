@@ -1,9 +1,10 @@
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
+@use "../general-styles/gradient" as grad;
 
 .gallery {
-  background-color: clrs.color-theme("5");
+     background: grad.gradient(gradient-primary);
 
   h2 {
     font-size: type.font-size-d(m);

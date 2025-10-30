@@ -226,7 +226,7 @@ textarea {
   flex-direction: column;
   gap: 2rem;
 }
-.member__key {
+.member__cards {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -234,18 +234,18 @@ textarea {
 .member__name {
   font-size: 2rem;
   text-align: center;
-  color: hsl(0, 0%, 45%);
+  color: hsl(0, 0%, 87%);
 }
 .member__post {
   font-size: 2rem;
   text-align: center;
-  color: hsl(0, 0%, 45%);
+  color: hsl(0, 0%, 87%);
 }
 .member__card {
-  width: 28rem;
+  width: 34.6rem;
   border-radius: 5px;
-  padding: 2rem;
-  background-color: hsl(126, 30%, 58%);
+  padding: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
 }
 .member__card h2 {
   color: hsl(0, 0%, 100%);
@@ -257,6 +257,15 @@ textarea {
   width: 10rem;
   border-radius: 50%;
   border: 4px solid hsl(39, 100%, 50%);
+}
+.member__card:hover {
+  border: 2px solid hsl(219, 49%, 47%);
+}
+.member__info {
+  padding: calc(1rem + 6vh) 2.5rem;
+  border: transparent;
+  border-radius: 5px;
+  background-color: hsl(220, 48%, 27%);
 }
 .member__right-chevron, .member__left-chevron {
   font-size: calc(1rem + 2vw);
@@ -291,7 +300,7 @@ textarea {
 .principal figure img {
   width: 15rem;
   height: 18rem;
-  border: 4px solid hsl(0, 0%, 45%);
+  border: 4px solid hsl(0, 0%, 87%);
   border-radius: 50%;
 }
 .principal__subtitle {
@@ -306,7 +315,13 @@ textarea {
 .about {
   display: flex;
   gap: 4rem;
-  background-color: hsl(180, 50%, 91%);
+  background: linear-gradient(#d8f2f2, #f7fbfb);
+}
+.about__content {
+  width: 50%;
+}
+.about__image {
+  width: 50%;
 }
 .about__image img {
   border-radius: 5px;
@@ -336,7 +351,7 @@ textarea {
   color: hsl(219, 49%, 47%);
 }
 .acadamics__title h2 {
-  color: hsl(0, 0%, 45%);
+  color: hsl(0, 0%, 87%);
 }
 .acadamics__content {
   display: flex;
@@ -357,7 +372,7 @@ textarea {
 }
 
 .gallery {
-  background-color: hsl(180, 50%, 91%);
+  background: linear-gradient(#d8f2f2, #f7fbfb);
 }
 .gallery h2 {
   font-size: calc(1rem + 2vw);
@@ -412,35 +427,35 @@ textarea {
   border-radius: 25%;
 }
 
-.resents {
+.recents {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
-.resents__box {
+.recents__box {
   display: flex;
   gap: 1rem;
 }
-.resents__card {
+.recents__card {
   flex-basis: 50%;
   display: flex;
   gap: 2rem;
 }
-.resents__card figure {
+.recents__card figure {
   width: 50%;
 }
-.resents__card figure img {
+.recents__card figure img {
   width: 100%;
   height: 20rem;
   border-radius: 5px;
 }
-.resents__days {
+.recents__days {
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.resents .sec-link {
+.recents .sec-link {
   align-self: start;
 }
 
@@ -463,18 +478,20 @@ textarea {
   width: 30rem;
   height: 30rem;
   text-align: center;
-  border: 1px solid hsl(180, 50%, 91%);
+  border: 1px solid hsl(0, 0%, 87%);
   padding: 1.5rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: rem;
+  justify-self: center;
 }
 .teachers__card figure img {
   width: 15rem;
   height: 15rem;
   border: 4px solid hsl(219, 49%, 47%);
   border-radius: 50%;
+  padding: 4px;
 }
 .teachers__name {
   font-size: calc(1rem + 2vw);
@@ -561,15 +578,15 @@ textarea {
 .parents__icons i {
   color: hsl(219, 49%, 47%);
 }
-.parents__girl {
+.parents__file {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
-.parents__girl figure {
+.parents__file figure {
   width: 15%;
 }
-.parents__girl figure img {
+.parents__file figure img {
   border-radius: 50%;
 }
 .parents__quote {
@@ -611,7 +628,7 @@ textarea {
   gap: 1rem;
 }
 .form__contact textarea {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   text-align: start;
@@ -634,13 +651,21 @@ textarea {
   font-size: calc(1rem + 1vw);
 }
 .form__div fieldset input {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   padding: 1.5rem;
   border-radius: 30px;
   background-color: hsl(0, 0%, 100%);
 }
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .form form fieldset label {
   font-size: 2rem;
+}
+.form form .massage {
+  border: 2px solid hsl(0, 0%, 87%);
 }
 
 .footer {
@@ -653,10 +678,15 @@ textarea {
   gap: 2rem;
 }
 .footer__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   width: 35rem;
   padding: 2.5rem;
+  justify-self: center;
 }
-.footer__card .sec-title {
+.footer__card h2 {
+  font-size: 2rem;
   color: hsl(0, 0%, 100%);
 }
 .footer__card .sec-sub-title {
@@ -704,12 +734,12 @@ textarea {
 }
 .adm-fee table thead tr th {
   text-align: start;
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   font-size: 2rem;
   padding: 1rem;
 }
 .adm-fee table tbody tr td {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   padding: 1rem;
   font-size: 2rem;
 }
@@ -721,13 +751,13 @@ textarea {
 }
 .tuition table thead tr th {
   text-align: start;
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   font-size: 2rem;
   padding: 1rem;
   background-color: #d9f4ff;
 }
 .tuition table tbody tr td {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(0, 0%, 87%);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -826,6 +856,13 @@ textarea {
   }
   /**************************Resents******************************/
   .resents__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  /**************************About******************************/
+  .form__div {
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -1,20 +1,21 @@
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
+@use "../general-styles/gradient" as grad;
 
 .about {
   display: flex;
   gap: 4rem;
 
-  background-color: clrs.color-theme("5");
+     background: grad.gradient(gradient-primary);
 
 
   &__content {
-    // width: 50%;
+    width: 50%;
 
   }
   &__image {
-    // width: 50%;
+    width: 50%;
 
     img {
       border-radius: 5px;

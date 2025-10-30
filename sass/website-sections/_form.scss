@@ -77,10 +77,18 @@
     }
 
     form {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         fieldset {
             label {
                 font-size: type.font-size-st(m);
             }
+        }
+
+        .massage {
+            border: 2px solid clrs.color-type("5");
         }
     }
 }
