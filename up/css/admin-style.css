@@ -25,8 +25,7 @@ li {
 img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 input,
@@ -233,8 +232,7 @@ input[type=submit] {
   width: 70%;
   height: 4rem;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 2px solid hsl(220, 48%, 27%);
 }
 
@@ -375,8 +373,7 @@ input[type=submit] {
   width: 80px;
   height: auto;
   max-height: 60px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 0.3rem;
 }
 .post-table__edit {
@@ -541,8 +538,7 @@ input[type=submit] {
 .main .inbox-table__name .figure img {
   width: 15%;
   height: 2rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 
