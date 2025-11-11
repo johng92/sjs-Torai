@@ -3,39 +3,44 @@
 @use "../general-styles/typography" as type;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 7.43rem;
-  // padding: 0 1.5rem;
-  
-  a {
-    img {
-      width: 20%;
-      border-radius: 50%;
-    }
-  }
+  padding: pad.padding-d-v(xs) pad.padding-d-h(s);
 
-  .main-nav {
-    &-list {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    &__nav-logo {
+    width: 20rem;
+    img {
+      height: 40%;
+      width: 40%;
+      }
+    }
+  &__nav-links {
     display: flex;
     gap: 2rem;
+    font-size: type.font-size-st(sc);
+  }
 
 
+  &__nav-link{
+     color: clrs.color-link("4");
+     font-size: type.font-size-st(sc);
+     font-weight: type.font-weight(bold);
+     transition: 0.25s all ease-in-out;
 
-    li a {
-      font-size: large;
-      font-weight: 600;
-
-      &:hover {
-        color: clrs.color-theme("3");
-      }
-      
+     &:hover {
+      color: clrs.color-link("5");
+     }
     }
-  }
-  }
+ 
+
 
 .hamburger {
-  position: fixed;
+  display: none;
 }
+
+
 }

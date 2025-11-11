@@ -4,98 +4,113 @@
 @use "../general-styles/typography" as type;
 
 @media screen and (max-width: 800px) {
-    // ---------HEADER/ MOBILE NAV
-    .main-nav-list {
-    flex-direction: column;
-    justify-content: center;
+// ---------HEADER/ MOBILE NAV
+// ----------------------------------- Header
+.header__nav {
+  flex-direction: column;
+  // justify-content: center;
+}
 
-    padding: pad.padding-d-v(l) pad.padding-d-h(m);
-    background-color: clrs.color-theme("3");
-    color: clrs.color-type("1");
-    transition: all 0.35s ease-in-out;
-    height: 100vh;
+.header__nav-logo {
+  // align-self: flex-start;
+  // width: 15rem;
+   position: fixed; // Added fixed positioning
+    top: 2.8rem; // Same as hamburger
+    left: 2.5rem; // Positioned on the left side
+    width: 12rem; // Further reduced for small screens
+    z-index: 1; // Same as hamburger to stay on top
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; // Added transition
 
-    position: fixed;
-    top: 0;
-    right: 0;
+  img {
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+  }
+}
 
-    transform: translateX(40rem);
+  // Hide logo class
+  .hide-logo {
+    opacity: 0;
+    transform: translateX(-2rem); // Slides slightly to the left while fading
+    pointer-events: none; // Prevents interaction when hidden
+  }
 
-    z-index: 9;
-    li {
-      a {
-    color: clrs.color-type("1");
 
-      }
-    }
-    }
-    .hamburger {
-    height: 5rem;
-    width: 8rem;
+.header__nav-links {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    /* position: fixed; is already done in global line-180  */
-    top: 2rem;
-    right: 5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
 
-    background-color: transparent;
-    padding: 1rem 2rem;
-    cursor: pointer;
+  // background-image: grad.gradient(gradient-primary);
+  background-color: clrs.color-theme("4");
+  padding: pad.padding-d-v(l) pad.padding-d-h(l);
+  transform: translateX(40rem );
+  transition: transform 0.4s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
+  z-index: 10;
+}
 
-    z-index: 10;
-    }
+// creating a dynamic class
+.display-nav {
+  transform: translateX(0);
+}
 
-  .hamburger__line {
+.header__nav-hamburger {
+  position: fixed;
+  top: 2.8rem;
+  right: 3rem;
+  height: 4rem;
+  width: 7rem;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 0.5rem;
+
+  padding: 0 1rem;
+  background-image: grad.gradient(gradient-primary);
+  border-radius: 0.5rem;
+
+  z-index: 11;
+
+  .line-1,
+  .line-2 {
+    height: 0.2rem;
+    background-color: clrs.color-theme("1");
+    transition: all 0.3s ease-in-out;
+  }
+
+  .line-1 {
+    width: 70%;
+    align-self: flex-end;
+  }
+
+  .line-2 {
     width: 100%;
-    height: 3px;
-    background-color: clrs.color-theme("3");
-    flex-shrink: 0;
+    align-self: center;
+  }
+    // Dynamic Classes
+  .line-1-toggled {
+    transform: rotate(45deg) translateX(-0.5rem) translateY(1rem);
+    width: 50%;
   }
 
-  .hamburger__line:first-child {
-    transition: all 0.25s ease-in-out;
-    width: 3rem; /* 60% of 3rem */
-    background-color: clrs.color-type("2");
-
+    .line-2-toggled {
+    transform: rotate(-45deg) translateX(0.4rem) translateY(-0.2rem);
+    width: 50%;
   }
+}
 
-  .hamburger__line:nth-child(2) {
-    transition: all 0.1s ease-in-out;
-    width: 2.4rem; /* 40% of 3rem */
-    background-color: clrs.color-type("2");
-
-  }
-
-  .hamburger__line:last-child {
-    transition: all 0.25s ease-in-out;
-    width: 1.4rem; /* 40% of 3rem */
-    background-color: clrs.color-type("2");
-
-  }
-
-  /* dynamic classes */
-  .display__nav {
-    transform: translateY(0);
-  }
-
-  .hamburger__line-1 {
-    transform: rotate(45deg) translateX(0.9rem) translateY(1rem);
-    width: 3rem;
-  }
-
-  .hamburger__line-2 {
-    visibility: hidden;
-  }
-
-  .hamburger__line.hamburger__line-3 {
-    transform: rotate(-45deg) translateX(0.8rem) translateY(-0.9rem);
-    width: 3rem;
-  }
-
+// ---------------NOTICE SECTION
+.notice {
+  margin-top: 6rem;
+}
 
 
   //----------- HERO SECTION

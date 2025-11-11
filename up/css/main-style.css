@@ -63,19 +63,19 @@ textarea {
 }
 
 .sec-link {
-  color: hsl(126, 30%, 58%);
-  background-color: hsl(216, 33%, 97%);
-  border: 1px solid hsl(126, 30%, 58%);
-  font-size: 1.5rem;
+  color: hsl(238, 50%, 13%);
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(238, 50%, 13%);
+  font-size: 1.8rem;
   padding: 1rem 3rem;
 }
 .sec-link:hover {
-  background-color: hsl(126, 30%, 58%);
+  background-color: hsl(238, 50%, 13%);
   color: hsl(0, 0%, 100%);
 }
 
 .sec-para {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: hsl(238, 50%, 13%);
   text-align: start;
   margin-bottom: 2rem;
@@ -96,7 +96,7 @@ textarea {
 }
 
 .sec-sub-para {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: rgba(16.575, 17.68, 49.725, 0.4);
 }
@@ -116,7 +116,7 @@ textarea {
 }
 
 .sec-mini-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: hsl(126, 30%, 58%);
   position: relative;
   display: inline-block;
@@ -128,7 +128,7 @@ textarea {
   height: 0.2rem;
   width: 2rem;
   transform: translateY(-50%);
-  background-color: hsl(126, 30%, 58%);
+  background-color: hsl(238, 50%, 13%);
 }
 .sec-mini-title::before {
   left: -60%;
@@ -138,7 +138,7 @@ textarea {
 }
 
 .sec-sub-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: hsl(220, 48%, 27%);
   transition: all 0.25s ease-in-out;
@@ -154,36 +154,46 @@ textarea {
 .cta {
   color: hsl(0, 0%, 100%);
   background-color: hsl(126, 30%, 58%);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   padding: 1rem 3rem;
 }
 .cta:hover {
-  background-color: hsl(206, 91%, 82%);
+  background-color: hsl(126, 30%, 45%);
+  color: hsl(0, 0%, 100%);
 }
 
 .header {
+  padding: calc(0.2rem + 1vh) calc(1rem + 2vw);
+}
+.header__nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 7.43rem;
 }
-.header a img {
-  width: 20%;
-  border-radius: 50%;
+.header__nav-logo {
+  width: 20rem;
 }
-.header .main-nav-list {
+.header__nav-logo img {
+  height: 40%;
+  width: 40%;
+}
+.header__nav-links {
   display: flex;
   gap: 2rem;
+  font-size: 1.8rem;
 }
-.header .main-nav-list li a {
-  font-size: large;
-  font-weight: 600;
-}
-.header .main-nav-list li a:hover {
+.header__nav-link {
   color: hsl(219, 49%, 47%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 0.25s all ease-in-out;
+}
+.header__nav-link:hover {
+  color: hsl(220, 100%, 67%);
 }
 .header .hamburger {
-  position: fixed;
+  display: none;
 }
 
 .hero {
@@ -201,7 +211,7 @@ textarea {
   line-height: 1.2;
 }
 .hero__content span {
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
 }
 .hero__content h3 {
   font-size: 2rem;
@@ -231,12 +241,12 @@ textarea {
 .member__name {
   font-size: 2rem;
   text-align: center;
-  color: hsl(0, 0%, 45%);
+  color: hsl(220, 100%, 67%);
 }
 .member__post {
   font-size: 2rem;
   text-align: center;
-  color: hsl(0, 0%, 45%);
+  color: hsl(220, 100%, 67%);
 }
 .member__card {
   width: 28rem;
@@ -253,18 +263,18 @@ textarea {
 .member__card figure img {
   width: 10rem;
   border-radius: 50%;
-  border: 4px solid hsl(39, 100%, 50%);
+  border: 4px solid hsl(126, 30%, 45%);
 }
 .member__right-chevron, .member__left-chevron {
   font-size: calc(1rem + 2vw);
   align-self: center;
 }
 .member__right-chevron i, .member__left-chevron i {
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
 }
 
 .notice {
-  background-color: hsl(219, 49%, 47%);
+  background-color: hsl(126, 30%, 58%);
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   line-height: 1.1;
@@ -273,7 +283,7 @@ textarea {
   font-size: 2rem;
 }
 .notice marquee a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: hsl(180, 50%, 91%);
 }
 
@@ -288,7 +298,7 @@ textarea {
 .principal figure img {
   width: 15rem;
   height: 18rem;
-  border: 4px solid hsl(0, 0%, 45%);
+  border: 4px solid hsl(220, 100%, 67%);
   border-radius: 50%;
 }
 .principal__subtitle {
@@ -303,7 +313,7 @@ textarea {
 .about {
   display: flex;
   gap: 4rem;
-  background-color: hsl(180, 50%, 91%);
+  background-color: hsl(220, 48%, 27%);
 }
 .about__image img {
   border-radius: 5px;
@@ -313,7 +323,7 @@ textarea {
   align-self: start;
 }
 .acadamics h2 {
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
 }
 .acadamics__header {
   font-size: calc(1rem + 2vw);
@@ -330,10 +340,10 @@ textarea {
 }
 .acadamics__title p {
   line-height: 1.9;
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
 }
 .acadamics__title h2 {
-  color: hsl(0, 0%, 45%);
+  color: hsl(220, 100%, 67%);
 }
 .acadamics__content {
   display: flex;
@@ -347,14 +357,14 @@ textarea {
 }
 .acadamics .acadamics__socials div i {
   font-size: 3rem;
-  color: hsl(206, 91%, 82%);
+  color: hsl(220, 100%, 67%);
 }
 .acadamics .acadamics__socials div p {
   font-size: 2rem;
 }
 
 .gallery {
-  background-color: hsl(180, 50%, 91%);
+  background-color: hsl(220, 48%, 27%);
 }
 .gallery h2 {
   font-size: calc(1rem + 2vw);
@@ -377,7 +387,7 @@ textarea {
   border: 2px solid transparent;
 }
 .gallery__card:hover {
-  border: 2px solid hsl(126, 30%, 58%);
+  border: 2px solid hsl(238, 50%, 13%);
   transition: all 0.99s ease-in-out;
 }
 .gallery__card figure img {
@@ -389,21 +399,21 @@ textarea {
 .gallery__card button {
   align-self: start;
   border: none;
-  border: 2px solid hsl(126, 30%, 58%);
+  border: 2px solid hsl(238, 50%, 13%);
   padding: calc(1rem + 1vh);
   border-radius: 50%;
 }
 .gallery__card button:hover {
-  background-color: hsl(126, 30%, 58%);
+  background-color: hsl(238, 50%, 13%);
 }
 .gallery__card button i {
   font-size: 2rem;
   transform: rotate(50deg);
 }
 .gallery__event {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   align-self: flex-start;
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
   padding-inline: 1.5rem;
   background-color: hsl(126, 30%, 58%);
   border-radius: 25%;
@@ -460,7 +470,7 @@ textarea {
   width: 30rem;
   height: 30rem;
   text-align: center;
-  border: 1px solid hsl(180, 50%, 91%);
+  border: 1px solid hsl(220, 48%, 27%);
   padding: 1.5rem;
   border-radius: 5px;
   display: flex;
@@ -470,7 +480,7 @@ textarea {
 .teachers__card figure img {
   width: 15rem;
   height: 15rem;
-  border: 4px solid hsl(219, 49%, 47%);
+  border: 4px solid hsl(126, 30%, 58%);
   border-radius: 50%;
 }
 .teachers__name {
@@ -480,7 +490,7 @@ textarea {
   text-align: center;
 }
 .teachers__subject {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: hsl(220, 48%, 27%);
   transition: all 0.25s ease-in-out;
@@ -499,13 +509,13 @@ textarea {
   gap: 1rem;
   justify-content: center;
   font-size: large;
-  color: hsl(126, 30%, 58%);
+  color: hsl(238, 50%, 13%);
 }
 .upcoming__icons i {
   width: 3rem;
   height: 3rem;
-  background-color: hsl(126, 30%, 58%);
-  color: hsl(216, 33%, 97%);
+  background-color: hsl(238, 50%, 13%);
+  color: hsl(0, 0%, 100%);
   border-radius: 50%;
 }
 .upcoming .upcoming-box__table {
@@ -547,7 +557,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: hsl(206, 91%, 82%);
+  background-color: hsl(220, 100%, 67%);
   border-radius: 5px;
 }
 .parents__icons {
@@ -556,7 +566,7 @@ textarea {
   font-size: 2rem;
 }
 .parents__icons i {
-  color: hsl(219, 49%, 47%);
+  color: hsl(126, 30%, 58%);
 }
 .parents__girl {
   display: flex;
@@ -608,7 +618,7 @@ textarea {
   gap: 1rem;
 }
 .form__contact textarea {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   background-color: hsl(0, 0%, 100%);
   padding: 1rem;
   text-align: start;
@@ -631,7 +641,7 @@ textarea {
   font-size: calc(1rem + 1vw);
 }
 .form__div fieldset input {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   padding: 1.5rem;
   border-radius: 30px;
   background-color: hsl(0, 0%, 100%);
@@ -701,12 +711,12 @@ textarea {
 }
 .adm-fee table thead tr th {
   text-align: start;
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   font-size: 2rem;
   padding: 1rem;
 }
 .adm-fee table tbody tr td {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   padding: 1rem;
   font-size: 2rem;
 }
@@ -718,13 +728,13 @@ textarea {
 }
 .tuition table thead tr th {
   text-align: start;
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   font-size: 2rem;
   padding: 1rem;
   background-color: #d9f4ff;
 }
 .tuition table tbody tr td {
-  border: 1px solid hsl(0, 0%, 45%);
+  border: 1px solid hsl(220, 100%, 67%);
   font-size: 2rem;
   padding: 1rem;
 }
@@ -742,73 +752,84 @@ textarea {
   /*********************Form*************************/
 }
 @media screen and (max-width: 800px) {
-  .main-nav-list {
+  .header__nav {
+    flex-direction: column;
+  }
+  .header__nav-logo {
+    position: fixed;
+    top: 2.8rem;
+    left: 2.5rem;
+    width: 12rem;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  .header__nav-logo img {
+    height: 40%;
+    width: 40%;
+    object-fit: contain;
+  }
+  .hide-logo {
+    opacity: 0;
+    transform: translateX(-2rem);
+    pointer-events: none;
+  }
+  .header__nav-links {
     flex-direction: column;
     justify-content: center;
-    padding: calc(2rem + 12vh) calc(1rem + 6vw);
-    background-color: hsl(219, 49%, 47%);
-    color: hsl(0, 0%, 100%);
-    transition: all 0.35s ease-in-out;
-    height: 100vh;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
+    height: 100vh;
+    background-color: hsl(126, 30%, 45%);
+    padding: calc(2rem + 12vh) calc(2rem + 12vw);
     transform: translateX(40rem);
-    z-index: 9;
+    transition: transform 0.4s ease-in-out;
+    z-index: 10;
   }
-  .main-nav-list li a {
-    color: hsl(0, 0%, 100%);
+  .display-nav {
+    transform: translateX(0);
   }
-  .hamburger {
-    height: 5rem;
-    width: 8rem;
-    /* position: fixed; is already done in global line-180  */
-    top: 2rem;
-    right: 5rem;
-    background-color: transparent;
-    padding: 1rem 2rem;
+  .header__nav-hamburger {
+    position: fixed;
+    top: 2.8rem;
+    right: 3rem;
+    height: 4rem;
+    width: 7rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1rem;
-    z-index: 10;
+    row-gap: 0.5rem;
+    padding: 0 1rem;
+    background-image: linear-gradient(45deg, hsla(253, 82%, 42%, 0.9), hsla(327, 97%, 48%, 0.7));
+    border-radius: 0.5rem;
+    z-index: 11;
   }
-  .hamburger__line {
+  .header__nav-hamburger .line-1,
+  .header__nav-hamburger .line-2 {
+    height: 0.2rem;
+    background-color: hsl(0, 0%, 100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .header__nav-hamburger .line-1 {
+    width: 70%;
+    align-self: flex-end;
+  }
+  .header__nav-hamburger .line-2 {
     width: 100%;
-    height: 3px;
-    background-color: hsl(219, 49%, 47%);
-    flex-shrink: 0;
+    align-self: center;
   }
-  .hamburger__line:first-child {
-    transition: all 0.25s ease-in-out;
-    width: 3rem; /* 60% of 3rem */
-    background-color: hsl(238, 50%, 13%);
+  .header__nav-hamburger .line-1-toggled {
+    transform: rotate(45deg) translateX(-0.5rem) translateY(1rem);
+    width: 50%;
   }
-  .hamburger__line:nth-child(2) {
-    transition: all 0.1s ease-in-out;
-    width: 2.4rem; /* 40% of 3rem */
-    background-color: hsl(238, 50%, 13%);
+  .header__nav-hamburger .line-2-toggled {
+    transform: rotate(-45deg) translateX(0.4rem) translateY(-0.2rem);
+    width: 50%;
   }
-  .hamburger__line:last-child {
-    transition: all 0.25s ease-in-out;
-    width: 1.4rem; /* 40% of 3rem */
-    background-color: hsl(238, 50%, 13%);
-  }
-  /* dynamic classes */
-  .display__nav {
-    transform: translateY(0);
-  }
-  .hamburger__line-1 {
-    transform: rotate(45deg) translateX(0.9rem) translateY(1rem);
-    width: 3rem;
-  }
-  .hamburger__line-2 {
-    visibility: hidden;
-  }
-  .hamburger__line.hamburger__line-3 {
-    transform: rotate(-45deg) translateX(0.8rem) translateY(-0.9rem);
-    width: 3rem;
+  .notice {
+    margin-top: 6rem;
   }
   .hero {
     display: flex;

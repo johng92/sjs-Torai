@@ -7,12 +7,15 @@
 
 .cta {
 color: clrs.color-link("1");
-background-color: clrs.color-theme("2");
-
+background-color: clrs.color-theme("3");
 font-size: type.font-size-st(sc);
+font-weight: type.font-weight(bold);
 padding: pad.padding-st-v(s)  pad.padding-st-h(l);
 
 &:hover {
-  background-color: clrs.color-theme("6");
+  background-color: clrs.color-theme("4");
+  color: clrs.color-link("1");
+
 }
+
 }

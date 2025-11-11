@@ -27,6 +27,7 @@ $pad-d-v: (
   "m": calc(1rem + 6vh),
   "sc": calc(1rem + 4vh),
   "s": calc(1rem + 1vh),
+  "xs": calc(0.2rem + 1vh),
 );
 
 @function padding-d-v($padd-dv) {

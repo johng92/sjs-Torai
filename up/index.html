@@ -19,30 +19,28 @@
 
 <body>
   <header class="header page-width padd">
-    <a href="index.html">
-      <img src="images/sjsToraiLogo1.png" width="80px" class="logo" alt="" /></a>
+    <nav class="header__nav">
+    <a href="index.html" class="header__nav-logo">
+      <img src="images/sjsToraiLogo1.png" class="header__logo" alt="" /></a>
 
-
-
-    <nav class="main-nav">
-      <ul class="main-nav-list">
-        <li><a href="index.html" class="main-nav-links">Home</a></li>
-        <li><a href="about.html" class="main-nav-links">About</a></li>
-        <li><a href="Gallery.html" class="main-nav-links">Gallery</a></li>
-        <li><a href="new.html" class="main-nav-links">News</a></li>
-        <li><a href="events.html" class="main-nav-links">Events</a></li>
-        <li><a href="contact.html" class="main-nav-links">Contact</a></li>
-        <li><a href="admin.html" class="main-nav-links">Admin</a></li>
+      <ul class="header__nav-links">
+        <li><a href="index.html" class="header__nav-link">Home</a></li>
+        <li><a href="about.html" class="header__nav-link">About</a></li>
+        <li><a href="Gallery.html" class="header__nav-link">Gallery</a></li>
+        <li><a href="new.html" class="header__nav-link">News</a></li>
+        <li><a href="events.html" class="header__nav-link">Events</a></li>
+        <li><a href="contact.html" class="header__nav-link">Contact</a></li>
+        <li><a href="admin.html" class="header__nav-link">Admin</a></li>
         <li>
-          <a href="admission.html" class="main-nav-links btn-adm">Admission</a>
+          <a href="admission.html" class=" cta">Admission</a>
         </li>
       </ul>
-    </nav>
       <div class="hamburger">
         <div class="hamburger__line"></div>
         <div class="hamburger__line"></div>
         <div class="hamburger__line"></div>
-    </div>
+      </div>
+    </nav>
   </header>
 
   <!--HEADERCONTAINER ENDS-->
@@ -57,7 +55,7 @@
   <!--NOTICE END-->
   <main class="page-width">
     <!-- HERO -->
-    <section class="hero padd">
+    <section class="hero padd page-width">
       <div class="hero__content">
         <h1>
           Welcome to <br />
@@ -85,7 +83,7 @@
       <!-- row ends-->
     </section>
 
-    <section class="member padd">
+    <section class="member padd page-width">
 
       <h2 class="sec-title-h">KEY MEMBERS</h2>
       <div class="member__key">
@@ -185,7 +183,7 @@
       </figure>
     </section>
 
-    <section class="acadamics padd">
+    <section class="acadamics padd page-width">
       <h2 class="acadamics__header">ACADAMICS</h2>
       <div class="acadamics__content">
         <div class="acadamics__title">
@@ -258,7 +256,7 @@
       </div>
     </section>
 
-    <section class="gallery padd">
+    <section class="gallery padd page-width">
       <h2>GALLERY</h2>
       <div class="gallery__content-continer responsive-grid">
         <div class="gallery__card">
@@ -558,6 +556,12 @@
 
   </main>
   <footer class="page-width"></footer>
+      <!-- In your shared footer or layout file -->
+<button class="back-to-top" aria-label="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
   <script src="js/app.js"></script>
 </body>
 
