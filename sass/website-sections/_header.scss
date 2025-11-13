@@ -4,7 +4,7 @@
 @use "../general-styles/typography" as type;
 
 .header {
-  background-color: clrs.color-theme("1");
+  background-color: --color-white;
   padding: pad.padding-d-v(s) pad.padding-d-h(m);
 
     display: flex;
@@ -27,8 +27,9 @@
     }
 
     &__nav-link {
-      font-size: type.font-size-st(s);
+      font-size: type.font-size-st(sc);
       font-weight: type.font-weight(bold);
+      color: var(--color-blue-dark);
     }
 }
 

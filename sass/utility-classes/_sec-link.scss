@@ -5,15 +5,15 @@
 @use "../general-styles/typography" as type;
 
 
-.sec-link {
-color: clrs.color-link("2");
-background-color: clrs.color-theme("1");
-border: 1px solid clrs.color-link("2");
-font-size: type.font-size-st(sc);
-padding: pad.padding-st-v(s)  pad.padding-st-h(l);
+// .sec-link {
+// color: clrs.color-link("2");
+// background-color: clrs.color-theme("1");
+// border: 1px solid clrs.color-link("2");
+// font-size: type.font-size-st(sc);
+// padding: pad.padding-st-v(s)  pad.padding-st-h(l);
 
-&:hover {
-  background-color: clrs.color-theme("2");
-  color: clrs.color-link("1");
-}
-}
+// &:hover {
+//   background-color: clrs.color-theme("2");
+//   color: clrs.color-link("1");
+// }
+// }

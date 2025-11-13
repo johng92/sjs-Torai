@@ -42,6 +42,18 @@ textarea {
   border-radius: 0.5rem;
 }
 
+:root {
+  --color-white: hsl(0 0% 100%);
+  --color-navy-dark: #111232;
+  --color-green-light: hsl(126 30% 58%);
+  --color-green-medium: hsl(126 30% 45%);
+  --color-blue-dark: #3e66b3;
+  --color-blue-bright: hsl(220 100% 67%);
+  --color-cyan-light: hsl(180 50% 91%);
+  /* Gradient Variables */
+  --gradient-cyan: linear-gradient(#d8f2f2, #f7fbfb);
+}
+
 .container {
   display: grid;
   grid-template-columns: [container-start] repeat(12, minmax(min-content, 12.5rem)) [container-end];
@@ -56,21 +68,9 @@ textarea {
   padding: calc(1rem + 6vh) calc(1rem + 2vw);
 }
 
-.sec-link {
-  color: hsl(238, 50%, 13%);
-  background-color: hsl(0, 0%, 100%);
-  border: 1px solid hsl(238, 50%, 13%);
-  font-size: 1.8rem;
-  padding: 1rem 3rem;
-}
-.sec-link:hover {
-  background-color: hsl(238, 50%, 13%);
-  color: hsl(0, 0%, 100%);
-}
-
 .sec-para {
   font-size: 1.8rem;
-  color: hsl(238, 50%, 13%);
+  color: var(--color-navy-dark);
   text-align: start;
   margin-bottom: 2rem;
 }
@@ -78,21 +78,14 @@ textarea {
 .sec-title {
   font-size: calc(1rem + 2vw);
   font-weight: 900;
-  color: hsl(220, 48%, 27%);
+  color: var(--color-blue-dark);
   text-align: start;
-}
-
-.sec-title-h {
-  font-size: calc(1rem + 2vw);
-  font-weight: 900;
-  color: hsl(220, 48%, 27%);
-  text-align: center;
 }
 
 .sec-sub-para {
   font-size: 1.8rem;
   font-weight: 700;
-  color: rgba(16.575, 17.68, 49.725, 0.4);
+  color: var(--color-navy-dark);
 }
 
 .responsive-grid {
@@ -111,7 +104,7 @@ textarea {
 
 .sec-mini-title {
   font-size: 1.8rem;
-  color: hsl(126, 30%, 58%);
+  color: var(--color-blue-dark);
   position: relative;
   display: inline-block;
 }
@@ -122,7 +115,7 @@ textarea {
   height: 0.2rem;
   width: 2rem;
   transform: translateY(-50%);
-  background-color: hsl(238, 50%, 13%);
+  background-color: var(--color-white);
 }
 .sec-mini-title::before {
   left: -60%;
@@ -134,25 +127,25 @@ textarea {
 .sec-sub-title {
   font-size: 1.8rem;
   font-weight: 500;
-  color: hsl(220, 48%, 27%);
+  color: var(--color-navy-dark);
   transition: all 0.25s ease-in-out;
   text-align: start;
 }
 
 .cta {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(126, 30%, 58%);
+  color: var(--color-white);
+  background-color: var(--color-green-light);
   font-size: 1.8rem;
   font-weight: 700;
   padding: 1rem 3rem;
 }
 .cta:hover {
-  background-color: hsl(126, 30%, 45%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--color-green-medium);
+  color: var(--color-white);
 }
 
 .header {
-  background-color: hsl(0, 0%, 100%);
+  background-color: --color-white;
   padding: calc(1rem + 1vh) calc(1rem + 6vw);
   display: flex;
   justify-content: space-between;
@@ -172,8 +165,9 @@ textarea {
   gap: 3rem;
 }
 .header__nav-link {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
+  color: var(--color-blue-dark);
 }
 
 .hamburger {

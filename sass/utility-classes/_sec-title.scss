@@ -4,13 +4,6 @@
 .sec-title {
     font-size: type.font-size-d(m);
     font-weight: type.font-weight(black-fw);
-    color: clrs.color-type("4");
+    color: var(--color-blue-dark);
     text-align: start;
-}
-
-.sec-title-h{
-    font-size: type.font-size-d(m);
-    font-weight: type.font-weight(black-fw);
-    color: clrs.color-type("4");
-    text-align: center;
 }

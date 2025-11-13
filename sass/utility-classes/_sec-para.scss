@@ -5,7 +5,7 @@
 
 .sec-para {
   font-size: type.font-size-st(sc);
-  color: clrs.color-type("2");
+  color: var(--color-navy-dark);
   text-align: start;
   margin-bottom: 2rem;
 

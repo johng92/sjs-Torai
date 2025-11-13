@@ -5,5 +5,5 @@
 .sec-sub-para {
     font-size: type.font-size-st(sc);
     font-weight: type.font-weight(bold);
-    color: rgba(clrs.color-type("2"), 0.4);
+    color: var(--color-navy-dark);
 }

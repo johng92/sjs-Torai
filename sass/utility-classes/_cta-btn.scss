@@ -6,16 +6,15 @@
 
 
 .cta {
-color: clrs.color-link("1");
-background-color: clrs.color-theme("3");
+color: var(--color-white);
+background-color: var(--color-green-light);
 font-size: type.font-size-st(sc);
 font-weight: type.font-weight(bold);
 padding: pad.padding-st-v(s)  pad.padding-st-h(l);
 
-&:hover {
-  background-color: clrs.color-theme("4");
-  color: clrs.color-link("1");
-
-}
+  &:hover {
+    background-color: var(--color-green-medium);
+    color: var(--color-white);
+  }
 
 }
