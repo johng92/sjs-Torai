@@ -47,12 +47,16 @@
   height: 100vh;
 
   // background-image: grad.gradient(gradient-primary);
-  background-color: clrs.color-theme("4");
+  background-color: clrs.color-theme("6");
   padding: pad.padding-d-v(l) pad.padding-d-h(l);
   transform: translateX(40rem );
   transition: transform 0.4s ease-in-out;
 
   z-index: 10;
+}
+.header__nav-link {
+  color: clrs.color-link("1");
+
 }
 
 // creating a dynamic class
@@ -82,7 +86,7 @@
   .line-1,
   .line-2 {
     height: 0.2rem;
-    background-color: clrs.color-theme("1");
+    background-color: clrs.color-theme("5");
     transition: all 0.3s ease-in-out;
   }
 
@@ -132,15 +136,6 @@
         }
       }
 
-      /**************************Resents******************************/
 
-      .resents {
-        &__box {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-      }
     
 }

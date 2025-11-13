@@ -192,7 +192,7 @@ textarea {
 .header__nav-link:hover {
   color: hsl(220, 100%, 67%);
 }
-.header .hamburger {
+.header__nav-hamburger {
   display: none;
 }
 
@@ -781,11 +781,14 @@ textarea {
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: hsl(126, 30%, 45%);
+    background-color: hsl(220, 100%, 67%);
     padding: calc(2rem + 12vh) calc(2rem + 12vw);
     transform: translateX(40rem);
     transition: transform 0.4s ease-in-out;
     z-index: 10;
+  }
+  .header__nav-link {
+    color: hsl(0, 0%, 100%);
   }
   .display-nav {
     transform: translateX(0);
@@ -809,7 +812,7 @@ textarea {
   .header__nav-hamburger .line-1,
   .header__nav-hamburger .line-2 {
     height: 0.2rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(220, 48%, 27%);
     transition: all 0.3s ease-in-out;
   }
   .header__nav-hamburger .line-1 {
@@ -843,10 +846,4 @@ textarea {
     gap: 2rem;
   }
   /**************************Resents******************************/
-  .resents__box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
 }/*# sourceMappingURL=main-style.css.map */
