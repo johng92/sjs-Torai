@@ -1,43 +1,37 @@
+// ===== header.scss =====
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
 
 .header {
-  padding: pad.padding-d-v(xs) pad.padding-d-h(s);
+  background-color: clrs.color-theme("1");
+  padding: pad.padding-d-v(s) pad.padding-d-h(m);
 
-  &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    column-gap: 2rem;
+
+    &__logo-link {
+      width: 20rem;
     }
 
-    &__nav-logo {
-    width: 20rem;
-    img {
-      height: 40%;
-      width: 40%;
-      }
+    &__logo {
+      height: 30%;
+      width: 30%;
     }
-  &__nav-links {
-    display: flex;
-    gap: 2rem;
-    font-size: type.font-size-st(sc);
-  }
 
-
-  &__nav-link{
-     color: clrs.color-link("4");
-     font-size: type.font-size-st(sc);
-     font-weight: type.font-weight(bold);
-     transition: 0.25s all ease-in-out;
-
-     &:hover {
-      color: clrs.color-link("5");
-     }
+    &__nav {
+      display: flex;
+      gap: 3rem;
     }
- 
-&__nav-hamburger {
-  display: none;
+
+    &__nav-link {
+      font-size: type.font-size-st(s);
+      font-weight: type.font-weight(bold);
+    }
 }
 
+.hamburger{
+    display: none;
 }

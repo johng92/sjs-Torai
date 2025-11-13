@@ -5,10 +5,10 @@
 @use "../general-styles/typography" as type;
 
 
-.sec-link,
-input[type="submit"] {
+.action-link
+{
+background-color: #115d66;
 color: clrs.color-link("1");
 font-size: type.font-size-st(sc);
-padding: pad.padding-st-v("s");
-
+padding: pad.padding-st-v(s)  pad.padding-st-h(s);
 }

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Contact Messages</title>
+  <link rel="stylesheet" href="css/admin-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+<body class="container">
+
+  <!-- Left Sidebar Navigation -->
+  <nav class="admin-nav padd">
+    <a href="admin.html" class="admin-nav__logo">
+      <img src="/up/images/logo.png" alt="Logo" class="logo" />
+    </a>
+
+    <ul class="admin-nav__links">
+      <li>
+        <a href="admin.html" class="admin-nav__link">
+          <i class="fa-solid fa-house-chimney"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="blogs.html" class="admin-nav__link">
+          <i class="fa-solid fa-blog"></i>
+          <span>Blogs</span>
+        </a>
+      </li>
+      <li>
+        <a href="contacts.html" class="admin-nav__link admin-nav__link--active">
+          <i class="fa-solid fa-address-book"></i>
+          <span>Contacts</span>
+        </a>
+      </li>
+      <li>
+        <a href="stats.html" class="admin-nav__link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Stats</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+      <!-- Main Content Area -->
+  <main class="admin-main page-width padd">
+ 
+      <!-- Header with greeting and icons -->
+      <header class="admin-header padd">
+        <div class="admin-header__greeting">
+          <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
+          <h1 class="admin-header__title sec-title">John Doe</h1>
+          
+        </div>
+
+        <div class="admin-header__icons">
+      <div class="admin-header__search">
+      <button type="button"
+              class="admin-header__icon-btn"
+              id="searchToggle"
+              aria-label="Search"
+              aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <!-- Hidden search form -->
+      <form class="admin-header__search-form" id="searchForm" action="/search" method="get">
+        <input type="search"
+               name="q"
+               placeholder="Search…"
+               aria-label="Search site" />
+      </form>
+    </div>
+          <button class="admin-header__icon-btn" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="admin-header__icon-btn" aria-label="Messages">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <figure class="admin-header__profile">
+            <img src="/up/images/johnhemb.jpg" alt="John Doe profile" />
+          </figure>
+        </div>
+      </header>
+
+  <!-- Contact Messages Section -->
+  <section class="admin-contacts">
+    <div class="admin-contacts__header">
+      <div class="admin-contacts__header-left">
+        <h2 class="admin-contacts__title">Contact Messages</h2>
+        <span class="admin-contacts__count">24 messages</span>
+      </div>
+      
+      <div class="admin-contacts__header-right">
+        <div class="admin-contacts__search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" placeholder="Search by name or email..." />
+        </div>
+        
+        <select class="admin-contacts__filter">
+          <option value="all">All Messages</option>
+          <option value="unread">Unread</option>
+          <option value="read">Read</option>
+          <option value="archived">Archived</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Contact Messages List -->
+    <div class="admin-contacts__list">
+      
+      <!-- ************* CONTACT MESSAGE ITEM 1 ********** -->
+      <div class="contact-item">
+        <!-- Checkbox for bulk actions -->
+        <input type="checkbox" class="contact-item__checkbox" />
+
+        <!-- Contact Name -->
+        <div class="contact-item__name-section">
+          <h3 class="contact-item__name">Sarah Johnson</h3>
+          <p class="contact-item__status">Not Replied</p>
+        </div>
+
+        <!-- Contact Email -->
+        <div class="contact-item__email-section">
+          <p class="contact-item__email">sarah.johnson@email.com</p>
+          <span class="contact-item__label">Email</span>
+        </div>
+
+        <!-- Contact Phone -->
+        <div class="contact-item__phone-section">
+          <p class="contact-item__phone">+1 (555) 123-4567</p>
+          <span class="contact-item__label">Phone</span>
+        </div>
+
+        <!-- Message Preview -->
+        <div class="contact-item__message-section">
+          <p class="contact-item__message">
+            I'm interested in learning more about..
+          </p>
+        </div>
+
+        <!-- Received Date/Time -->
+        <div class="contact-item__date-section">
+          <p class="contact-item__date">2025-09-29</p>
+          <span class="contact-item__time">2:30 PM</span>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="contact-item__actions">
+          <a href="contact-detail.html" class="contact-item__view" aria-label="View Full Message" title="View">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          <form onsubmit="alert('Delete functionality coming soon!'); return false;">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="contact-item__delete" aria-label="Delete Message" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- CONTACT MESSAGE ITEM 2 ********* -->
+      <div class="contact-item">
+        <input type="checkbox" class="contact-item__checkbox" />
+
+        <div class="contact-item__name-section">
+          <h3 class="contact-item__name">Michael Chen</h3>
+          <p class="contact-item__status contact-item__status--replied">Replied</p>
+        </div>
+
+        <div class="contact-item__email-section">
+          <p class="contact-item__email">michael.chen@company.com</p>
+          <span class="contact-item__label">Email</span>
+        </div>
+
+        <div class="contact-item__phone-section">
+          <p class="contact-item__phone">+1 (555) 987-6543</p>
+          <span class="contact-item__label">Phone</span>
+        </div>
+
+        <div class="contact-item__message-section">
+          <p class="contact-item__message">
+            Great product! Just wanted to provide some ...
+          </p>
+        </div>
+
+        <div class="contact-item__date-section">
+          <p class="contact-item__date">2025-09-28</p>
+          <span class="contact-item__time">10:15 AM</span>
+        </div>
+
+        <div class="contact-item__actions">
+          <a href="contact-detail.html" class="contact-item__view" aria-label="View Full Message" title="View">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          <form method="">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="contact-item__delete" aria-label="Delete Message" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Message Item 3 -->
+      <div class="contact-item">
+        <input type="checkbox" class="contact-item__checkbox" />
+
+        <div class="contact-item__name-section">
+          <h3 class="contact-item__name">Emma Wilson</h3>
+          <p class="contact-item__status">Not Replied</p>
+        </div>
+
+        <div class="contact-item__email-section">
+          <p class="contact-item__email">emma.wilson@email.com</p>
+          <span class="contact-item__label">Email</span>
+        </div>
+
+        <div class="contact-item__phone-section">
+          <p class="contact-item__phone">+44 (20) 7946 0958</p>
+          <span class="contact-item__label">Phone</span>
+        </div>
+
+        <div class="contact-item__message-section">
+          <p class="contact-item__message">
+            I have a question regarding your pricing ....
+          </p>
+        </div>
+
+        <div class="contact-item__date-section">
+          <p class="contact-item__date">2025-09-27</p>
+          <span class="contact-item__time">4:45 PM</span>
+        </div>
+
+        <div class="contact-item__actions">
+          <a href="contact-detail.html" class="contact-item__view" aria-label="View Full Message" title="View">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          <form method="">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="contact-item__delete" aria-label="Delete Message" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Message Item 4 -->
+      <div class="contact-item contact-item--unread">
+        <input type="checkbox" class="contact-item__checkbox" />
+
+        <div class="contact-item__name-section">
+          <h3 class="contact-item__name">James Rodriguez</h3>
+          <p class="contact-item__status contact-item__status--unread">Unread</p>
+        </div>
+
+        <div class="contact-item__email-section">
+          <p class="contact-item__email">james.rodriguez@email.com</p>
+          <span class="contact-item__label">Email</span>
+        </div>
+
+        <div class="contact-item__phone-section">
+          <p class="contact-item__phone">+1 (555) 234-5678</p>
+          <span class="contact-item__label">Phone</span>
+        </div>
+
+        <div class="contact-item__message-section">
+          <p class="contact-item__message">
+            Hello! I'm interested in partnership opportunities...
+          </p>
+        </div>
+
+        <div class="contact-item__date-section">
+          <p class="contact-item__date">2025-09-26</p>
+          <span class="contact-item__time">9:20 AM</span>
+        </div>
+
+        <div class="contact-item__actions">
+          <a href="contact-detail.html" class="contact-item__view" aria-label="View Full Message" title="View">
+            <i class="fa-solid fa-eye"></i>
+          </a>
+          <form method="">
+          <input type="hidden" name="_method" value="DELETE">
+          <button class="contact-item__delete" aria-label="Delete Message" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Modal for viewing full message (optional) -->
+  <div id="contactModal" class="contact-modal">
+    <div class="contact-modal__content">
+      <button class="contact-modal__close" aria-label="Close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 @use "../general-styles/typography" as type;
 
 .sec-sub-title {
-    font-size: type.font-size-st(sc);
+    font-size: type.font-size-st(m);
     font-weight: type.font-weight(medium);
     color: clrs.color-type("3");
     transition: all 0.25s ease-in-out;

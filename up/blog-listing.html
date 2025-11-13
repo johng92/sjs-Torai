@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Dashboard</title>
+    <link rel="stylesheet" href="css/admin-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="container">
+
+    <!-- Left Sidebar Navigation -->
+    <nav class="admin-nav padd">
+      <a href="admin.html" class="admin-nav__logo">
+        <img src="/up/images/logo.png" alt="Logo" class="logo" />
+      </a>
+
+      <ul class="admin-nav__links">
+        <li>
+          <a href="admin.html" class="admin-nav__link admin-nav__link--active">
+            <i class="fa-solid fa-house-chimney"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="blogs.html" class="admin-nav__link">
+            <i class="fa-solid fa-blog"></i>
+            <span>Blogs</span>
+          </a>
+        </li>
+        <li>
+          <a href="admin-contact.html" class="admin-nav__link">
+            <i class="fa-solid fa-address-book"></i>
+            <span>Contacts</span>
+          </a>
+        </li>
+        <li>
+          <a href="stats.html" class="admin-nav__link">
+            <i class="fa-solid fa-chart-simple"></i>
+            <span>Stats</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="admin-main page-width padd">
+      
+      <!-- Header with greeting and icons -->
+      <header class="admin-header padd">
+        <div class="admin-header__greeting">
+          <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
+          <h1 class="admin-header__title sec-title">John Doe</h1>
+          
+        </div>
+
+        <div class="admin-header__icons">
+<div class="admin-header__search">
+      <button type="button"
+              class="admin-header__icon-btn"
+              id="searchToggle"
+              aria-label="Search"
+              aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <!-- Hidden search form -->
+      <form class="admin-header__search-form" id="searchForm" action="/search" method="get">
+        <input type="search"
+               name="q"
+               placeholder="Search…"
+               aria-label="Search site" />
+      </form>
+    </div>
+          <button class="admin-header__icon-btn" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="admin-header__icon-btn" aria-label="Messages">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <figure class="admin-header__profile">
+            <img src="/up/images/johnhemb.jpg" alt="John Doe profile" />
+          </figure>
+        </div>
+      </header>
+
+
+
+      
+      <!-- Blogs Section -->
+<section class="admin-blogs padd">
+  <div class="admin-blogs__header">
+    <div class="admin-blogs__header-left">
+      <p class="admin-blogs__title sec-sub-para">All Blogs</p>
+      <span class="admin-blogs__count">12 posts</span>
+    </div>
+    
+    <div class="admin-blogs__header-right">
+      <div class="admin-blogs__search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" placeholder="Search blogs..." />
+      </div>
+      
+      <select class="admin-blogs__filter">
+        <option value="all">All Categories</option>
+        <option value="android">Android</option>
+        <option value="productivity">Productivity</option>
+        <option value="security">Security</option>
+      </select>
+      
+      <a href="add-blog.html" class="admin-blogs__add action-link">Add Blog</a>
+    </div>
+  </div>
+
+  <div class="admin-blogs__list">
+    <!-- Blog items -->
+    <section class="admin-blogs ">
+
+  <div class="admin-blogs__list">
+    
+    <!-- First Blog Item -->
+    <div class="blog-item padd">
+      <!-- Blog Date -->
+      <p class="blog-item__date">2025-09-29</p>
+
+      <!-- Blog Image -->
+      <figure class="blog-item__image">
+        <img src="https://picsum.photos/200" alt="Blog 1 Thumbnail" />
+      </figure>
+
+      <!-- Blog Title -->
+      <h3 class="blog-item__title">Understanding Grid Systems in Modern Web Design</h3>
+
+      <!-- Action Icons -->
+  <div class="blog-item__actions">
+    <a href="#" class="blog-item__edit" aria-label="Edit">
+      <i class="fa-solid fa-pencil"></i>
+    </a>
+
+    <a href="#"
+      class="blog-item__delete"
+      aria-label="Delete"
+      onclick="return confirm('Are you sure you want to delete this blog?');">
+      <i class="fa-solid fa-trash"></i>
+    </a>
+  </div>
+
+    </div>
+
+        <!-- Second Blog Item -->
+    <div class="blog-item">
+      <!-- Blog Date -->
+      <p class="blog-item__date">2025-09-29</p>
+
+      <!-- Blog Image -->
+      <figure class="blog-item__image">
+        <img src="https://picsum.photos/200" alt="Blog 1 Thumbnail" />
+      </figure>
+
+      <!-- Blog Title -->
+      <h3 class="blog-item__title">Understanding Grid Systems in Modern Web Design</h3>
+
+      <!-- Action Icons -->
+      <div class="blog-item__actions">
+      <a href="#" class="blog-item__edit" aria-label="Edit">
+        <i class="fa-solid fa-pencil"></i>
+      </a>
+
+      <a href="#"
+        class="blog-item__delete"
+        aria-label="Delete"
+        onclick="return confirm('Are you sure you want to delete this blog?');">
+        <i class="fa-solid fa-trash"></i>
+      </a>
+    </div>
+
+    </div>
+
+    <!------Third Blog Item ------- -->
+    <div class="blog-item">
+      <!-- Blog Date -->
+      <p class="blog-item__date">2025-09-29</p>
+
+      <!-- Blog Image -->
+      <figure class="blog-item__image">
+        <img src="https://picsum.photos/200" alt="Blog 1 Thumbnail" />
+      </figure>
+
+      <!-- Blog Title -->
+      <h3 class="blog-item__title">Understanding Grid Systems in Modern Web Design</h3>
+
+      <!-- Action Icons -->
+      <div class="blog-item__actions">
+        <a href="#" class="blog-item__edit" aria-label="Edit">
+          <i class="fa-solid fa-pencil"></i>
+        </a>
+
+        <a href="#"
+          class="blog-item__delete"
+          aria-label="Delete"
+          onclick="return confirm('Are you sure you want to delete this blog?');">
+          <i class="fa-solid fa-trash"></i>
+        </a>
+      </div>
+
+    </div>
+    <!-- Add more blog items dynamically via PHP -->
+    
+  </div>
+</section>
+  </div>
+</section>
+
+
+
+
+
+    </main>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>
