@@ -4,11 +4,11 @@
 @use "../general-styles/typography" as type;
 
 .header {
-  background-color: --color-white;
+  background-color: var(--color-white);
   padding: pad.padding-d-v(s) pad.padding-d-h(m);
 
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     column-gap: 2rem;
 
@@ -24,6 +24,7 @@
     &__nav {
       display: flex;
       gap: 3rem;
+      margin-left: auto;
     }
 
     &__nav-link {
@@ -31,8 +32,4 @@
       font-weight: type.font-weight(bold);
       color: var(--color-blue-dark);
     }
-}
-
-.hamburger{
-    display: none;
 }

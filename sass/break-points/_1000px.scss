@@ -1,0 +1,97 @@
+@use "../general-styles/padding" as pad;
+@use "../general-styles/gradient" as grad;
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+@media screen and (max-width: 1000px) {
+
+  .header {
+
+    &__logo-link {
+      // position: fixed;
+      top: 2.8rem;
+      left: 2.5rem;
+      // width: 12rem;
+      // z-index: 10;
+    }
+
+    &__nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+      padding: pad.padding-d-v(sc) pad.padding-d-h(m);
+      transition: all 0.35s ease-in-out;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 100vh;
+
+      position: fixed;
+      top: 0;
+      right: 0;
+
+      transform: translateX(100rem);
+      z-index: 9;
+    }
+  }
+// HAMBURGER MENU STYLES
+  .hamburger {
+      height: 5rem;
+      width: 9rem;
+      background-color: var(--color-white);
+      padding: pad.padding-st-h(s);
+      cursor: pointer;
+
+      position: fixed;
+      top: 2rem;
+      right: 4rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+
+      z-index: 10;
+    }
+
+    .hamburger__line {
+      display: block;
+      min-height: 3px;
+      background-color: var(--color-blue-dark); // Fallback color
+      transition: all 0.3s ease;
+      
+      z-index: 11;
+    }
+
+    .hamburger__line:nth-child(1) {
+      width: 50%;
+      transition: all 0.25s ease;
+    }
+
+   .hamburger__line:nth-child(2) {
+      transition: all 0.1s ease;
+    }
+    .hamburger__line:nth-child(3) {
+      width: 50%;
+      transition: all 0.25s ease;
+      align-self: flex-end;
+    }
+
+    // Dynamic Class added by js
+        .display__nav {
+      transform: translateX(0);
+    }
+
+    .hamburger__line-1 {
+      transform: rotate(45deg) translateX(1.5rem) translateY(-0.2rem);
+    }
+
+    .hamburger__line-2 {
+      visibility: hidden;
+    }
+
+    .hamburger__line-3 {
+      transform: rotate(-45deg) translateX(0.2rem) translateY(-2.1rem);
+    }
+
+}

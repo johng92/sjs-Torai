@@ -47,7 +47,7 @@ textarea {
   --color-navy-dark: #111232;
   --color-green-light: hsl(126 30% 58%);
   --color-green-medium: hsl(126 30% 45%);
-  --color-blue-dark: #3e66b3;
+  --color-blue-dark: hsl(219, 49%, 47%);
   --color-blue-bright: hsl(220 100% 67%);
   --color-cyan-light: hsl(180 50% 91%);
   /* Gradient Variables */
@@ -145,10 +145,9 @@ textarea {
 }
 
 .header {
-  background-color: --color-white;
+  background-color: var(--color-white);
   padding: calc(1rem + 1vh) calc(1rem + 6vw);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -163,6 +162,7 @@ textarea {
 .header__nav {
   display: flex;
   gap: 3rem;
+  margin-left: auto;
 }
 .header__nav-link {
   font-size: 1.8rem;
@@ -170,6 +170,69 @@ textarea {
   color: var(--color-blue-dark);
 }
 
-.hamburger {
-  display: none;
+@media screen and (max-width: 1000px) {
+  .header__logo-link {
+    top: 2.8rem;
+    left: 2.5rem;
+  }
+  .header__nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(1rem + 4vh) calc(1rem + 6vw);
+    transition: all 0.35s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100rem);
+    z-index: 9;
+  }
+  .hamburger {
+    height: 5rem;
+    width: 9rem;
+    background-color: var(--color-white);
+    padding: 2rem;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10;
+  }
+  .hamburger__line {
+    display: block;
+    min-height: 3px;
+    background-color: var(--color-blue-dark);
+    transition: all 0.3s ease;
+    z-index: 11;
+  }
+  .hamburger__line:nth-child(1) {
+    width: 50%;
+    transition: all 0.25s ease;
+  }
+  .hamburger__line:nth-child(2) {
+    transition: all 0.1s ease;
+  }
+  .hamburger__line:nth-child(3) {
+    width: 50%;
+    transition: all 0.25s ease;
+    align-self: flex-end;
+  }
+  .display__nav {
+    transform: translateX(0);
+  }
+  .hamburger__line-1 {
+    transform: rotate(45deg) translateX(1.5rem) translateY(-0.2rem);
+  }
+  .hamburger__line-2 {
+    visibility: hidden;
+  }
+  .hamburger__line-3 {
+    transform: rotate(-45deg) translateX(0.2rem) translateY(-2.1rem);
+  }
 }/*# sourceMappingURL=main-style.css.map */
