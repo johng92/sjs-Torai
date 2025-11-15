@@ -8,11 +8,10 @@
   .header {
 
     &__logo-link {
-      // position: fixed;
+
       top: 2.8rem;
       left: 2.5rem;
-      // width: 12rem;
-      // z-index: 10;
+
     }
 
     &__nav {
@@ -23,6 +22,7 @@
 
       padding: pad.padding-d-v(sc) pad.padding-d-h(m);
       transition: all 0.35s ease-in-out;
+      background-color: var(--color-white);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       height: 100vh;
 
@@ -31,7 +31,7 @@
       right: 0;
 
       transform: translateX(100rem);
-      z-index: 9;
+      z-index: 9998;
     }
   }
 // HAMBURGER MENU STYLES
@@ -51,7 +51,7 @@
       justify-content: center;
       gap: 1rem;
 
-      z-index: 10;
+      z-index: 9999;
     }
 
     .hamburger__line {
