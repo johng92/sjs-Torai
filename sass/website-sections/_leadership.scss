@@ -1,0 +1,92 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.leadership {
+
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__card {
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to right,aliceblue,rgb(88, 87, 87), var(--color-blue-dark));
+    border-radius: 20px;
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
+    transition: all 0.2s ease-in-out;
+    }
+
+    &__card-top {
+    height: 65%;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 20px 20px 40px 0px;
+    display: flex;
+    }
+
+    &__circle {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .circle {
+      height: 100px;
+      width: 100px;
+      border: 2px solid var(--color-blue-dark);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+      }
+    }
+
+    &__card-info {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__name {
+      font-size: type.font-size-st(sc);
+      align-self: flex-start;
+    }
+
+    &__position {
+      font-size: type.font-size-st(s);
+    }
+
+    &__quotes {
+      height: 35%;
+      width: 100%;
+      background-color: var(--color-blue-dark);
+      color: white;
+      border-radius:40px 0px 20px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      p {
+        font-size: type.font-size-st(s);
+      }
+    }
+}
+

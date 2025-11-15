@@ -92,7 +92,7 @@ textarea {
   font-size: calc(1rem + 2vw);
   font-weight: 900;
   color: var(--color-blue-dark);
-  text-align: start;
+  text-align: center;
 }
 
 .sec-sub-para {
@@ -156,6 +156,13 @@ textarea {
 .cta:hover {
   background-color: var(--color-green-medium);
   color: var(--color-white);
+}
+
+.sec-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .header {
@@ -299,6 +306,80 @@ textarea {
   width: 50%;
   height: 50%;
   background-color: var(--color-cyan-light);
+}
+
+.leadership__cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+.leadership__card {
+  height: 300px;
+  width: 300px;
+  background: linear-gradient(to right, aliceblue, rgb(88, 87, 87), var(--color-blue-dark));
+  border-radius: 20px;
+  justify-content: center;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(255, 255, 255) 0px 20px 30px -10px;
+  transition: all 0.2s ease-in-out;
+}
+.leadership__card-top {
+  height: 65%;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 20px 20px 40px 0px;
+  display: flex;
+}
+.leadership__circle {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leadership .circle {
+  height: 100px;
+  width: 100px;
+  border: 2px solid var(--color-blue-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leadership .circle img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+}
+.leadership__card-info {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.leadership__name {
+  font-size: 1.8rem;
+  align-self: flex-start;
+}
+.leadership__position {
+  font-size: 1.5rem;
+}
+.leadership__quotes {
+  height: 35%;
+  width: 100%;
+  background-color: var(--color-blue-dark);
+  color: white;
+  border-radius: 40px 0px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.leadership__quotes p {
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 900px) {
