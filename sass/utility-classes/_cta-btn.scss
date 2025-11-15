@@ -11,6 +11,7 @@ background-color: var(--color-green-light);
 font-size: type.font-size-st(sc);
 font-weight: type.font-weight(bold);
 padding: pad.padding-st-v(s)  pad.padding-st-h(l);
+border: 1px solid var(--color-green-light);
 
   &:hover {
     background-color: var(--color-green-medium);

@@ -17,3 +17,15 @@
 //   color: clrs.color-link("1");
 // }
 // }
+.sec-link {
+  color: var(--color-green-light);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-green-light);
+  font-size: type.font-size-st(sc);
+  padding: pad.padding-st-v(s)  pad.padding-st-h(l);
+
+  &:hover {
+    background-color: var(--color-green-medium);
+    color: var(--color-white);
+  }
+}

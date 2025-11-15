@@ -1,0 +1,82 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  &__content {
+    flex-basis: 55%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__title {
+    font-size: type.font-size-d(l);
+
+    span {
+      color: var(--color-blue-bright);
+    }
+  }
+
+  &__subtitle {
+    font-size: type.font-size-d(m);
+    font-weight: type.font-weight(light);
+    font-style: italic;
+
+    span {
+      color: var(--color-blue-bright);
+    }
+  }
+  
+  &__para {
+    font-size: type.font-size-st(sc);
+    // color: var(--color-gray-dark);
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 22rem));
+    // justify-content: center;
+    gap: 2rem;
+
+    a {
+      text-align: center;
+    }
+
+  }
+  &__image-container {
+    flex-basis: 45%;
+    position: relative;
+  }
+
+  // decorative elements on hero image
+  &__image-container::before, &__image-container::after {
+    content: "";  
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__image-container::before {
+    top: -7%;
+    right: 0%;
+    width: 50%;
+    height: 50%;
+    background-color: var(--color-cyan-light);
+  }
+
+    &__image-container::after {
+    bottom: -7%;
+    left: 0%;
+    width: 50%;
+    height: 50%;
+
+    background-color: var(--color-cyan-light);
+  }
+
+
+}

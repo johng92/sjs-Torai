@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -66,6 +67,18 @@ textarea {
 
 .padd {
   padding: calc(1rem + 6vh) calc(1rem + 2vw);
+}
+
+.sec-link {
+  color: var(--color-green-light);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-green-light);
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+}
+.sec-link:hover {
+  background-color: var(--color-green-medium);
+  color: var(--color-white);
 }
 
 .sec-para {
@@ -138,6 +151,7 @@ textarea {
   font-size: 1.8rem;
   font-weight: 700;
   padding: 1rem 3rem;
+  border: 1px solid var(--color-green-light);
 }
 .cta:hover {
   background-color: var(--color-green-medium);
@@ -225,6 +239,74 @@ textarea {
   }
   to {
     transform: translateX(-1528px);
+  }
+}
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.hero__content {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero__title {
+  font-size: calc(2rem + 3vw);
+}
+.hero__title span {
+  color: var(--color-blue-bright);
+}
+.hero__subtitle {
+  font-size: calc(1rem + 2vw);
+  font-weight: 300;
+  font-style: italic;
+}
+.hero__subtitle span {
+  color: var(--color-blue-bright);
+}
+.hero__para {
+  font-size: 1.8rem;
+}
+.hero__btns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 22rem));
+  gap: 2rem;
+}
+.hero__btns a {
+  text-align: center;
+}
+.hero__image-container {
+  flex-basis: 45%;
+  position: relative;
+}
+.hero__image-container::before, .hero__image-container::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.hero__image-container::before {
+  top: -7%;
+  right: 0%;
+  width: 50%;
+  height: 50%;
+  background-color: var(--color-cyan-light);
+}
+.hero__image-container::after {
+  bottom: -7%;
+  left: 0%;
+  width: 50%;
+  height: 50%;
+  background-color: var(--color-cyan-light);
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero__content {
+    padding-bottom: 1rem;
   }
 }
 @media screen and (max-width: 1000px) {
