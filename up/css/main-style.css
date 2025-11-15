@@ -366,6 +366,7 @@ textarea {
 }
 .leadership__position {
   font-size: 1.5rem;
+  align-self: flex-start;
 }
 .leadership__quotes {
   height: 35%;
