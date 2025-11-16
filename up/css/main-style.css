@@ -408,11 +408,8 @@ textarea {
 .principal__content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   flex-basis: 60%;
-}
-.principal__content-para {
-  line-height: 1.9;
 }
 .principal__content-title {
   text-align: start;

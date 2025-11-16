@@ -29,12 +29,9 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     flex-basis: 60%;
 
-    &-para {
-      line-height: 1.9;
-    }
 
     &-title {
       text-align: start;
