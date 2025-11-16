@@ -3,8 +3,6 @@
 @use "../general-styles/typography" as type;
 
 .about {
-  display: flex;
-  gap: 1rem;
   background:  var(--gradient-cyan);
 
   &__content {
