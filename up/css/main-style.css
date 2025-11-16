@@ -383,6 +383,50 @@ textarea {
   font-size: 1.5rem;
 }
 
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.principal__photo {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+}
+.principal__photo img {
+  border: 2px solid var(--color-blue-dark);
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+.principal__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-basis: 60%;
+}
+.principal__content-para {
+  line-height: 1.9;
+}
+.principal__content-title {
+  text-align: start;
+}
+.principal__content-name-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: flex-start;
+}
+.principal__content-name {
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 900px) {
   .hero {
     flex-direction: column;

@@ -1,0 +1,58 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  &__photo {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    
+    img {
+      border: 2px solid var(--color-blue-dark);
+      width: 40%;
+      
+      height: 40%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-basis: 60%;
+
+    &-para {
+      line-height: 1.9;
+    }
+
+    &-title {
+      text-align: start;
+    }
+
+    &-name-box {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      align-items: flex-start;
+      
+    }
+
+    &-name {
+     font-size: type.font-size-st(m);
+  
+    }
+
+
+  }
+}
