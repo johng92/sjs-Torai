@@ -424,6 +424,13 @@ textarea {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 600px) {
+  .principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 900px) {
   .hero {
     flex-direction: column;

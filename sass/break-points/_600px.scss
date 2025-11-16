@@ -3,3 +3,11 @@
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/typography" as type;
 
+@media  screen and (max-width: 600px) {
+  .principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}
