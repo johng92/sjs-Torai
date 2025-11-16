@@ -138,7 +138,7 @@ textarea {
 }
 
 .sec-sub-title {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 500;
   color: var(--color-navy-dark);
   transition: all 0.25s ease-in-out;
@@ -308,6 +308,9 @@ textarea {
   background-color: var(--color-cyan-light);
 }
 
+.leadership {
+  display: none;
+}
 .leadership__cards {
   display: flex;
   justify-content: space-evenly;
@@ -470,11 +473,46 @@ textarea {
      object-position: center;
 }
 
+.academics__container {
+  display: flex;
+  gap: 2rem;
+}
+.academics__container--card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+.academics__container--card-para {
+  font-size: 2rem;
+  color: var(--color-blue-dark);
+}
+.academics__container--card-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.academics__container--card-icons li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 2rem;
+}
+.academics__container--card-icons li a {
+  font-size: calc(1rem + 2vw);
+  color: var(--color-navy-dark);
+  text-decoration: none;
+}
+.academics__container--card-icons li a i {
+  color: var(--color-green-medium);
+}
+.academics__container--card .btn {
+  align-self: flex-start;
+}
+
 @media screen and (max-width: 600px) {
   .principal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 800px) {
@@ -483,6 +521,18 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .about__content, .about__group-photo {
+    width: 100%;
+  }
+  .academics__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .academics__container--card {
+    width: 100%;
   }
 }
 @media screen and (max-width: 900px) {

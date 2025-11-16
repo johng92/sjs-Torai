@@ -9,6 +9,26 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+
+    &__content,
+    &__group-photo {
+      width: 100%;
+    }
   }
+
+
+.academics__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+
+
+  &--card {
+    width: 100%;
+  }
+}
+
 
 }

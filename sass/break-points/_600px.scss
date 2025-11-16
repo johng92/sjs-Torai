@@ -5,9 +5,7 @@
 
 @media  screen and (max-width: 600px) {
   .principal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  flex-direction: column;
   }
 
 }

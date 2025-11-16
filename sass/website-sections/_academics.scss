@@ -1,0 +1,49 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+.academics {
+  &__container {
+    display: flex;
+    gap: 2rem;
+
+    &--card {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 50%;
+
+      &-para {
+        font-size: type.font-size-st(m);
+        color: var(--color-blue-dark);
+        
+      }
+      &-icons{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        li {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          font-size: type.font-size-st(m);
+
+          a {
+            font-size: type.font-size-d(m);
+            color: var( --color-navy-dark);
+            text-decoration: none;
+            
+            i {
+              color: var( --color-green-medium);
+              
+            }
+          }
+        }
+      }
+        .btn {
+          align-self: flex-start;
+        }
+    }
+  }
+}
