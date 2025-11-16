@@ -1,0 +1,56 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.about {
+  display: flex;
+  gap: 1rem;
+  background:  var(--gradient-cyan);
+
+  &__content {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+
+    h2 {
+      font-size: type.font-size-st(xl);
+      font-weight: type.font-weight(bold);
+      color: var( --color-navy-dark);
+      text-align: start;
+    }
+
+    h3 {
+      font-size: type.font-size-st(l);
+      font-weight: type.font-weight(bold);
+      color: var(--color-blue-dark);
+    }
+    .cta {
+      align-self: start;
+    }
+    &-link {
+     color: var( --color-navy-dark);
+      font-size: type.font-size-st(m);
+      font-weight: type.font-weight(medium);
+
+    }
+  }
+
+  &__group-photo  {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-self: center;
+
+    img {
+    border-radius: 10px;
+    width: 100%;
+    // height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+    }
+  }
+}
