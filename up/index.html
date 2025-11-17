@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sjs-Torai</title>
+        <!-- Linking SwiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main-style.css" />
     <link
       rel="stylesheet"
@@ -108,8 +111,11 @@
         <h2 class="sec-title">Key Members</h2>
 
         <div class="leadership__card-body">
-        <div class="leadership__cards">
-          <article class="leadership__card">
+        
+        <div class="swiper">
+        <div class="slider-wrapper">
+        <div class="leadership__cards swiper-wrapper">
+          <article class="leadership__card swiper-slide">
             <div class="leadership__card-top">
               <div class="leadership__circle">
                 <figure class="circle">
@@ -128,7 +134,7 @@
             </div>
           </article>
 
-          <article class="leadership__card">
+          <article class="leadership__card swiper-slide">
             <div class="leadership__card-top">
               <div class="leadership__circle">
                 <figure class="circle">
@@ -149,7 +155,7 @@
             </div>
           </article>
 
-          <article class="leadership__card">
+          <article class="leadership__card swiper-slide">
             <div class="leadership__card-top">
               <div class="leadership__circle">
                 <figure class="circle">
@@ -168,7 +174,7 @@
             </div>
           </article>
 
-          <article class="leadership__card">
+          <article class="leadership__card swiper-slide">
             <div class="leadership__card-top">
               <div class="leadership__circle">
                 <figure class="circle">
@@ -187,6 +193,14 @@
             </div>
           </article>
         </div> <!--leadership__cards ends i.e. cards-list -->
+
+          <!-- Add pagination code below -->
+          <div class="swiper-pagination"></div>
+          <!--Swiper navigation buttons -->
+          <div class="swiper-slide-button swiper-button-prev"></div>
+          <div class="swiper-slide-button swiper-button-next"></div>
+        </div> <!--slider-wrapper ENDS-->
+        </div> <!--swiper  ends-->
         </div> <!--leadership__card-body ends-->
       </section>
       <!-------- PRINCIPAL START ------->
@@ -352,7 +366,7 @@
 
       <section class="news padd sec-flex">
         <h2 class="sec-title">Recent News</h2>
-        <div class="news__cards responsive-grid-b">
+        <div class="news__cards responsive-grid">
           <div class="news__card">
             <figure>
               <img src="/up/images/foundation_day.jpg" alt="" />
@@ -445,7 +459,10 @@
         </div>
       </section>
     </main>
+    <!-- Linking SwiperJS script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<!-- Custom Script -->
     <script src="js/app.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </body>
 </html>

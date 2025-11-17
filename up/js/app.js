@@ -15,6 +15,37 @@ burger.addEventListener("click", function() {
 
   nav.classList.toggle("display__nav");
 })
+
+// SwiperJS Carousel
+const swiper = new Swiper('.slider-wrapper', {
+
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        620: {
+            slidesPerView: 2
+        },
+        1024: {
+            slidesPerView: 3
+        }
+    }
+});
 // // BAck to Top
 // // Create back to top button dynamically
 // const createBackToTopBtn = () => {

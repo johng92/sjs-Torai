@@ -305,6 +305,11 @@ textarea {
   display: flex;
   justify-content: center;
 }
+.leadership .slider-wrapper {
+  overflow: hidden;
+  max-width: 120rem;
+  margin: 0 70px 55px;
+}
 .leadership__card {
   height: 300px;
   width: 400px;

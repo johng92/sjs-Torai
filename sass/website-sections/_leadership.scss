@@ -5,12 +5,18 @@
 
 .leadership {
 
+  // padding: pad.padding-d-v(l) auto;
+
   &__card-body{
   display: flex;
   justify-content: center;
   }
 
-
+  .slider-wrapper {
+    overflow: hidden;
+    max-width: 120rem;
+    margin: 0 70px 55px;
+  }
 
   &__card {
     height: 300px;
