@@ -18,21 +18,28 @@ burger.addEventListener("click", function() {
 
 // SwiperJS Carousel
 const swiper = new Swiper('.slider-wrapper', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 30,
 
-  loop: true,
-  grabCursor: true,
-  spaceBetween: 30,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    speed: 1200,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: true
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
 
     breakpoints: {
         0: {
@@ -45,7 +52,7 @@ const swiper = new Swiper('.slider-wrapper', {
             slidesPerView: 3
         }
     }
-});
+  });
 // // BAck to Top
 // // Create back to top button dynamically
 // const createBackToTopBtn = () => {

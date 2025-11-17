@@ -5,6 +5,9 @@
 
 .leadership {
 
+  &__title {
+    padding-bottom: pad.padding-d-v(m);
+  }
   // padding: pad.padding-d-v(l) auto;
 
   &__card-body{
@@ -14,13 +17,33 @@
 
   .slider-wrapper {
     overflow: hidden;
-    max-width: 120rem;
+    /* based on your screen size */
+    max-width: 1200px;
     margin: 0 70px 55px;
+  }
+  .slider-wrapper {
+    .swiper-pagination-bullet {
+      background: var(--color-blue-dark);
+      height: 15px;
+      width: 15px;
+    }
+
+    .swiper-slide-button {
+      color: var(--color-green-light);
+      margin-top: -50px;
+      transition: 0.2s ease;  
+
+      &:hover {
+      color: var(--color-green-medium);
+
+      }
+    }
+
   }
 
   &__card {
-    height: 300px;
-    width: 400px;
+    height: 300px !important;
+    user-select: none;
     background: linear-gradient(to right,aliceblue,rgb(88, 87, 87), var(--color-blue-dark));
     border-radius: 20px;
     justify-content: center;
@@ -99,4 +122,6 @@
       }
     }
 }
+
+
 
