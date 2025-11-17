@@ -108,13 +108,6 @@ textarea {
   gap: 3rem;
 }
 
-.responsive-grid-b {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
-  gap: 3rem;
-}
-
 .sec-mini-title {
   font-size: 1.8rem;
   color: var(--color-blue-dark);
@@ -662,7 +655,7 @@ textarea {
     position: fixed;
     top: 0;
     right: 0;
-    transform: translateX(100rem);
+    transform: translateX(100%);
     z-index: 9998;
   }
   .hamburger {
