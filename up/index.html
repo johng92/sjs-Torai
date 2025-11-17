@@ -456,56 +456,124 @@
         </div>
       </section>
 
-      <section class="events padd sec-fles">
+<section class="events" id="events">
 
-        <h2 class=" events__title sec-title">Upcoming Events</h2>
+  <h2 class="events__title sec-title">Upcoming Events</h2>
 
-        <div >
+  <div class="events__container">
 
-        <div class="events__months">
-          <div class="events__months-icons">
-            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-            <a href="#"><i class="fa-solid fa-chevron-left"></i></a>
-          </div>
+    <!-- Header -->
+    <div class="events__header">
+      <div class="events__chevrons">
+        <button class="events__chevron-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="events__chevron-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
 
-          <h2 class="sec-sub-title">November 2024</h2>
-          <span class="cta">Months</span>
-        </div>
+      <h3 class="events__month">November 2024</h3>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Program name</th>
-              <th>Participants</th>
-            </tr>
-          </thead>
+      <span class="events__badge">Month</span>
+    </div>
 
-          <tbody>
-            <tr>
-              <td>5.12.2025</td>
-              <td>foiwhr</td>
-              <td>Independence Day</td>
-              <td>foiwhr</td>
-            </tr>
-            <tr>
-              <td>9.12.2025</td>
-              <td>foiwhr</td>
-              <td>Children's Day</td>
-              <td>foiwhr</td>
-            </tr>
-            <tr>
-              <td>21.12.2025</td>
-              <td>foiwhr</td>
-              <td>Teachers day</td>
-              <td>Students & Parents</td>
-            </tr>
-          </tbody>
-        </table>
-        <a href="#" class="cta">Add to Calender</a>
-        </div>
-      </section>
+    <!-- Table -->
+    <table class="events__table">
+      <tbody>
+
+        <!-- DATE 1 -->
+        <tr class="events__date-row">
+          <td colspan="2">
+            <div class="events__date-flex">
+              <span class="events__date">November 14, 2024</span>
+              <span class="events__day">Thursday</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">7:00am – 2:00pm</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Bal Diwas Celebration
+          </td>
+        </tr>
+
+        <!-- DATE 2 -->
+        <tr class="events__date-row">
+          <td colspan="2">
+            <div class="events__date-flex">
+              <span class="events__date">November 15, 2024</span>
+              <span class="events__day">Friday</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">8:00am – 1:00pm</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Guru Nanak Jayanti Holiday
+          </td>
+        </tr>
+
+        <!-- DATE 3 -->
+        <tr class="events__date-row">
+          <td colspan="2">
+            <div class="events__date-flex">
+              <span class="events__date">November 19, 2024</span>
+              <span class="events__day">Tuesday</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">10:00am – 11:00am</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Parents Meeting (Class IV–VIII)
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">1:00pm – 2:00pm</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Teachers Training Session
+          </td>
+        </tr>
+
+        <!-- DATE 4 -->
+        <tr class="events__date-row">
+          <td colspan="2">
+            <div class="events__date-flex">
+              <span class="events__date">November 21, 2024</span>
+              <span class="events__day">Thursday</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">9:30am – 12:30pm</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Science Exhibition (All Classes)
+          </td>
+        </tr>
+
+        <tr class="events__event-row">
+          <td class="events__time">1:00pm – 3:00pm</td>
+          <td class="events__details">
+            <span class="events__dot"></span>
+            Inter-House Quiz Competition
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</section>
+
+
     </main>
     <!-- Linking SwiperJS script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>

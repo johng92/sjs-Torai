@@ -607,8 +607,8 @@ textarea {
   align-self: start;
 }
 .news__card-figure {
-  width: 25rem;
-  height: 20rem;
+  width: 20rem;
+  height: auto;
 }
 .news__card-figure img {
   width: 100%;
@@ -647,50 +647,134 @@ textarea {
   border: 6px solid var(--color-blue-bright);
 }
 
+.events {
+  padding: 2rem 0;
+  width: 100%;
+  /* Header */
+  /* TABLE */
+  /* RESPONSIVE */
+}
 .events__title {
   padding-bottom: 2rem;
 }
-.events > div {
-  border: 2px solid var(--color-navy-dark);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1.5rem;
-  width: 55%;
-  margin: 0 auto;
+.events .events__container {
+  background: #fff;
+  padding: 1.3rem;
+  border-radius: 10px;
+  max-width: 820px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
-.events > div a {
-  align-self: start;
-}
-.events__months {
+.events .events__header {
   display: flex;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.events .events__header .events__chevrons {
+  display: flex;
+  gap: 0.5rem;
+}
+.events .events__header .events__chevron-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #f2f2f2;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+.events .events__header .events__chevron-btn:hover {
+  background: #e4e4e4;
+}
+.events .events__header .events__month {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.events .events__header .events__badge {
+  background: #e8f0ff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  color: #3259a5;
+}
+.events .events__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+}
+.events .events__table .events__date-row {
+  background: #f7f7f7;
+  border-left: 4px solid #1a73e8;
+}
+.events .events__table .events__date-row td {
+  padding: 0.8rem 1rem;
+}
+.events .events__table .events__date-flex {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.events__months-icons a {
-  padding: 1rem;
-  background-color: var(--color-blue-bright);
-  color: var(--color-white);
-  font-size: 2rem;
+.events .events__table .events__date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+.events .events__table .events__day {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #777;
+}
+.events .events__table .events__event-row {
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+.events .events__table .events__event-row td {
+  padding: 0.75rem 1rem;
+}
+.events .events__table .events__event-row .events__time {
+  width: 160px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #444;
+  white-space: nowrap;
+}
+.events .events__table .events__event-row .events__details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+.events .events__table .events__event-row .events__details .events__dot {
+  width: 8px;
+  height: 8px;
+  background: #1a73e8;
   border-radius: 50%;
+  display: inline-block;
 }
-.events table {
-  width: 80%;
-  margin: 0 auto;
-  border-collapse: collapse;
-}
-.events table th, .events table tr td {
-  border: 2px solid black;
-}
-.events table thead, .events table tr, .events table th {
-  height: 5rem;
-  font-size: 2rem;
-  text-align: start;
-  padding: 1rem;
-}
-.events table tbody, .events table tr, .events table td {
-  padding: 1rem;
+@media (max-width: 600px) {
+  .events .events__container {
+    padding: 1rem;
+  }
+  .events .events__date-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+  .events .events__event-row td {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+  }
+  .events .events__time {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
