@@ -104,7 +104,7 @@ textarea {
 .responsive-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 3rem;
 }
 
@@ -608,7 +608,7 @@ textarea {
   align-self: start;
 }
 
-.teachers .teachers__profile--info {
+.teachers .teachers__profile-info {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -616,17 +616,17 @@ textarea {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   align-items: center;
 }
-.teachers .teachers__profile--info > div {
+.teachers .teachers__profile-info > div {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
   align-items: center;
 }
-.teachers .teachers__profile--info figure {
+.teachers .teachers__profile-info figure {
   width: 57%;
   height: 55%;
 }
-.teachers .teachers__profile--info figure img {
+.teachers .teachers__profile-info figure img {
   width: 100%;
   width: 100%;
   -o-object-fit: cover;
