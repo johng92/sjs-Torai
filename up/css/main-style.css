@@ -308,16 +308,13 @@ textarea {
   background-color: var(--color-cyan-light);
 }
 
-.leadership {
-  display: none;
-}
-.leadership__cards {
+.leadership__card-body {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .leadership__card {
   height: 300px;
-  width: 300px;
+  width: 400px;
   background: linear-gradient(to right, aliceblue, rgb(88, 87, 87), var(--color-blue-dark));
   border-radius: 20px;
   justify-content: center;
