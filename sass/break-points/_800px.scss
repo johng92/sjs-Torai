@@ -32,4 +32,14 @@
 // ACADEMICS END 
 
 
+    .news {
+
+      &__cards {
+        flex-direction: column;
+
+        width: 100%;
+      }
+    }
+
+
 }

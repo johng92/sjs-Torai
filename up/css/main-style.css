@@ -560,11 +560,12 @@ textarea {
   gap: 3rem;
 }
 .gallery__card-info h3 {
-  padding: 2px 9px;
+  padding: 2px 8px;
   background-color: var(--color-green-light);
   align-self: start;
   color: rebeccapurple;
   border-radius: 6px;
+  font-size: 1.5rem;
 }
 .gallery__card-info a {
   padding: 1rem;
@@ -578,6 +579,45 @@ textarea {
 .gallery__card-info a:hover {
   background-color: var(--color-blue-dark);
   color: var(--color-white);
+}
+
+.news__cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+.news__card {
+  display: flex;
+  width: 48%;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem;
+}
+.news__card > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.news__card > div h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+.news__card > div a {
+  align-self: start;
+}
+.news__card-figure {
+  width: 25rem;
+  height: 20rem;
+}
+.news__card-figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 6px;
 }
 
 .teachers .teachers__profile-info {
@@ -633,6 +673,10 @@ textarea {
     gap: 4rem;
   }
   .academics__card {
+    width: 100%;
+  }
+  .news__cards {
+    flex-direction: column;
     width: 100%;
   }
 }
