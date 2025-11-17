@@ -4,20 +4,26 @@
 
 
 .academics {
-  &__container {
+  &__cards {
     display: flex;
     gap: 2rem;
+  }
 
-    &-card {
+
+    &__card {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
       width: 50%;
 
+      &-title {
+        font-weight: 800;
+        font-size: type.font-size-d("sc");
+      }
+
       &-para {
-        font-size: type.font-size-st(m);
+
         color: var(--color-blue-dark);
-        
       }
       &-icons{
         display: flex;
@@ -46,4 +52,3 @@
         }
     }
   }
-}

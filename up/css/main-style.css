@@ -487,40 +487,43 @@ textarea {
      object-position: center;
 }
 
-.academics__container {
+.academics__cards {
   display: flex;
   gap: 2rem;
 }
-.academics__container-card {
+.academics__card {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   width: 50%;
 }
-.academics__container-card-para {
-  font-size: 2rem;
+.academics__card-title {
+  font-weight: 800;
+  font-size: calc(1rem + 1.5vw);
+}
+.academics__card-para {
   color: var(--color-blue-dark);
 }
-.academics__container-card-icons {
+.academics__card-icons {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 }
-.academics__container-card-icons li {
+.academics__card-icons li {
   display: flex;
   gap: 1rem;
   align-items: center;
   font-size: 2rem;
 }
-.academics__container-card-icons li a {
+.academics__card-icons li a {
   font-size: calc(1rem + 2vw);
   color: var(--color-navy-dark);
   text-decoration: none;
 }
-.academics__container-card-icons li a i {
+.academics__card-icons li a i {
   color: var(--color-green-medium);
 }
-.academics__container-card .btn {
+.academics__card .btn {
   align-self: flex-start;
 }
 
@@ -576,38 +579,6 @@ textarea {
   color: var(--color-white);
 }
 
-.news .news__card {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-  gap: 2rem;
-}
-.news .news__card figure {
-  width: 40%;
-}
-.news .news__card figure img {
-  border-radius: 9px;
-  width: 100%;
-  height: 100%;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.news .news__card--info {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.news .news__card--info h3 {
-  text-align: start;
-  color: var(--color-navy-dark);
-}
-.news .news__card--info a {
-  align-self: start;
-}
-
 .teachers .teachers__profile-info {
   display: flex;
   flex-direction: column;
@@ -655,10 +626,12 @@ textarea {
   .about__content, .about__group-photo {
     width: 100%;
   }
-  .academics__container {
+  .academics .academics__cards {
     flex-direction: column;
+    align-content: center;
+    gap: 4rem;
   }
-  .academics__container--card {
+  .academics__card {
     width: 100%;
   }
 }

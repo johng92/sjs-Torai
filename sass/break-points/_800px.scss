@@ -15,15 +15,21 @@
   }
 
 
-.academics__container{
+  //  ACADEMICS START 
+.academics {
+
+.academics__cards{
   flex-direction: column;
+  align-content: center;
+  gap: 4rem;
+  }
 
-
-
-  &--card {
+  &__card {
     width: 100%;
   }
+
 }
+// ACADEMICS END 
 
 
 }
