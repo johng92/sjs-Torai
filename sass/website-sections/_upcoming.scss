@@ -1,0 +1,71 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+
+
+.events {
+
+  &__title {
+    padding-bottom: 2rem;
+  }
+
+  >div {
+    border: 2px solid var(--color-navy-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: pad.padding-st-v("m");
+    width: 55%;
+   margin: 0 auto;
+
+   a {
+    align-self: start;
+   }
+  }
+  &__months {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+    
+
+    &-icons {
+      a {
+        padding: pad.padding-st-v("s");
+        background-color: var(--color-blue-bright);
+        color: var(--color-white);
+        font-size: type.font-size-st("m");
+        border-radius: 50%;
+      }
+    }
+  }
+
+
+  table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    
+    th, tr td {
+      border: 2px solid black;
+
+    }
+    
+
+
+    thead ,tr,th {
+    
+      height: 5rem;
+      font-size: type.font-size-st("m");
+      text-align: start;
+      padding: pad.padding-st-v("s");
+    }
+
+    tbody , tr, td {
+      padding: pad.padding-st-v("s");
+      
+    }
+
+  }
+}

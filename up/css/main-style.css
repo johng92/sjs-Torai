@@ -597,7 +597,7 @@ textarea {
 .news__card > div {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 2rem;
 }
 .news__card > div h2 {
   font-size: 1.8rem;
@@ -647,17 +647,80 @@ textarea {
   border: 6px solid var(--color-blue-bright);
 }
 
+.events__title {
+  padding-bottom: 2rem;
+}
+.events > div {
+  border: 2px solid var(--color-navy-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  width: 55%;
+  margin: 0 auto;
+}
+.events > div a {
+  align-self: start;
+}
+.events__months {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  align-items: center;
+}
+.events__months-icons a {
+  padding: 1rem;
+  background-color: var(--color-blue-bright);
+  color: var(--color-white);
+  font-size: 2rem;
+  border-radius: 50%;
+}
+.events table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.events table th, .events table tr td {
+  border: 2px solid black;
+}
+.events table thead, .events table tr, .events table th {
+  height: 5rem;
+  font-size: 2rem;
+  text-align: start;
+  padding: 1rem;
+}
+.events table tbody, .events table tr, .events table td {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .news__card {
+    width: 100%;
+  }
+  .news__card > div {
+    width: 20%;
+  }
+  .news__card figure {
+    width: 80%;
+  }
+}
 @media screen and (max-width: 600px) {
   .principal {
     flex-direction: column;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .slider-wrapper {
     margin: 0 10px 40px;
   }
   .slider-wrapper .swiper-slide-button {
     display: none;
+  }
+  .news__card {
+    width: 100%;
+  }
+  .news__card figure {
+    width: 40%;
   }
 }
 @media screen and (max-width: 800px) {
