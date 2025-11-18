@@ -4,10 +4,13 @@
 @use "../general-styles/typography" as type;
 
 @media  screen and (max-width: 600px) {
+  // Utility class
+  .sec-title {
+    font-size: type.font-size-st(mc);
+  }
+  // Principle section
   .principal {
   flex-direction: column;
   }
-
-
 
 }
