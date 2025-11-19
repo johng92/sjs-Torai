@@ -530,55 +530,78 @@ textarea {
 .gallery {
   background: var(--gradient-cyan);
 }
+.gallery__card-link {
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  border-radius: 14px;
+}
 .gallery__card {
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 2rem;
-  padding: 1.5rem calc(0.2rem + 1vh);
-  background-color: var(--color-white);
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 3px solid transparent;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease-in-out;
+  border: 2px solid transparent;
 }
-.gallery__card:hover, .gallery__card__card:hover {
-  transition: all 0.43s ease-in-out;
-  border: 3px solid var(--color-blue-dark);
+.gallery__card:hover {
+  border-color: var(--color-blue-dark);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
-.gallery__card figure {
-  width: 300px;
-  height: 200px;
+.gallery__card:hover .gallery__link i {
+  background-color: var(--color-blue-dark);
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid transparent;
 }
-.gallery__card figure img {
+.gallery__image {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  padding: 1.1rem;
+}
+.gallery__image img {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
-.gallery__card-info {
+.gallery__content {
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.2rem;
 }
-.gallery__card-info h3 {
-  padding: 2px 8px;
-  background-color: var(--color-green-light);
-  align-self: start;
-  color: rebeccapurple;
+.gallery__badge {
+  font-size: 1.5rem;
+  background: var(--color-green-light);
+  padding: 0.3rem 0.7rem;
   border-radius: 6px;
-  font-size: 1.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--color-navy-dark);
 }
-.gallery__card-info a {
-  padding: 1rem;
+.gallery__text {
+  color: var(--color-navy-dark);
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+.gallery__link {
+  align-self: flex-start;
   border: 2px solid var(--color-navy-dark);
-  align-self: start;
-  border-radius: 100%;
-  transform: rotate(45deg);
-  transition: all 0.53s ease-in-out;
-  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: all 0.4s ease;
 }
-.gallery__card-info a:hover {
-  background-color: var(--color-blue-dark);
-  color: var(--color-white);
+.gallery__link i {
+  color: var(--color-navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  font-size: 1.8rem;
+  transform: rotate(45deg);
 }
 
 .news__cards {
