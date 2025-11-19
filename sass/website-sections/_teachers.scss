@@ -2,37 +2,67 @@
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
 
-
 .teachers {
-.teachers__profile {
+  background-color: var(--color-white);
+  padding: pad.padding-d-v("m");
 
-  &-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: pad.padding-st-v("m");
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    align-items: center;
+  &__list {
+    width: 100%;
+    padding-top: 1.5rem;
+  }
 
-    >div {
-      display: flex;
-      flex-direction: column;
-      gap: 0.9rem;
-      align-items: center;
-    }
-    figure {
-      width: 57%;
-      height: 55%;
-      
-      img {
-        width: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 6px solid var(--color-blue-bright);
-      }
+  /* THE CARD */
+  &__person {
+    width: clamp(250px, 60vw, 320px);   // Fixed card width
+    background: var(--color-cyan-lightest);
+    border: 1px solid var(--color-blue-dark);
+    border-radius: 1rem;
+
+    padding: pad.padding-st-v(m);
+    margin: 0 auto 2rem;                // Center + vertical spacing
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    transition: all .25s ease;
+
+    text-align: center;
+    overflow: hidden;
+
+    // Taller height feel (a bit more breathing space)
+    min-height: 300px;
+
+    &:hover {
+      border-color: var(--color-blue-dark);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.12);
     }
   }
-}
-}
 
+  /* PHOTO */
+  &__photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.2rem;
+    display: block;
+    border: 2px solid var(--color-blue-dark);
+    padding: 2px;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+
+  /* NAME */
+  &__name {
+    font-size: type.font-size-st(sc);
+    font-weight: 600;
+    color: var(--color-navy-dark);
+    margin-bottom: .4rem;
+  }
+
+  /* SUBJECTS */
+  &__subject {
+    font-size: type.font-size-st(s);
+    color: var(--color-gray-dark);
+    line-height: 1.5;
+  }
+}
