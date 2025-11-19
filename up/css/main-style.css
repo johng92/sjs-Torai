@@ -48,9 +48,11 @@ textarea {
   --color-navy-dark: #111232;
   --color-green-light: hsl(126 30% 58%);
   --color-green-medium: hsl(126 30% 45%);
+  --color-green-tint: #e3f0e4;
   --color-blue-dark: hsl(219, 49%, 47%);
   --color-blue-bright: hsl(220 100% 67%);
   --color-cyan-light: hsl(180 50% 91%);
+  --color-cyan-lightest: #f7fbfb;
   /* Gradient Variables */
   --gradient-cyan: linear-gradient(#d8f2f2, #f7fbfb);
 }
@@ -604,6 +606,67 @@ textarea {
   transform: rotate(45deg);
 }
 
+.recent-news {
+  background-color: var(--color-white);
+  padding: calc(1rem + 6vh);
+  /* IMAGE FULL WIDTH */
+  /* TAGS LEFT */
+  /* INFO RIGHT */
+  /* TITLE FULL WIDTH */
+  /* PARA FULL WIDTH */
+  /* BUTTON LEFT */
+}
+.recent-news__card {
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.1rem;
+}
+.recent-news__img-photo {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 180px;
+}
+.recent-news__img-photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.recent-news__tags {
+  grid-column: 1/span 2;
+  font-size: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-green-tint);
+  color: var(--color-green-medium);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recent-news__info {
+  grid-column: 4/-1;
+  font-size: 1.5rem;
+  text-align: right;
+}
+.recent-news__news-title {
+  grid-column: 1/-1;
+  font-size: 1.8rem;
+}
+.recent-news__para {
+  grid-column: 1/-1;
+  font-size: 1.5rem;
+}
+.recent-news__btn {
+  grid-column: 1/span 2;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .teachers .teachers__profile-info {
   display: flex;
   flex-direction: column;
@@ -775,12 +838,6 @@ textarea {
   }
   .slider-wrapper .swiper-slide-button {
     display: none;
-  }
-  .news__card {
-    width: 100%;
-  }
-  .news__card figure {
-    width: 40%;
   }
 }
 @media screen and (max-width: 800px) {
