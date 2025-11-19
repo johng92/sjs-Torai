@@ -22,11 +22,11 @@ const swiper = new Swiper('.slider-wrapper', {
     grabCursor: true,
     spaceBetween: 30,
 
-    // autoplay: {
-    //     delay: 2000,
-    //     disableOnInteraction: false,
-    // },
-    // speed: 1200,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    speed: 1200,
   
     // If we need pagination
     pagination: {

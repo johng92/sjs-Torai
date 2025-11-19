@@ -678,6 +678,7 @@ textarea {
 .teachers {
   background-color: var(--color-white);
   padding: calc(1rem + 6vh);
+  /* Swiper JS */
   /* THE CARD */
   /* PHOTO */
   /* NAME */
@@ -687,8 +688,28 @@ textarea {
   width: 100%;
   padding-top: 1.5rem;
 }
+.teachers .slider-wrapper {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 70px 55px;
+}
+.teachers .slider-wrapper .swiper-pagination-bullet {
+  background: #4658ff;
+  width: 15px;
+  height: 15px;
+}
+.teachers .slider-wrapper .swiper-slide-button {
+  color: #fff;
+  margin-top: -50px;
+  transition: 0.2s ease;
+}
+.teachers .slider-wrapper .swiper-slide-button:hover {
+  color: #4658ff;
+}
 .teachers__person {
-  width: clamp(250px, 60vw, 320px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   background: var(--color-cyan-lightest);
   border: 1px solid var(--color-blue-dark);
   border-radius: 1rem;

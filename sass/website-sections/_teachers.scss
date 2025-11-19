@@ -6,14 +6,41 @@
   background-color: var(--color-white);
   padding: pad.padding-d-v("m");
 
+  // &__card-body {
+  //   display: flex;
+  //   justify-content: center;
+  // }
   &__list {
     width: 100%;
     padding-top: 1.5rem;
   }
 
+  // SWIPER RELATED CODES
+  .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+  .slider-wrapper .swiper-pagination-bullet {
+    background: #4658ff;
+    width: 15px;
+    height: 15px;
+  }
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+}
+  /* Swiper JS */
   /* THE CARD */
   &__person {
-    width: clamp(250px, 60vw, 320px);   // Fixed card width
+    // width: clamp(250px, 60vw, 320px);   // Fixed card width
+    user-select: none;
     background: var(--color-cyan-lightest);
     border: 1px solid var(--color-blue-dark);
     border-radius: 1rem;
