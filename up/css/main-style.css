@@ -855,6 +855,14 @@ textarea {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .slider-wrapper {
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    max-width: 100% !important;
+    padding-bottom: 45px !important;
+  }
+}
 @media screen and (max-width: 600px) {
   .sec-title {
     font-size: 2.5rem;
