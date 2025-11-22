@@ -16,43 +16,78 @@ burger.addEventListener("click", function() {
   nav.classList.toggle("display__nav");
 })
 
-// SwiperJS Carousel
-const swiper = new Swiper('.slider-wrapper', {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 30,
+/* ==========================================================
+   MASTER SWIPER INITIALIZER
+   Works for: leadership, teachers, gallery, testimonials, etc.
+   DO NOT change your HTML — this script adapts automatically.
+========================================================== */
 
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    speed: 1200,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+function initSwipers() {
+  document.querySelectorAll('.swiper[data-swiper]').forEach(swiperRoot => {
 
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1024: {
-            slidesPerView: 3
-        }
+    const type = swiperRoot.dataset.swiper;
+    const wrapper = swiperRoot.querySelector('.slider-wrapper'); // REAL SWIPER
+    const pagination = wrapper.querySelector('.swiper-pagination');
+    const nextBtn = wrapper.querySelector('.swiper-button-next');
+    const prevBtn = wrapper.querySelector('.swiper-button-prev');
+
+    // Base config
+    let options = {
+      loop: true,
+      grabCursor: true,
+      speed: 1000,
+      spaceBetween: 30,
+      observer: true,
+      observeParents: true,
+      watchOverflow: true,
+
+      breakpoints: {
+        0:   { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024:{ slidesPerView: 3 }
+      }
+    };
+
+    // Pagination attach (if exists)
+    if (pagination) {
+      options.pagination = {
+        el: pagination,
+        clickable: true,
+        dynamicBullets: true
+      };
     }
+
+    // Variant rules
+    if (type === "leadership") {
+      options.autoplay = { delay: 2300, disableOnInteraction: false };
+      if (window.innerWidth >= 500 && nextBtn && prevBtn) {
+        options.navigation = { nextEl: nextBtn, prevEl: prevBtn };
+      }
+    }
+
+    if (type === "teachers") {
+      options.autoplay = { delay: 1800, disableOnInteraction: false };
+      // no arrows
+    }
+
+    if (type === "gallery") {
+      options.autoplay = { delay: 2000 };
+      if (nextBtn && prevBtn) {
+        options.navigation = { nextEl: nextBtn, prevEl: prevBtn };
+      }
+    }
+
+    if (type === "testimonials") {
+      options.autoplay = { delay: 2600 };
+      // no arrows unless added
+    }
+
+    // Initialize REAL swiper
+    new Swiper(wrapper, options);
   });
+}
+
+initSwipers();
 // // BAck to Top
 // // Create back to top button dynamically
 // const createBackToTopBtn = () => {

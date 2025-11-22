@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sjs-Torai</title>
-        <!-- Linking SwiperJS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <!-- Linking SwiperJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="up/css/main-style.css" />
     <link
@@ -29,7 +32,9 @@
 
       <nav class="header__nav">
         <li><a class="header__nav-link" href="#">Home</a></li>
-        <li><a class="header__nav-link" href="admin-dashboard.html">Admin</a></li>
+        <li>
+          <a class="header__nav-link" href="admin-dashboard.html">Admin</a>
+        </li>
         <li><a class="header__nav-link" href="#">About</a></li>
         <li><a class="header__nav-link" href="#">Gallery</a></li>
         <li><a class="header__nav-link" href="#">News</a></li>
@@ -111,97 +116,102 @@
         <h2 class="sec-title leadership__title">Key Members</h2>
 
         <div class="leadership__card-body">
-        
-        <div class="swiper">
-        <div class="slider-wrapper">
-        <div class="leadership__cards swiper-wrapper">
-          <article class="leadership__card swiper-slide">
-            <div class="leadership__card-top">
-              <div class="leadership__circle">
-                <figure class="circle">
-                  <img src="up/images/BishopBaba.jpeg" alt="" />
-                </figure>
+          <div class="swiper" data-swiper="leadership">
+            <div class="slider-wrapper">
+              <div class="leadership__cards swiper-wrapper">
+                <article class="leadership__card swiper-slide">
+                  <div class="leadership__card-top">
+                    <div class="leadership__circle">
+                      <figure class="circle">
+                        <img src="up/images/BishopBaba.jpeg" alt="" />
+                      </figure>
+                    </div>
+
+                    <div class="leadership__card-info">
+                      <h3 class="leadership__name">Most Rev. Julius Marandi</h3>
+                      <p class="leadership__position">
+                        Bishop of Dumka Diocese
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="leadership__quotes">
+                    <p>“Lead with faith, and serve with humility.”</p>
+                  </div>
+                </article>
+
+                <article class="leadership__card swiper-slide">
+                  <div class="leadership__card-top">
+                    <div class="leadership__circle">
+                      <figure class="circle">
+                        <img src="up/images/BishopSonatan.jpeg" alt="" />
+                      </figure>
+                    </div>
+
+                    <div class="leadership__card-info">
+                      <h3 class="leadership__name">Rev. Sonatan Kisku</h3>
+                      <p class="leadership__position">
+                        Auxiliary Bishop of Dumka Diocese
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="leadership__quotes">
+                    <p>“A teacher’s kindness lasts a lifetime.”</p>
+                  </div>
+                </article>
+
+                <article class="leadership__card swiper-slide">
+                  <div class="leadership__card-top">
+                    <div class="leadership__circle">
+                      <figure class="circle">
+                        <img src="up/images/FrPiyus.jpg" alt="" />
+                      </figure>
+                    </div>
+
+                    <div class="leadership__card-info">
+                      <h3 class="leadership__name">Rev. Fr. Piyus Marandi</h3>
+                      <p class="leadership__position">Vice President</p>
+                    </div>
+                  </div>
+
+                  <div class="leadership__quotes">
+                    <p>“Every lesson is a seed of hope.”</p>
+                  </div>
+                </article>
+
+                <article class="leadership__card swiper-slide">
+                  <div class="leadership__card-top">
+                    <div class="leadership__circle">
+                      <figure class="circle">
+                        <img src="up/images/FrIgnatius.jpg" alt="" />
+                      </figure>
+                    </div>
+
+                    <div class="leadership__card-info">
+                      <h3 class="leadership__name">Fr. Ignatius Soren</h3>
+                      <p class="leadership__position">Treasurer</p>
+                    </div>
+                  </div>
+
+                  <div class="leadership__quotes">
+                    <p>“Smile, learn, grow — repeat!”</p>
+                  </div>
+                </article>
               </div>
+              <!--leadership__cards ends i.e. cards-list -->
 
-              <div class="leadership__card-info">
-                <h3 class="leadership__name">Most Rev. Julius Marandi</h3>
-                <p class="leadership__position">Bishop of Dumka Diocese</p>
-              </div>
+              <!-- Add pagination code below -->
+              <div class="swiper-pagination"></div>
+              <!--Swiper navigation buttons -->
+              <div class="swiper-slide-button swiper-button-prev"></div>
+              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
-
-            <div class="leadership__quotes">
-              <p>“Lead with faith, and serve with humility.”</p>
-            </div>
-          </article>
-
-          <article class="leadership__card swiper-slide">
-            <div class="leadership__card-top">
-              <div class="leadership__circle">
-                <figure class="circle">
-                  <img src="up/images/BishopSonatan.jpeg" alt="" />
-                </figure>
-              </div>
-
-              <div class="leadership__card-info">
-                <h3 class="leadership__name">Rev. Sonatan Kisku</h3>
-                <p class="leadership__position">
-                  Auxiliary Bishop of Dumka Diocese
-                </p>
-              </div>
-            </div>
-
-            <div class="leadership__quotes">
-              <p>“A teacher’s kindness lasts a lifetime.”</p>
-            </div>
-          </article>
-
-          <article class="leadership__card swiper-slide">
-            <div class="leadership__card-top">
-              <div class="leadership__circle">
-                <figure class="circle">
-                  <img src="up/images/FrPiyus.jpg" alt="" />
-                </figure>
-              </div>
-
-              <div class="leadership__card-info">
-                <h3 class="leadership__name">Rev. Fr. Piyus Marandi</h3>
-                <p class="leadership__position">Vice President</p>
-              </div>
-            </div>
-
-            <div class="leadership__quotes">
-              <p>“Every lesson is a seed of hope.”</p>
-            </div>
-          </article>
-
-          <article class="leadership__card swiper-slide">
-            <div class="leadership__card-top">
-              <div class="leadership__circle">
-                <figure class="circle">
-                  <img src="up/images/FrIgnatius.jpg" alt="" />
-                </figure>
-              </div>
-
-              <div class="leadership__card-info">
-                <h3 class="leadership__name">Fr. Ignatius Soren</h3>
-                <p class="leadership__position">Treasurer</p>
-              </div>
-            </div>
-
-            <div class="leadership__quotes">
-              <p>“Smile, learn, grow — repeat!”</p>
-            </div>
-          </article>
-        </div> <!--leadership__cards ends i.e. cards-list -->
-
-          <!-- Add pagination code below -->
-          <div class="swiper-pagination"></div>
-          <!--Swiper navigation buttons -->
-          <div class="swiper-slide-button swiper-button-prev"></div>
-          <div class="swiper-slide-button swiper-button-next"></div>
-        </div> <!--slider-wrapper ENDS-->
-        </div> <!--swiper  ends-->
-        </div> <!--leadership__card-body ends-->
+            <!--slider-wrapper ENDS-->
+          </div>
+          <!--swiper  ends-->
+        </div>
+        <!--leadership__card-body ends-->
       </section>
       <!-------- PRINCIPAL START ------->
       <section class="principal padd">
@@ -286,9 +296,7 @@
             <a class="sec-link btn" href="#">Learn More</a>
           </div>
           <div class="academics__card">
-            <h2 class="academics__card-title sec-sub-title">
-              Middle School
-            </h2>
+            <h2 class="academics__card-title sec-sub-title">Middle School</h2>
 
             <p class="sec-para">
               Our middle school offers a comprehensive education that prepares
@@ -319,7 +327,6 @@
         <h2 class="sec-title">Gallery</h2>
 
         <div class="gallery__cards">
-
           <a href="/gallery" class="gallery__card-link">
             <article class="gallery__card">
               <figure class="gallery__image">
@@ -328,7 +335,9 @@
 
               <div class="gallery__content">
                 <h3 class="gallery__badge">Events</h3>
-                <p class="gallery__text">Celebrate the season with love and joy.</p>
+                <p class="gallery__text">
+                  Celebrate the season with love and joy.
+                </p>
 
                 <span class="gallery__link">
                   <i class="fa-solid fa-arrow-up"></i>
@@ -345,7 +354,9 @@
 
               <div class="gallery__content">
                 <h3 class="gallery__badge">Events</h3>
-                <p class="gallery__text">Celebrate the season with love and joy.</p>
+                <p class="gallery__text">
+                  Celebrate the season with love and joy.
+                </p>
 
                 <span class="gallery__link">
                   <i class="fa-solid fa-arrow-up"></i>
@@ -362,7 +373,9 @@
 
               <div class="gallery__content">
                 <h3 class="gallery__badge">Events</h3>
-                <p class="gallery__text">Celebrate the season with love and joy.</p>
+                <p class="gallery__text">
+                  Celebrate the season with love and joy.
+                </p>
 
                 <span class="gallery__link">
                   <i class="fa-solid fa-arrow-up"></i>
@@ -370,7 +383,6 @@
               </div>
             </article>
           </a>
-
         </div>
       </section>
 
@@ -379,44 +391,60 @@
 
         <div class="recent-news__container responsive-grid">
           <div class="recent-news__card">
-            <figure class="recent-news__img-photo"> <img src="up/images/cultural2.jpg" alt=""></figure>
+            <figure class="recent-news__img-photo">
+              <img src="up/images/cultural2.jpg" alt="" />
+            </figure>
             <p class="recent-news__tags">Sports Day</p>
             <div class="recent-news__info">
               <p class="recent-news__date">15.11.2025</p>
               <p class="recent-news__author">By Joseph Sir</p>
             </div>
             <h3 class="recent-news__news-title">Children's Day Celebrated</h3>
-            <p class="recent-news__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, blanditiis. Fuga recusandae....</p>
+            <p class="recent-news__para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, blanditiis. Fuga recusandae....
+            </p>
             <a href="#" class="sec-link recent-news__btn">Read More</a>
-          </div> <!--recent-news__card ENDS-->
+          </div>
+          <!--recent-news__card ENDS-->
 
           <div class="recent-news__card">
-            <figure class="recent-news__img-photo"> <img src="up/images/cultural2.jpg" alt=""></figure>
+            <figure class="recent-news__img-photo">
+              <img src="up/images/cultural2.jpg" alt="" />
+            </figure>
             <p class="recent-news__tags">Sports Day</p>
             <div class="recent-news__info">
               <p class="recent-news__date">15.11.2025</p>
               <p class="recent-news__author">By Joseph Sir</p>
             </div>
             <h3 class="recent-news__news-title">Children's Day Celebrated</h3>
-            <p class="recent-news__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, blanditiis. Fuga recusandae....</p>
+            <p class="recent-news__para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, blanditiis. Fuga recusandae....
+            </p>
             <a href="#" class="sec-link recent-news__btn">Read More</a>
-          </div> <!--recent-news__card ENDS-->
+          </div>
+          <!--recent-news__card ENDS-->
 
           <div class="recent-news__card">
-            <figure class="recent-news__img-photo"> <img src="up/images/cultural2.jpg" alt=""></figure>
+            <figure class="recent-news__img-photo">
+              <img src="up/images/cultural2.jpg" alt="" />
+            </figure>
             <p class="recent-news__tags">Sports Day</p>
             <div class="recent-news__info">
               <p class="recent-news__date">15.11.2025</p>
               <p class="recent-news__author">By Joseph Sir</p>
             </div>
             <h3 class="recent-news__news-title">Children's Day Celebrated</h3>
-            <p class="recent-news__para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, blanditiis. Fuga recusandae....</p>
+            <p class="recent-news__para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Deserunt, blanditiis. Fuga recusandae....
+            </p>
             <a href="#" class="sec-link recent-news__btn">Read More</a>
-          </div> <!--recent-news__card ENDS-->
-
-        </div> <!--recent-news__container ENDS-->
-
-
+          </div>
+          <!--recent-news__card ENDS-->
+        </div>
+        <!--recent-news__container ENDS-->
       </section>
 
       <section class="teachers padd sec-flex">
@@ -424,102 +452,109 @@
 
         <div class="teachers__list">
           <div class="teachers__person">
-            <img src="up/images/Benjamin.jpg" alt="" class="teachers__photo">
+            <img src="up/images/Benjamin.jpg" alt="" class="teachers__photo" />
             <h3 class="teachers__name">Mr. Benjamin</h3>
             <p class="teachers__subject">English, Math</p>
           </div>
 
           <div class="teachers__person">
-            <img src="up/images/Prem.jpg" alt="" class="teachers__photo">
+            <img src="up/images/Prem.jpg" alt="" class="teachers__photo" />
             <h3 class="teachers__name">Mr. Prem</h3>
             <p class="teachers__subject">Hindi</p>
           </div>
 
           <div class="teachers__person">
-            <img src="up/images/Stephan.jpg" alt="" class="teachers__photo">
+            <img src="up/images/Stephan.jpg" alt="" class="teachers__photo" />
             <h3 class="teachers__name">Mr. Stephan</h3>
             <p class="teachers__subject">Math, Science</p>
           </div>
 
           <div class="teachers__person">
-            <img src="up/images/JyotiPrabha.jpg" alt="" class="teachers__photo">
+            <img
+              src="up/images/JyotiPrabha.jpg"
+              alt=""
+              class="teachers__photo"
+            />
             <h3 class="teachers__name">Mrs. Jyoti Prabha</h3>
             <p class="teachers__subject">Sanskrit, Hindi</p>
           </div>
-
+        </div>
       </section>
 
       <section class="testimonials padd sec-flex">
-  <h2 class="sec-title">What Parents Say</h2>
+        <h2 class="sec-title">What Parents Say</h2>
 
-  <div class="testimonials__list">
+        <div class="testimonials__list">
+          <!-- Testimonial 1 -->
+          <div class="testimonials__card testimonials__card--compact">
+            <span class="testimonials__quote">❝</span>
 
-    <!-- Testimonial 1 -->
-    <div class="testimonials__card testimonials__card--compact">
+            <figure class="testimonials__photo">
+              <img src="up/images/parent1.jpg" alt="Parent Photo" />
+            </figure>
 
-      <span class="testimonials__quote">❝</span>
+            <div class="testimonials__content">
+              <div class="testimonials__rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span
+                ><span>★</span>
+              </div>
 
-      <figure class="testimonials__photo">
-        <img src="up/images/parent1.jpg" alt="Parent Photo">
-      </figure>
+              <p class="testimonials__comment">
+                “Amazing progress in my child’s confidence and learning.”
+              </p>
 
-      <div class="testimonials__content">
-        <div class="testimonials__rating">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <p class="testimonials__text">
+                The teachers give personal attention, and the environment is
+                warm and supportive.
+              </p>
+
+              <h3 class="testimonials__name">Mrs. Anita Sharma</h3>
+              <p class="testimonials__role">Business Owner</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonials__card testimonials__card--compact">
+            <span class="testimonials__quote">❝</span>
+
+            <figure class="testimonials__photo">
+              <img src="up/images/parent2.jpg" alt="Parent Photo" />
+            </figure>
+
+            <div class="testimonials__content">
+              <div class="testimonials__rating">
+                <span>★</span><span>★</span><span>★</span><span>★</span
+                ><span>☆</span>
+              </div>
+
+              <p class="testimonials__comment">
+                “Best school experience we’ve had so far.”
+              </p>
+
+              <p class="testimonials__text">
+                Teachers are highly skilled and truly care about children.
+              </p>
+
+              <h3 class="testimonials__name">Mr. Rajesh Kumar</h3>
+              <p class="testimonials__role">Govt. Employee</p>
+            </div>
+          </div>
         </div>
-
-        <p class="testimonials__comment">“Amazing progress in my child’s confidence and learning.”</p>
-
-        <p class="testimonials__text">
-          The teachers give personal attention, and the environment is warm and supportive.
-        </p>
-
-        <h3 class="testimonials__name">Mrs. Anita Sharma</h3>
-        <p class="testimonials__role">Business Owner</p>
-      </div>
-    </div>
-
-    <!-- Testimonial 2 -->
-    <div class="testimonials__card testimonials__card--compact">
-
-      <span class="testimonials__quote">❝</span>
-
-      <figure class="testimonials__photo">
-        <img src="up/images/parent2.jpg" alt="Parent Photo">
-      </figure>
-
-      <div class="testimonials__content">
-        <div class="testimonials__rating">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
-        </div>
-
-        <p class="testimonials__comment">“Best school experience we’ve had so far.”</p>
-
-        <p class="testimonials__text">
-          Teachers are highly skilled and truly care about children.
-        </p>
-
-        <h3 class="testimonials__name">Mr. Rajesh Kumar</h3>
-        <p class="testimonials__role">Govt. Employee</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
+      </section>
 
       <section class="events" id="events">
-
         <h2 class="events__title sec-title">Upcoming Events</h2>
 
         <div class="events__container">
-
           <!-- Header -->
           <div class="events__header">
             <div class="events__chevrons">
-              <button class="events__chevron-btn"><i class="fas fa-chevron-left"></i></button>
-              <button class="events__chevron-btn"><i class="fas fa-chevron-right"></i></button>
+              <button class="events__chevron-btn">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="events__chevron-btn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
 
             <h3 class="events__month">November 2024</h3>
@@ -530,7 +565,6 @@
           <!-- Table -->
           <table class="events__table">
             <tbody>
-
               <!-- DATE 1 -->
               <tr class="events__date-row">
                 <td colspan="2">
@@ -618,20 +652,14 @@
                   Inter-House Quiz Competition
                 </td>
               </tr>
-
             </tbody>
           </table>
-
         </div>
-
       </section>
-
-
-</main>
+    </main>
     <!-- Linking SwiperJS script -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<!-- Custom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- Custom Script -->
     <script src="up/js/app.js"></script>
-
   </body>
 </html>
