@@ -5,17 +5,38 @@
 .gallery {
   background: var(--gradient-cyan);
 
-  &__card-link {
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    border-radius: 14px; // smooth outer rounding
+    .slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+
+    .slider-wrapper {
+    .swiper-pagination-bullet {
+      background: var(--color-blue-dark);
+      height: 15px;
+      width: 15px;
+    }
+
+    .swiper-slide-button {
+      color: var(--color-green-light);
+      margin-top: -50px;
+      transition: 0.2s ease;  
+
+      &:hover {
+      color: var(--color-green-medium);
+
+      }
+    }
+
   }
 
   &__card {
+    height: 300px !important;
+    user-select: none;
     background: #fff;
     border-radius: 14px;
-    overflow: hidden;
+
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: all 0.25s ease-in-out;
     border: 2px solid transparent;
@@ -37,7 +58,7 @@
   // IMAGE
   &__image {
     width: 100%;
-    height: 170px;
+    height: 150px;
     overflow: hidden;
     padding: 1.1rem;
 
