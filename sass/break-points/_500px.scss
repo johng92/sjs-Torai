@@ -49,4 +49,13 @@
     font-size: 1.4rem;
   }
 
+  // Teachers section
+  .teachers {
+    .slider-wrapper {
+    // padding: 0 10px !important;
+    margin: 0 auto !important;
+    max-width: 100% !important; //fixes padding issue
+    }
+  }
+
 }

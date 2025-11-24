@@ -67,7 +67,9 @@ function initSwipers() {
 
     if (type === "teachers") {
       options.autoplay = { delay: 1800, disableOnInteraction: false };
-      // no arrows
+       if (window.innerWidth >= 500 && nextBtn && prevBtn) {
+        options.navigation = { nextEl: nextBtn, prevEl: prevBtn };
+      }
     }
 
     if (type === "gallery") {
