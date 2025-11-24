@@ -13,4 +13,42 @@
   }
   }
 
+
+  // Homepage Gallery section
+  .gallery {
+      .slider-wrapper {
+        margin-bottom: 4rem;
+  }
+  }
+
+    .gallery .slider-wrapper {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  .gallery__card {
+    height: auto !important;
+  }
+
+  .gallery__image {
+    height: 130px;
+    padding: 0.5rem;
+  }
+
+  .gallery__content {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .gallery__text {
+    font-size: type.font-size-st(s);
+  }
+
+  .gallery__link i {
+    width: 30px;
+    height: 30px;
+    font-size: 1.4rem;
+  }
+
 }
