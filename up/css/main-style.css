@@ -878,12 +878,11 @@ textarea {
     padding-bottom: 45px !important;
   }
   .gallery .slider-wrapper {
-    margin-bottom: 4rem;
-  }
-  .gallery .slider-wrapper {
     margin: 0 auto !important;
     max-width: 100% !important;
     padding: 0 10px !important;
+    padding-bottom: 4rem !important;
+    overflow: visible !important;
   }
   .gallery__card {
     height: auto !important;

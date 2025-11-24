@@ -15,16 +15,14 @@
 
 
   // Homepage Gallery section
-  .gallery {
-      .slider-wrapper {
-        margin-bottom: 4rem;
-  }
-  }
 
     .gallery .slider-wrapper {
     margin: 0 auto !important;
     max-width: 100% !important;
     padding: 0 10px !important;
+
+    padding-bottom: 4rem !important;
+    overflow: visible !important;
   }
 
   .gallery__card {
