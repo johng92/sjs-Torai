@@ -73,14 +73,14 @@ function initSwipers() {
     }
 
     if (type === "gallery") {
-      options.autoplay = { delay: 2000 };
+      options.autoplay = { delay: 2900 };
       if (nextBtn && prevBtn) {
         options.navigation = { nextEl: nextBtn, prevEl: prevBtn };
       }
     }
 
     if (type === "testimonials") {
-      options.autoplay = { delay: 2700 };
+      options.autoplay = { delay: 5500 };
       // no arrows unless added
        // Force 1 card per view everywhere
       options.breakpoints = {
