@@ -80,8 +80,14 @@ function initSwipers() {
     }
 
     if (type === "testimonials") {
-      options.autoplay = { delay: 2600 };
+      options.autoplay = { delay: 2700 };
       // no arrows unless added
+       // Force 1 card per view everywhere
+      options.breakpoints = {
+        0:   { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1024:{ slidesPerView: 1 }
+      };
     }
 
     // Initialize REAL swiper

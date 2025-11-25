@@ -58,4 +58,14 @@
     }
   }
 
+  // Testimonials section
+  .testimonials {
+    &__card {
+      width: 100% !important;
+    }
+    &__rating {
+      justify-content: center;
+    }
+  // }
+}
 }
