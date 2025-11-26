@@ -709,6 +709,74 @@
           </table>
         </div>
       </section>
+
+      <section class="contact padd">
+        <h2 class="contact__title sec-title">Enquiry Form</h2>
+
+        <form class="contact__form">
+          <!-- Row 1: Name | Email -->
+          <div class="contact__row">
+            <fieldset>
+              <label for="full-name">Full Name</label>
+              <input
+                id="full-name"
+                name="full-name"
+                type="text"
+                placeholder="Enter Your Name"
+              />
+            </fieldset>
+
+            <fieldset>
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter Your Email"
+              />
+            </fieldset>
+          </div>
+
+          <!-- Row 2: Phone | Subject -->
+          <div class="contact__row">
+            <fieldset>
+              <label for="phone">Phone Number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter Your Phone Number"
+              />
+            </fieldset>
+
+            <fieldset>
+              <label for="subject">Subject</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Subject of Inquiry"
+              />
+            </fieldset>
+          </div>
+
+          <!-- Full width message -->
+          <fieldset class="contact__full">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your enquiry..."
+            ></textarea>
+          </fieldset>
+
+          <!-- Full width submit -->
+          <div class="contact__full">
+            <input type="submit" value="Send" class="cta" />
+          </div>
+        </form>
+      </section>
     </main>
     <!-- Linking SwiperJS script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
