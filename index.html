@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+    <!-- RE-captcha Loader -->
+     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="up/css/main-style.css" />
     <link
@@ -723,6 +725,7 @@
                 name="full-name"
                 type="text"
                 placeholder="Enter Your Name"
+                required
               />
             </fieldset>
 
@@ -733,6 +736,7 @@
                 name="email"
                 type="email"
                 placeholder="Enter Your Email"
+                required
               />
             </fieldset>
           </div>
@@ -746,6 +750,7 @@
                 name="phone"
                 type="tel"
                 placeholder="Enter Your Phone Number"
+                required
               />
             </fieldset>
 
@@ -767,10 +772,20 @@
               id="message"
               name="message"
               rows="4"
+              cols="6"
               placeholder="Write your enquiry..."
+              required
             ></textarea>
           </fieldset>
 
+          <!-- USING TEST KEY ----- REPLACE BEFORE DEPLOYMENT -->
+          <!-- reCAPTCHA row -->
+          <fieldset class="contact__full contact__captcha">
+            <!-- This div is required by Google, PHP will activate it later -->
+            <div class="g-recaptcha" 
+                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
+                data-theme="light"></div>
+          </fieldset>
           <!-- Full width submit -->
           <div class="contact__full">
             <input type="submit" value="Send" class="cta" />

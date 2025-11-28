@@ -10,7 +10,17 @@
         display: none;
     }
 
+// Contact Section
+.contact {
 
+  &__row {
+    flex-wrap: wrap;
+
+    fieldset {
+      flex-basis: 100%;
+    }
+  }
+}
 
     }
 

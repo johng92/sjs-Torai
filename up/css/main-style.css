@@ -50,12 +50,14 @@ textarea {
   --color-green-light: hsl(126 30% 58%);
   --color-green-medium: hsl(126 30% 45%);
   --color-green-tint: #e3f0e4;
+  --color-mint-green: rgb(189, 226.5, 192.5);
   --color-blue-dark: hsl(219, 49%, 47%);
   --color-blue-bright: hsl(220 100% 67%);
+  --color-light-greyish-blue: hsl(210, 14%, 89%);
   --color-cyan-light: hsl(180 50% 91%);
   --color-cyan-lightest: #f7fbfb;
   /* Gradient Variables */
-  --gradient-cyan: linear-gradient(#d8f2f2, #f7fbfb);
+  --gradient-cyan: linear-gradient( #f7fbfb , #d8f2f2);
 }
 
 .container {
@@ -1047,6 +1049,76 @@ textarea {
     font-size: 1.5rem;
   }
 }
+.contact {
+  background: var(--gradient-cyan);
+}
+.contact__title {
+  padding-bottom: 2rem;
+}
+.contact__form {
+  max-width: 755px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact__row {
+  display: flex;
+  gap: 2rem;
+}
+.contact__row fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 50%;
+}
+.contact__row fieldset label, .contact__row fieldset input {
+  font-size: 1.5rem;
+  display: block;
+}
+.contact__row fieldset input {
+  border: none;
+  outline: none;
+  border: 1px solid var(--color-light-greyish-blue);
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 1.1rem 1.6rem;
+  font-size: 1.5rem;
+}
+.contact__row fieldset input:focus {
+  outline: 3px solid var(--color-mint-green); /* your focus color */
+}
+.contact__full {
+  display: flex;
+  flex-direction: column;
+}
+.contact__full label {
+  font-size: 1.5rem;
+}
+.contact__full textarea {
+  border: 1px solid gray;
+  padding: 1.1rem 1.6rem;
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 1px solid var(--color-light-greyish-blue);
+  border-radius: 20px;
+}
+.contact__full input[type=submit] {
+  border-radius: 20px;
+}
+.contact__captcha {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.contact__captcha .g-recaptcha {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
 @media screen and (max-width: 500px) {
   .leadership .slider-wrapper {
     margin: 0 auto !important;
@@ -1105,6 +1177,12 @@ textarea {
   }
   .slider-wrapper .swiper-slide-button {
     display: none;
+  }
+  .contact__row {
+    flex-wrap: wrap;
+  }
+  .contact__row fieldset {
+    flex-basis: 100%;
   }
 }
 @media screen and (max-width: 800px) {
