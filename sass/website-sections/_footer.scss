@@ -1,0 +1,71 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.footer {
+  background-color: var(--color-navy-dark);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+
+  h2 {
+    color: var(--color-white);
+    font-size: type.font-size-st(m);
+  }
+  p {
+    color: var(--color-white);
+    font-size: type.font-size-st(s);
+  }
+  a {
+    color: var(--color-green-light);
+  }
+
+  &__contact {
+    &-list {
+      font-size: type.font-size-st(s);
+    }
+  }
+
+  &__socials {
+
+    &-list {
+      display: flex;
+      // flex-direction: column;
+      font-size: type.font-size-st(s);
+      gap: 1.5rem;
+
+      a {
+          .fb {
+            color: var(--color-fb) !important;
+      }
+       .tw {
+        color: var(--color-twitter);
+       }
+
+       .ig {
+        color:  var(--color-ig);
+       }
+
+       .yt {
+        color:  var(--color-yt);
+       }
+      }
+    }
+  }
+
+  &__legal {
+    &-list {
+      font-size: type.font-size-st(xs);
+    }
+  }
+
+  &__bottom {
+    padding-top: 2rem;
+
+    p {
+      text-align: center;
+    }
+  }
+}

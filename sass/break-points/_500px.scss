@@ -68,4 +68,17 @@
     }
   // }
 }
+
+// Footer 
+ .footer {
+  justify-content: flex-start;
+
+  &__legal {
+    width: 100%;
+  }
+
+  &__bottom {
+    order: 3;
+  }
+ }
 }
