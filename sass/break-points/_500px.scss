@@ -6,6 +6,25 @@
 @media  screen and (max-width: 500px){
 
   // Notice Bar
+  .notice-bar__notice {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;         // breathing space
+    padding: 0 1.2rem;
+  }
+
+  .notice-bar__time {
+    flex-shrink: 0;      // never squeezes or overlaps
+    font-weight: 600;
+    opacity: 0.85;
+  }
+
+  .notice-bar__text {
+    min-width: max-content;
+    padding-right: 2rem; // separation looks clean
+  }
+
+
   .notice-bar {
     &__title {
       display: none;

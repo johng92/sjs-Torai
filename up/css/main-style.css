@@ -242,6 +242,7 @@ textarea {
   content: "";
   width: 1px;
   height: 100%;
+  opacity: 0.4;
   background-color: #b8b8b8;
   position: absolute;
   top: 0;
@@ -1191,6 +1192,22 @@ textarea {
   }
 }
 @media screen and (max-width: 500px) {
+  .notice-bar__notice {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0 1.2rem;
+  }
+  .notice-bar__time {
+    flex-shrink: 0;
+    font-weight: 600;
+    opacity: 0.85;
+  }
+  .notice-bar__text {
+    min-width: -moz-max-content;
+    min-width: max-content;
+    padding-right: 2rem;
+  }
   .notice-bar__title {
     display: none;
   }
