@@ -4,10 +4,23 @@
 @use "../general-styles/typography" as type;
 
 @media  screen and (max-width: 500px){
-  // Utility classes
+
+  // Notice Bar
+  .notice-bar {
+    &__title {
+      display: none;
+    }
+    &__title-mobile {
+      display: flex;
+    }
+  }
+  // Hero sections
   .hero {
     &__btns {
       .cta {
+        padding: 1rem 2rem;
+      }
+      .sec-link {
         padding: 1rem 2rem;
       }
     }

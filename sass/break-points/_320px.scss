@@ -1,0 +1,19 @@
+@use "../general-styles/padding" as pad;
+@use "../general-styles/gradient" as grad;
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/typography" as type;
+
+@media screen and (max-width: 320px) {
+    // Hero sections
+  .hero {
+    &__btns {
+      .cta {
+        font-size: type.font-size-st(xs);
+      }
+      .sec-link {
+                font-size: type.font-size-st(xs);
+
+      }
+    }
+  }
+}

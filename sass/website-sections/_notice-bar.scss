@@ -22,6 +22,19 @@
     font-size: type.font-size-st(sc);
     z-index: 200;
   }
+  &__title-mobile {
+    position: absolute;
+    background-color: var(--color-blue-dark);
+    color: var(--color-white);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 2.4rem;
+    font-size: type.font-size-st(sc);
+    z-index: 200;
+    display: none;
+
+  }
 
   &__list {
     display: flex;

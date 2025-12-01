@@ -214,6 +214,18 @@ textarea {
   font-size: 1.8rem;
   z-index: 200;
 }
+.notice-bar__title-mobile {
+  position: absolute;
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  z-index: 200;
+  display: none;
+}
 .notice-bar__list {
   display: flex;
   list-style: none;
@@ -1171,8 +1183,25 @@ textarea {
   text-align: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 320px) {
   .hero__btns .cta {
+    font-size: 1.3rem;
+  }
+  .hero__btns .sec-link {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .notice-bar__title {
+    display: none;
+  }
+  .notice-bar__title-mobile {
+    display: flex;
+  }
+  .hero__btns .cta {
+    padding: 1rem 2rem;
+  }
+  .hero__btns .sec-link {
     padding: 1rem 2rem;
   }
   .leadership .slider-wrapper {
