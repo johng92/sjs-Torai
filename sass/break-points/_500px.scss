@@ -4,6 +4,15 @@
 @use "../general-styles/typography" as type;
 
 @media  screen and (max-width: 500px){
+  // Utility classes
+  .hero {
+    &__btns {
+      .cta {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+
   .leadership {
     .slider-wrapper {
       margin: 0 auto !important;

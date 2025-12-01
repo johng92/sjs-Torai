@@ -1172,6 +1172,9 @@ textarea {
 }
 
 @media screen and (max-width: 500px) {
+  .hero__btns .cta {
+    padding: 1rem 2rem;
+  }
   .leadership .slider-wrapper {
     margin: 0 auto !important;
     padding: 0 10px !important;
