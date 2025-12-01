@@ -2,7 +2,6 @@
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
 
-
 .notice-bar {
   position: relative;
   top: 0;
@@ -22,6 +21,7 @@
     font-size: type.font-size-st(sc);
     z-index: 200;
   }
+
   &__title-mobile {
     position: absolute;
     background-color: var(--color-blue-dark);
@@ -33,14 +33,16 @@
     font-size: type.font-size-st(sc);
     z-index: 200;
     display: none;
-
   }
 
+  /* 🔹 UL that moves */
   &__list {
     display: flex;
     list-style: none;
     margin: 0;
-    animation: notice-scroll 20s linear infinite;
+    padding-left: 0;
+    transform: translateX(0);  // JS will animate this
+    will-change: transform;
   }
 
   &__notice {
@@ -56,7 +58,7 @@
       opacity: 0.4;
       background-color: #b8b8b8;
       position: absolute;
-      top: 0; 
+      top: 0;
       right: 0;
     }
 
@@ -64,18 +66,10 @@
       display: none;
     }
   }
+
   &__time {
     color: #949393;
   }
 }
 
-@keyframes notice-scroll {
-  from {
-    transform: translateX(100%);
-  }
-  
-  to {
-       transform: translateX(-1528px);
-  }
-}
-
+/* ❌ Remove your old @keyframes notice-scroll completely */

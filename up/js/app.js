@@ -16,6 +16,51 @@ burger.addEventListener("click", function() {
   nav.classList.toggle("display__nav");
 })
 
+// ========= Dynamic News Ticker (NO swiper conflict) =========
+function initNoticeTicker() {
+  const container = document.querySelector('.notice-bar');
+  const list = document.querySelector('.notice-bar__list');
+
+  if (!container || !list) return;
+
+  // Clone items once to create seamless loop
+  const originalHTML = list.innerHTML;
+  list.innerHTML = originalHTML + originalHTML;
+
+  let x = 0;
+  let lastTime = null;
+
+  // speed in pixels per second (adjust if you want faster/slower)
+  const SPEED = 60;
+
+  function step(timestamp) {
+    if (!lastTime) lastTime = timestamp;
+    const delta = (timestamp - lastTime) / 1000; // seconds
+    lastTime = timestamp;
+
+    // Move left
+    x -= SPEED * delta;
+
+    // Width of original content (half of the doubled list)
+    const originalWidth = list.scrollWidth / 2;
+
+    // When we've shifted past one full set, reset
+    if (Math.abs(x) >= originalWidth) {
+      x += originalWidth; // keep it seamless
+    }
+
+    list.style.transform = `translateX(${x}px)`;
+
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+}
+
+// Run after everything (including Swipers) is ready
+window.addEventListener('load', initNoticeTicker);
+
+
 /* ==========================================================
    MASTER SWIPER INITIALIZER
    Works for: leadership, teachers, gallery, testimonials, etc.

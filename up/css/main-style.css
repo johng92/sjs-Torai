@@ -202,6 +202,7 @@ textarea {
   right: 0;
   overflow: hidden;
   box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+  /* 🔹 UL that moves */
 }
 .notice-bar__title {
   position: absolute;
@@ -230,7 +231,9 @@ textarea {
   display: flex;
   list-style: none;
   margin: 0;
-  animation: notice-scroll 20s linear infinite;
+  padding-left: 0;
+  transform: translateX(0);
+  will-change: transform;
 }
 .notice-bar__notice {
   white-space: nowrap;
@@ -255,14 +258,7 @@ textarea {
   color: #949393;
 }
 
-@keyframes notice-scroll {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-1528px);
-  }
-}
+/* ❌ Remove your old @keyframes notice-scroll completely */
 .hero {
   display: flex;
   align-items: center;
@@ -1196,7 +1192,7 @@ textarea {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    padding: 0 1.2rem;
+    padding: 0.5 1.6rem;
   }
   .notice-bar__time {
     flex-shrink: 0;
