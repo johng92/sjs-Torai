@@ -1236,6 +1236,9 @@ textarea {
     height: 30px;
     font-size: 1.4rem;
   }
+  .recent-news {
+    padding: 2rem 3rem;
+  }
   .teachers .slider-wrapper {
     margin: 0 auto !important;
     max-width: 100% !important;
