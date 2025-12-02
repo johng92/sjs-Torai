@@ -20,42 +20,63 @@ burger.addEventListener("click", function() {
 function initNoticeTicker() {
   const container = document.querySelector('.notice-bar');
   const list = document.querySelector('.notice-bar__list');
+  const titleDesktop = document.querySelector('.notice-bar__title');
+  const titleMobile = document.querySelector('.notice-bar__title-mobile');
 
   if (!container || !list) return;
 
-  // Clone items once to create seamless loop
+  // Clone original content once
   const originalHTML = list.innerHTML;
   list.innerHTML = originalHTML + originalHTML;
 
-  let x = 0;
+  // Detect which title is visible (desktop or mobile)
+  const activeTitle =
+    titleMobile && window.getComputedStyle(titleMobile).display !== "none"
+      ? titleMobile
+      : titleDesktop;
+
+  const titleWidth = activeTitle ? activeTitle.offsetWidth : 0;
+
+  // Start position shifted **after** the title
+  let x = titleWidth;
   let lastTime = null;
 
-  // speed in pixels per second (adjust if you want faster/slower)
-  const SPEED = 60;
+  const SPEED = 60; // px/sec (adjust as desired)
 
   function step(timestamp) {
     if (!lastTime) lastTime = timestamp;
-    const delta = (timestamp - lastTime) / 1000; // seconds
+    const delta = (timestamp - lastTime) / 1000;
     lastTime = timestamp;
 
-    // Move left
     x -= SPEED * delta;
 
-    // Width of original content (half of the doubled list)
     const originalWidth = list.scrollWidth / 2;
 
-    // When we've shifted past one full set, reset
-    if (Math.abs(x) >= originalWidth) {
-      x += originalWidth; // keep it seamless
+    // Reset when one full cycle has passed
+    if (Math.abs(x - titleWidth) >= originalWidth) {
+      // Reset exactly after title width
+      x = titleWidth;
     }
 
     list.style.transform = `translateX(${x}px)`;
-
     requestAnimationFrame(step);
   }
 
   requestAnimationFrame(step);
+
+  // Recalculate on resize
+  window.addEventListener("resize", () => {
+    const updatedTitleWidth =
+      titleMobile && window.getComputedStyle(titleMobile).display !== "none"
+        ? titleMobile.offsetWidth
+        : titleDesktop.offsetWidth;
+
+    x = updatedTitleWidth; // new start offset
+  });
 }
+
+initNoticeTicker();
+
 
 // Time Ago Live Update for Notice Times  
 // Run after everything (including Swipers) is ready
