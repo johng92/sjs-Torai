@@ -1,0 +1,22 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.disclaimer {
+  &__updated {
+    font-size: 1.6rem;
+    color: #aaa;
+  }
+
+  &__subtitle {
+    margin-top: 1.5rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  } 
+
+  &__text {
+    font-size: 1.5rem;
+  }
+}

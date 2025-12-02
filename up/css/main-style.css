@@ -1254,6 +1254,20 @@ textarea {
   content: "\f111";
 }
 
+.disclaimer__updated {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+.disclaimer__subtitle {
+  margin-top: 1.5rem;
+}
+.disclaimer__subtitle:first-of-type {
+  margin-top: 0;
+}
+.disclaimer__text {
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;
