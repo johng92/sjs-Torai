@@ -1198,10 +1198,10 @@ textarea {
   color: rgb(131, 131, 131);
 }
 .privacy__text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .privacy__list {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding-left: 2.4rem;
 }
 .privacy__list li {
@@ -1236,7 +1236,7 @@ textarea {
   margin-top: 0;
 }
 .terms-of-use__text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .terms-of-use ul {
   list-style: none;
@@ -1247,7 +1247,7 @@ textarea {
   position: relative;
   padding-left: 2.4rem;
   margin-bottom: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.5;
   /* Font Awesome icon */
 }
@@ -1276,7 +1276,7 @@ textarea {
   margin-top: 0;
 }
 .disclaimer__text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 @media screen and (max-width: 320px) {
