@@ -1,0 +1,55 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.terms-of-use {
+  &__updated {
+    font-size: 1.6rem;
+    color: #aaa;
+  }
+
+  &__subtitle {
+    margin-top: 1.5rem;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+    
+  }
+  &__text {
+    font-size: 1.5rem;
+  }
+
+    ul
+   {
+    list-style: none;
+    padding-left: 2.4rem;
+    margin: 1.2rem 0 1.6rem 0;
+  }
+
+   /* LI styling with FA icons */
+  li {
+    position: relative;
+    padding-left: 2.4rem;   // space for icon
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+
+    /* Font Awesome icon */
+    &::before {
+      content: "\f111"; // default FA "check" icon
+      font-family: "Font Awesome 7 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 0.2rem;
+      font-size: 1.2rem;
+      color: #505050;   // adjust to your theme
+    }
+  }
+
+  /* OPTIONAL: different icon for nested lists */
+  ul ul li::before {
+    content: "\f111"; // small circle icon
+  }
+}

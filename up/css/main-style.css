@@ -1191,7 +1191,7 @@ textarea {
 }
 .privacy__list {
   font-size: 1.5rem;
-  padding: 0;
+  padding-left: 2.4rem;
 }
 .privacy__list li {
   position: relative;
@@ -1208,6 +1208,50 @@ textarea {
   top: 3px;
   color: #0073e6;
   font-size: 15px;
+}
+
+.terms-of-use {
+  /* LI styling with FA icons */
+  /* OPTIONAL: different icon for nested lists */
+}
+.terms-of-use__updated {
+  font-size: 1.6rem;
+  color: #aaa;
+}
+.terms-of-use__subtitle {
+  margin-top: 1.5rem;
+}
+.terms-of-use__subtitle:first-of-type {
+  margin-top: 0;
+}
+.terms-of-use__text {
+  font-size: 1.5rem;
+}
+.terms-of-use ul {
+  list-style: none;
+  padding-left: 2.4rem;
+  margin: 1.2rem 0 1.6rem 0;
+}
+.terms-of-use li {
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  /* Font Awesome icon */
+}
+.terms-of-use li::before {
+  content: "\f111";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.2rem;
+  color: #505050;
+}
+.terms-of-use ul ul li::before {
+  content: "\f111";
 }
 
 @media screen and (max-width: 320px) {
