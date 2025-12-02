@@ -1,3 +1,7 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
 .gallery-list {
   background: var(--gradient-cyan);
   width: 100%;
