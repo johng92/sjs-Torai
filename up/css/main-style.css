@@ -1279,6 +1279,64 @@ textarea {
   font-size: 1.4rem;
 }
 
+.gallery-list {
+  background: var(--gradient-cyan);
+}
+.gallery-list__category {
+  margin-bottom: 3rem;
+}
+.gallery-list__heading {
+  font-size: 1.8rem;
+  color: var(--color-navy-dark);
+  margin-bottom: 1.2rem;
+  border-left: 6px solid var(--color-blue-dark);
+  padding-left: 1rem;
+}
+.gallery-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.gallery-list__card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+.gallery-list__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+.gallery-list__image {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+.gallery-list__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.gallery-list__title {
+  padding: 1rem 1.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  border-top: 1px solid var(--color-light-greyish-blue);
+}
+
+/* Mobile tweaks */
+@media (max-width: 500px) {
+  .gallery-list__grid {
+    gap: 1.6rem;
+  }
+  .gallery-list__image {
+    height: 140px;
+  }
+}
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;
