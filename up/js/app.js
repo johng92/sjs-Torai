@@ -57,8 +57,47 @@ function initNoticeTicker() {
   requestAnimationFrame(step);
 }
 
+// Time Ago Live Update for Notice Times  
 // Run after everything (including Swipers) is ready
 window.addEventListener('load', initNoticeTicker);
+
+(function initTimeAgoLive() {
+  const items = document.querySelectorAll(".notice-bar__time[data-date]");
+  if (!items.length) return;
+
+  function timeAgo(dateString) {
+    const date = new Date(dateString);
+    if (isNaN(date)) return "";
+
+    const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
+
+    const units = [
+      { name: "year", sec: 31536000 },
+      { name: "month", sec: 2592000 },
+      { name: "day", sec: 86400 },
+      { name: "hour", sec: 3600 },
+      { name: "minute", sec: 60 }
+    ];
+
+    for (const u of units) {
+      const count = Math.floor(seconds / u.sec);
+      if (count >= 1)
+        return `${count} ${u.name}${count > 1 ? "s" : ""} ago |`;
+    }
+
+    return "just now |";
+  }
+
+  function updateAll() {
+    items.forEach(el => {
+      const dateStr = el.dataset.date;
+      el.textContent = timeAgo(dateStr);
+    });
+  }
+
+  updateAll();
+  setInterval(updateAll, 60000); // refresh every 1 minute
+})();
 
 
 /* ==========================================================
