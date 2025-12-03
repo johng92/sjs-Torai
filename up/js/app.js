@@ -83,7 +83,7 @@ initNoticeTicker();
 window.addEventListener('load', initNoticeTicker);
 
 (function initTimeAgoLive() {
-  const items = document.querySelectorAll(".notice-bar__time[data-date]");
+  const items = document.querySelectorAll(".notice-bar__time[data-date], .news-card__date[data-date]");
   if (!items.length) return;
 
   function timeAgo(dateString) {
