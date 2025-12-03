@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SJS Torai, Detailed News</title>
+    <!-- FA cdn -->
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="up/css/main-style.css" />
+  </head>
+  <body>
+    <header class="header page-width padd">
+      <a class="header__logo-link" href="index.html">
+        <img src="up/images/sjsToraiLogo1.png" alt="" class="header__logo" />
+      </a>
+
+      <nav class="header__nav">
+        <li><a class="header__nav-link" href="#">Home</a></li>
+        <li>
+          <a class="header__nav-link" href="admin-dashboard.html">Admin</a>
+        </li>
+        <li><a class="header__nav-link" href="#">About</a></li>
+        <li><a class="header__nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="header__nav-link" href="#">News</a></li>
+        <li><a class="header__nav-link" href="#">Events</a></li>
+        <li><a class="header__nav-link" href="#">Contact</a></li>
+        <li><a class="cta" href="#">Admission</a></li>
+      </nav>
+
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </div>
+    </header>
+
+    <section class="news-details padd">
+      <div class="news-details__container">
+        <!-- HERO TITLE -->
+        <header class="news-details__header">
+          <h1 class="news-details__title">
+            <!-- Hard-coded or PHP echo -->
+            School Celebrates Annual Sports Day with Great Enthusiasm
+          </h1>
+          <div class="news-details__meta">
+            <span class="news-details__meta-item news-details__date">
+              <i class="fa-solid fa-calendar"></i>
+              Published: 2025-02-10
+            </span>
+
+            <span class="news-details__meta-item news-details__author">
+              <i class="fa-solid fa-user"></i>
+              By: School Administration
+            </span>
+
+            <span class="news-details__meta-item news-details__category">
+              <i class="fa-solid fa-tag"></i>
+              Events
+            </span>
+          </div>
+        </header>
+
+        <!-- FEATURE IMAGE -->
+        <figure class="news-details__image">
+          <img src="/up/images/sports.jpg" alt="Sports Day" />
+        </figure>
+
+        <!-- MAIN ARTICLE CONTENT (PHP RICHTEXT) -->
+        <article class="news-details__content">
+          <!-- This will come from PHP -->
+          <!-- <?= $newsContent ?> -->
+        </article>
+
+        <!-- RECENT NEWS -->
+        <section class="news-details__recent">
+          <h2 class="news-details__recent-title">Recent News</h2>
+
+          <div class="news-details__recent-list">
+            <!-- LOOP FROM PHP -->
+            <article class="news-card">
+              <a href="/news-details/123">
+                <figure class="news-card__image">
+                  <img src="/up/images/festiveSeason.jpg" alt="" />
+                </figure>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">Festive Season Celebration</h3>
+                  <p class="news-card__date">2 days ago</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card">
+              <a href="/news-details/456">
+                <figure class="news-card__image">
+                  <img src="/up/images/cultural2.jpg" alt="" />
+                </figure>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">Cultural Dance Competition</h3>
+                  <p class="news-card__date">5 days ago</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="news-card">
+              <a href="/news-details/789">
+                <figure class="news-card__image">
+                  <img src="/up/images/teachersday.jpg" alt="" />
+                </figure>
+                <div class="news-card__content">
+                  <h3 class="news-card__title">Teacher’s Day Celebration</h3>
+                  <p class="news-card__date">1 week ago</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </section>
+      </div>
+      <!-- container ends -->
+    </section>
+
+    <script src="up/js/app.js"></script>
+  </body>
+</html>
