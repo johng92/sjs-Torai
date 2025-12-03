@@ -1371,6 +1371,135 @@ textarea {
          columns: 3;
   }
 }
+.nursery-academics {
+  background: var(--gradient-cyan);
+  /* HERO */
+  /* FACT GRID */
+  /* CONTENT SECTION */
+  /* LIST */
+  /* SCHEDULE */
+  /* GALLERY */
+  /* CTA */
+}
+.nursery-academics__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+}
+.nursery-academics__hero {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.nursery-academics__title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+}
+.nursery-academics__subtitle {
+  margin-top: 0.8rem;
+  color: var(--color-gray-dark);
+  font-size: 1.5rem;
+}
+.nursery-academics__facts {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+.nursery-academics__facts .fact {
+  text-align: center;
+}
+.nursery-academics__facts .fact h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: 0.4rem;
+}
+.nursery-academics__facts .fact p {
+  color: var(--color-gray-dark);
+  font-size: 1.3rem;
+}
+.nursery-academics__section {
+  margin-bottom: 2rem;
+}
+.nursery-academics__section h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-navy-dark);
+  margin-bottom: 1rem;
+}
+.nursery-academics__section p {
+  color: var(--color-gray-dark);
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+.nursery-academics__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.nursery-academics__list li {
+  margin-bottom: 0.7rem;
+  padding-left: 1.4rem;
+  position: relative;
+  font-size: 1.5rem;
+}
+.nursery-academics__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-blue-dark);
+  font-size: 1.4rem;
+}
+.nursery-academics__schedule {
+  background: var(--color-white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: grid;
+  gap: 1rem;
+}
+.nursery-academics__schedule div {
+  font-size: 1.5rem;
+}
+.nursery-academics__schedule div span {
+  width: 100px;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--color-blue-dark);
+  font-size: 1.5rem;
+}
+.nursery-academics__gallery {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+.nursery-academics__gallery img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+}
+.nursery-academics__cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+.nursery-academics__cta h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--color-navy-dark);
+}
+.nursery-academics__cta .cta {
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+  font-size: 1.8rem;
+}
+
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;
