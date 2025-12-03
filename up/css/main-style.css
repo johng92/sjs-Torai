@@ -1324,6 +1324,53 @@ textarea {
   border-top: 1px solid var(--color-light-greyish-blue);
 }
 
+.gallery-details {
+  background: var(--gradient-cyan);
+}
+.gallery-details__grid {
+  -moz-columns: 1;
+       columns: 1;
+  -moz-column-gap: 1.4rem;
+       column-gap: 1.4rem;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.gallery-details__item {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 1.4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  display: block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+.gallery-details__item:hover {
+  transform: scale(1.02);
+}
+.gallery-details__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Responsive Columns */
+@media (min-width: 600px) {
+  .gallery-details__grid {
+    -moz-columns: 2;
+         columns: 2;
+  }
+}
+@media (min-width: 900px) {
+  .gallery-details__grid {
+    -moz-columns: 3;
+         columns: 3;
+  }
+}
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;

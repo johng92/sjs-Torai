@@ -1,0 +1,50 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.gallery-details {
+  background: var(--gradient-cyan);
+
+  &__grid {
+    columns: 1;               // default: mobile stacked
+    column-gap: 1.4rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  &__item {
+    break-inside: avoid;
+    margin-bottom: 1.4rem;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    cursor: zoom-in;
+    transition: transform .2s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+/* Responsive Columns */
+@media (min-width: 600px) {
+  .gallery-details__grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery-details__grid {
+    columns: 3;
+  }
+}
