@@ -1943,6 +1943,172 @@ textarea {
     margin-bottom: 1.5rem;
   }
 }
+/* ======================================================
+   ADMISSION PAGE — refined typography + improved CTAs
+=========================================================*/
+.admission {
+  background: var(--gradient-cyan);
+  padding: calc(1rem + 6vh);
+  /* HEADER */
+  /* MAIN CONTAINER */
+  /* SECTIONS */
+  /* LIST TEXT — boosted readability */
+  /* ADMISSION PROCESS — improved font size */
+  /* FEE STRUCTURE BLOCK */
+  /* DOWNLOADABLE FORMS — now styled as CTA blocks */
+  /* CONTACT SECTION — improved font size */
+}
+.admission__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.admission__header .admission__title {
+  font-size: 3.5rem;
+  color: var(--color-navy-dark);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.admission__header .admission__subtitle {
+  font-size: 1.8rem;
+  color: var(--color-gray-dark);
+}
+.admission__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.admission__section {
+  background: var(--color-white);
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-light-greyish-blue);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+.admission__section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-blue-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+.admission__section h2 i {
+  font-size: 1.8rem;
+  color: var(--color-blue-dark);
+}
+.admission__list, .admission__docs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.admission__list li, .admission__docs li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 2rem;
+  color: var(--color-navy-dark);
+}
+.admission__list li i, .admission__docs li i {
+  font-size: 1.6rem;
+  color: var(--color-blue-dark);
+}
+.admission__steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+.admission__steps li i {
+  margin-top: 0.3rem;
+  color: var(--color-green-medium);
+  font-size: 1.8rem;
+}
+.admission__downloads .admission__info {
+  margin-bottom: 1.4rem;
+  color: var(--color-gray-dark);
+  font-size: 2rem;
+}
+.admission__downloads .admission__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  border-radius: 0.7rem;
+  font-size: 1.5rem;
+  transition: 0.25s ease;
+}
+.admission__downloads .admission__download-btn i {
+  font-size: 1.6rem;
+}
+.admission__downloads .admission__download-btn:hover {
+  background: var(--color-blue-bright);
+  transform: translateY(-3px);
+}
+.admission__download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+.admission__download-card {
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.admission__download-card i {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+.admission__download-card h4 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+.admission__download-card p {
+  font-size: 1.5rem;
+  opacity: 0.85;
+}
+.admission__download-card:hover {
+  background: var(--color-blue-bright);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
+.admission__contact-para {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.admission__contact-list {
+  margin: 1rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.admission__contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.8rem;
+}
+.admission__contact-list li i {
+  color: var(--color-blue-dark);
+  font-size: 1.8rem;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 600px) {
+  .admission__section {
+    padding: 2rem;
+  }
+}
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;
