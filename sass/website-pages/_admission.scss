@@ -8,7 +8,6 @@
 
 .admission {
   background: var(--gradient-cyan);
-  padding: pad.padding-d-v(m);
 
   /* HEADER */
   &__header {
@@ -199,3 +198,100 @@
     padding: 2rem;
   }
 }
+.admission-faq {
+  max-width: 880px;
+  margin: 0 auto;
+  background: var(--gradient-cyan);
+  border-radius: 1.2rem;
+  padding: pad.padding-st-v(l) pad.padding-st-h(m);
+
+  &__title {
+    text-align: center;
+    font-size: type.font-size-st(mc);
+    margin-bottom: 2.5rem;
+    color: var(--color-blue-dark);
+    font-weight: type.font-weight(bold);
+  }
+
+  &__item {
+    background: var(--color-white);
+    border-radius: 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--color-light-greyish-blue);
+    overflow: hidden;
+  }
+
+  /* QUESTION ROW */
+  &__question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: pad.padding-st-v(s) pad.padding-st-h(m);
+    font-size: type.font-size-st(s);
+
+
+    font-weight: type.font-weight(medium);
+    color: var(--color-navy-dark);
+
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+
+    span {
+    font-weight: type.font-weight("bold");
+    }
+
+    /* CIRCULAR ICON */
+    .faq-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--color-blue-dark);
+      color: var(--color-white);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 1.9rem;
+      transition: 
+        transform 0.28s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    &.active .faq-icon {
+      transform: rotate(180deg);
+      background: var(--color-green-medium);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+  }
+
+  /* ANSWER PANEL */
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--color-cyan-lightest);
+
+    transition: max-height 0.35s ease, padding 0.25s ease;
+
+    p {
+      font-size: type.font-size-st(s);
+      padding: 0 pad.padding-st-h(m);
+      margin: 1.2rem 0;
+      color: var(--color-navy-dark);
+      line-height: 1.6;
+    }
+  }
+
+  /* Expand when active */
+  &__item.active .admission-faq__answer {
+    max-height: 400px;
+    padding-bottom: 1.2rem;
+  }
+}
+

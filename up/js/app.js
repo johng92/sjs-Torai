@@ -201,6 +201,32 @@ function initSwipers() {
 }
 
 initSwipers();
+
+document.querySelectorAll('.admission-faq__item').forEach(item => {
+  const question = item.querySelector('.admission-faq__question');
+  const icon = item.querySelector('.faq-icon');
+  const answer = item.querySelector('.admission-faq__answer');
+
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('active');
+
+    // Close all other FAQs
+    document.querySelectorAll('.admission-faq__item').forEach(i => {
+      i.classList.remove('active');
+      i.querySelector('.faq-icon').classList.replace('fa-minus', 'fa-plus');
+    });
+
+    // Toggle current
+    if (!isOpen) {
+      item.classList.add('active');
+      icon.classList.replace('fa-plus', 'fa-minus');
+    } else {
+      item.classList.remove('active');
+      icon.classList.replace('fa-minus', 'fa-plus');
+    }
+  });
+});
+
 // // BAck to Top
 // // Create back to top button dynamically
 // const createBackToTopBtn = () => {
