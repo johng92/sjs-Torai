@@ -1,0 +1,114 @@
+@use "../general-styles/typography" as type;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/colors" as clrs;
+
+/* ===============================
+   NEWS LIST SECTION
+================================ */
+.news-list {
+  background: var(--gradient-cyan);
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 2.5rem;
+
+    /* ----------- Desktop ----------- */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__loadmore {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+/* ===============================
+   NEWS CARD
+================================ */
+.news-card {
+  background: var(--color-white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--color-light-greyish-blue);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__image {
+    width: 100%;
+    height: 180px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  &__content {
+    padding: 1.8rem 2rem;
+  }
+
+  &__title {
+    font-size: type.font-size-st(m);
+    font-weight: type.font-weight(bold);
+    color: var(--color-navy-dark);
+    margin-bottom: .8rem;
+  }
+
+  &__date {
+    font-size: type.font-size-st(xs);
+    color: var(--color-gray-medium);
+    margin-bottom: 1.2rem;
+  }
+
+  &__excerpt {
+    font-size: type.font-size-st(s);
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+  }
+}
+
+/* ===============================
+   RESPONSIVENESS
+================================ */
+
+/* 2 CARDS — Tablets / small laptops */
+@media (max-width: 900px) {
+  .news-list__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-card__image {
+    height: 160px;
+  }
+}
+
+/* 1 CARD — Mobile */
+@media (max-width: 600px) {
+  .news-list__container {
+    grid-template-columns: 1fr;
+  }
+
+  .news-card__image {
+    height: 150px;
+  }
+}

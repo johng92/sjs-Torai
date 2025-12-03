@@ -1769,6 +1769,100 @@ textarea {
   color: var(--color-gray-dark);
 }
 
+/* ===============================
+   NEWS LIST SECTION
+================================ */
+.news-list {
+  background: var(--gradient-cyan);
+}
+.news-list__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  /* ----------- Desktop ----------- */
+  grid-template-columns: repeat(3, 1fr);
+}
+.news-list__loadmore {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ===============================
+   NEWS CARD
+================================ */
+.news-card {
+  background: var(--color-white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--color-light-greyish-blue);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+.news-card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.news-card__image {
+  width: 100%;
+  height: 180px;
+}
+.news-card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.news-card:hover img {
+  transform: scale(1.05);
+}
+.news-card__content {
+  padding: 1.8rem 2rem;
+}
+.news-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-navy-dark);
+  margin-bottom: 0.8rem;
+}
+.news-card__date {
+  font-size: 1.3rem;
+  color: var(--color-gray-medium);
+  margin-bottom: 1.2rem;
+}
+.news-card__excerpt {
+  font-size: 1.5rem;
+  color: var(--color-gray-dark);
+  line-height: 1.6;
+}
+
+/* ===============================
+   RESPONSIVENESS
+================================ */
+/* 2 CARDS — Tablets / small laptops */
+@media (max-width: 900px) {
+  .news-list__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .news-card__image {
+    height: 160px;
+  }
+}
+/* 1 CARD — Mobile */
+@media (max-width: 600px) {
+  .news-list__container {
+    grid-template-columns: 1fr;
+  }
+  .news-card__image {
+    height: 150px;
+  }
+}
 @media screen and (max-width: 320px) {
   .hero__btns .cta {
     font-size: 1.3rem;

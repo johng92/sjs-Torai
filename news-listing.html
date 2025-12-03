@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SJS Torai, All News</title>
+    <link rel="stylesheet" href="up/css/main-style.css" />
+  </head>
+  <body>
+    <header class="header page-width padd">
+      <a class="header__logo-link" href="index.html">
+        <img src="up/images/sjsToraiLogo1.png" alt="" class="header__logo" />
+      </a>
+
+      <nav class="header__nav">
+        <li><a class="header__nav-link" href="#">Home</a></li>
+        <li>
+          <a class="header__nav-link" href="admin-dashboard.html">Admin</a>
+        </li>
+        <li><a class="header__nav-link" href="#">About</a></li>
+        <li><a class="header__nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="header__nav-link" href="#">News</a></li>
+        <li><a class="header__nav-link" href="#">Events</a></li>
+        <li><a class="header__nav-link" href="#">Contact</a></li>
+        <li><a class="cta" href="#">Admission</a></li>
+      </nav>
+
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </div>
+    </header>
+
+    <section class="news-list padd sec-flex">
+      <h2 class="sec-title">All News</h2>
+
+      <div class="news-list__container">
+        <!-- NEWS CARD -->
+        <article class="news-card">
+          <a href="/news-details/123" class="news-card__link">
+            <figure class="news-card__image">
+              <img src="up/images/sports.jpg" alt="Sports Day Celebration" />
+            </figure>
+
+            <div class="news-card__content">
+              <h3 class="news-card__title">Sports Day Celebration</h3>
+
+              <!-- Dynamic time ago -->
+              <p class="news-card__date" data-date="2025-02-10 10:00:00"></p>
+
+              <p class="news-card__excerpt">
+                Students participated enthusiastically in various events
+                showcasing teamwork and discipline.
+              </p>
+            </div>
+          </a>
+        </article>
+
+        <!-- NEWS CARD -->
+        <article class="news-card">
+          <a href="/news-details/456" class="news-card__link">
+            <figure class="news-card__image">
+              <img
+                src="up/images/cultural2.jpg"
+                alt="Cultural Fest Highlights"
+              />
+            </figure>
+
+            <div class="news-card__content">
+              <h3 class="news-card__title">Cultural Fest Highlights</h3>
+
+              <p class="news-card__date" data-date="2025-01-28 09:30:00"></p>
+
+              <p class="news-card__excerpt">
+                A vibrant cultural show where students showcased traditional
+                dances and music.
+              </p>
+            </div>
+          </a>
+        </article>
+
+                <!-- NEWS CARD -->
+        <article class="news-card">
+          <a href="/news-details/123" class="news-card__link">
+            <figure class="news-card__image">
+              <img src="up/images/sports.jpg" alt="Sports Day Celebration" />
+            </figure>
+
+            <div class="news-card__content">
+              <h3 class="news-card__title">Sports Day Celebration</h3>
+
+              <!-- Dynamic time ago -->
+              <p class="news-card__date" data-date="2025-02-10 10:00:00"></p>
+
+              <p class="news-card__excerpt">
+                Students participated enthusiastically in various events
+                showcasing teamwork and discipline.
+              </p>
+            </div>
+          </a>
+        </article>
+
+      <!-- NEWS CARD -->
+        <article class="news-card">
+          <a href="/news-details/456" class="news-card__link">
+            <figure class="news-card__image">
+              <img
+                src="up/images/cultural2.jpg"
+                alt="Cultural Fest Highlights"
+              />
+            </figure>
+
+            <div class="news-card__content">
+              <h3 class="news-card__title">Cultural Fest Highlights</h3>
+
+              <p class="news-card__date" data-date="2025-01-28 09:30:00"></p>
+
+              <p class="news-card__excerpt">
+                A vibrant cultural show where students showcased traditional
+                dances and music.
+              </p>
+            </div>
+          </a>
+        </article>
+        <!-- More cards... -->
+      </div>
+
+      <!-- LOAD MORE -->
+      <div class="news-list__loadmore">
+        <a href="#" class="cta">Load More</a>
+      </div>
+    </section>
+
+    <script src="up/js/app.js"></script>
+  </body>
+</html>
