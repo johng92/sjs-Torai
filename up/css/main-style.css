@@ -2284,6 +2284,15 @@ textarea {
   .principal {
     flex-direction: column;
   }
+  .admission-faq__question .faq-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+  .admission-faq__question span {
+    padding-right: 1rem;
+    white-space: normal;
+  }
 }
 @media screen and (max-width: 780px) {
   .slider-wrapper {

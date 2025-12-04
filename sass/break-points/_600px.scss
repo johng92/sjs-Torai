@@ -13,4 +13,16 @@
   flex-direction: column;
   }
 
+  // Admission FAQ
+  .admission-faq__question .faq-icon {
+    flex-shrink: 0;    // prevents squishing
+    width: 40px;       // slightly smaller for small screens
+    height: 40px;
+  }
+
+  .admission-faq__question span {
+    padding-right: 1rem;   // ensures space between text + icon
+    white-space: normal;   // allow wrapping
+  }
+
 }
