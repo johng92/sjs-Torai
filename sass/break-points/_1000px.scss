@@ -38,8 +38,9 @@
   .hamburger {
       height: 5rem;
       width: 9rem;
-      background-color: var(--color-white);
+      background: var(--gradient-nav-btn);
       padding: pad.padding-st-h(s);
+      border-radius: 8px;
       cursor: pointer;
 
       position: fixed;
