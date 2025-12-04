@@ -5,13 +5,13 @@
 .gallery {
   background: var(--gradient-cyan);
 
-    .slider-wrapper {
+  .slider-wrapper {
     overflow: hidden;
     max-width: 1200px;
     margin: 0 auto 55px;
   }
 
-    .slider-wrapper {
+  .slider-wrapper {
     .swiper-pagination-bullet {
       background: var(--color-blue-dark);
       height: 15px;
@@ -21,11 +21,10 @@
     .swiper-slide-button {
       color: var(--color-green-light);
       margin-top: -50px;
-      transition: 0.2s ease;  
+      transition: 0.2s ease;
 
       &:hover {
-      color: var(--color-green-medium);
-
+        color: var(--color-green-medium);
       }
     }
 
@@ -53,7 +52,6 @@
       border-radius: 50%;
       border: 2px solid transparent;
     }
-
   }
 
   // IMAGE
@@ -83,7 +81,7 @@
   &__badge {
     font-size: type.font-size-st(s);
     background: var(--color-green-light);
-    padding: .3rem .7rem;
+    padding: 0.3rem 0.7rem;
     border-radius: 6px;
     width: fit-content;
     color: var(--color-navy-dark);
@@ -100,7 +98,7 @@
     align-self: flex-start;
     border: 2px solid var(--color-navy-dark);
     border-radius: 50%;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
 
     i {
       color: var(--color-navy-dark);

@@ -758,7 +758,7 @@ textarea {
 .teachers .slider-wrapper {
   overflow: hidden;
   max-width: 1200px;
-  margin: 0 70px 55px;
+  margin: 0 auto 55px;
 }
 .teachers .slider-wrapper .swiper-pagination-bullet {
   background-color: var(--color-blue-dark);
