@@ -2181,7 +2181,6 @@ textarea {
   line-height: 1.6;
 }
 .admission-faq__item.active .admission-faq__answer {
-  max-height: 400px;
   padding-bottom: 1.2rem;
 }
 
@@ -2286,8 +2285,8 @@ textarea {
   }
   .admission-faq__question .faq-icon {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
   }
   .admission-faq__question span {
     padding-right: 1rem;

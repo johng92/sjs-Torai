@@ -202,30 +202,48 @@ function initSwipers() {
 
 initSwipers();
 
-document.querySelectorAll('.admission-faq__item').forEach(item => {
-  const question = item.querySelector('.admission-faq__question');
-  const icon = item.querySelector('.faq-icon');
-  const answer = item.querySelector('.admission-faq__answer');
+// FAQ script
+// Smooth FAQ Accordion
+const faqItems = document.querySelectorAll(".admission-faq__item");
 
-  question.addEventListener('click', () => {
-    const isOpen = item.classList.contains('active');
+faqItems.forEach(item => {
+  const question = item.querySelector(".admission-faq__question");
+  const answer = item.querySelector(".admission-faq__answer");
+  const icon = item.querySelector(".faq-icon");
 
-    // Close all other FAQs
-    document.querySelectorAll('.admission-faq__item').forEach(i => {
-      i.classList.remove('active');
-      i.querySelector('.faq-icon').classList.replace('fa-minus', 'fa-plus');
+  question.addEventListener("click", () => {
+    const isOpen = item.classList.contains("active");
+
+    // Close any open items
+    faqItems.forEach(i => {
+      if (i !== item) {
+        i.classList.remove("active");
+        const a = i.querySelector(".admission-faq__answer");
+        const ic = i.querySelector(".faq-icon");
+
+        a.style.maxHeight = "0px";
+        a.style.paddingBottom = "0px";
+        ic.classList.replace("fa-minus", "fa-plus");
+      }
     });
 
-    // Toggle current
+    // Toggle current item
     if (!isOpen) {
-      item.classList.add('active');
-      icon.classList.replace('fa-plus', 'fa-minus');
+      item.classList.add("active");
+      icon.classList.replace("fa-plus", "fa-minus");
+
+      answer.style.maxHeight = answer.scrollHeight + "px";
+      answer.style.paddingBottom = "1.2rem";
     } else {
-      item.classList.remove('active');
-      icon.classList.replace('fa-minus', 'fa-plus');
+      item.classList.remove("active");
+      icon.classList.replace("fa-minus", "fa-plus");
+
+      answer.style.maxHeight = "0px";
+      answer.style.paddingBottom = "0px";
     }
   });
 });
+
 
 // // BAck to Top
 // // Create back to top button dynamically
