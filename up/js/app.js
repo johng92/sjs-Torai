@@ -246,34 +246,38 @@ faqItems.forEach(item => {
 
 
 // // BAck to Top
-// // Create back to top button dynamically
-// const createBackToTopBtn = () => {
-//   const btn = document.createElement('button');
-//   btn.className = 'back-to-top';
-//   btn.setAttribute('aria-label', 'Back to top');
-//   btn.innerHTML = `
-//     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-//       <polyline points="18 15 12 9 6 15"></polyline>
-//     </svg>
-//   `;
-//   document.body.appendChild(btn);
-//   return btn;
-// };
+document.addEventListener("DOMContentLoaded", () => {
 
-// // Initialize button
-// const backToTopBtn = createBackToTopBtn();
-// const scrollThresholdBtn = 300;
+  const createBackToTopBtn = () => {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+           viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    `;
+    document.body.appendChild(btn);
+    return btn;
+  };
 
-// // Show/hide logic
-// window.addEventListener('scroll', () => {
-//   const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-//   if (currentScroll > scrollThresholdBtn) {
-//     backToTopBtn.classList.add('show-back-to-top');
-//   } else {
-//     backToTopBtn.classList.remove('show-back-to-top');
-//   }
-// });
+  const backToTopBtn = createBackToTopBtn();
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show-back-to-top');
+    } else {
+      backToTopBtn.classList.remove('show-back-to-top');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+});
+
 
 // // Smooth scroll to top
 // backToTopBtn.addEventListener('click', () => {

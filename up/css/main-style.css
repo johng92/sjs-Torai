@@ -74,6 +74,33 @@ textarea {
   grid-column: container-start/container-end;
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-blue-dark);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top.show-back-to-top {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .padd {
   padding: calc(1rem + 6vh) calc(1rem + 2vw);
 }
