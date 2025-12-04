@@ -605,7 +605,7 @@ textarea {
   color: var(--color-green-medium);
 }
 .gallery__card {
-  height: 300px !important;
+  height: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

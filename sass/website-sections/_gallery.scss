@@ -32,7 +32,8 @@
   }
 
   &__card {
-    height: 300px !important;
+    // height: 300px !important;
+    height: auto;
     user-select: none;
     background: #fff;
     border-radius: 14px;
