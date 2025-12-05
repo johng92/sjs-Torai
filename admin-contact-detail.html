@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Contact Messages</title>
+  <!-- Fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="up/css/admin-style.css" />
+
+</head>
+<body class="container">
+
+  <!-- Left Sidebar Navigation -->
+  <nav class="admin-nav padd">
+    <a href="admin-dashboard.html" class="admin-nav__logo">
+      <img src="up/images/sjsToraiLogo1.png" alt="Logo" class="logo" />
+    </a>
+
+    <ul class="admin-nav__links">
+      <li>
+        <a href="admin-dashboard.html" class="admin-nav__link">
+          <i class="fa-solid fa-house-chimney"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="admin-blogs.html" class="admin-nav__link">
+          <i class="fa-solid fa-blog"></i>
+          <span>Blogs</span>
+        </a>
+      </li>
+      <li>
+        <a href="contacts.html" class="admin-nav__link admin-nav__link--active">
+          <i class="fa-solid fa-address-book"></i>
+          <span>Contacts</span>
+        </a>
+      </li>
+      <li>
+        <a href="stats.html" class="admin-nav__link">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Stats</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+      <!-- Main Content Area -->
+  <main class="admin-main page-width padd">
+ 
+      <!-- Header with greeting and icons -->
+      <header class="admin-header padd">
+        <div class="admin-header__greeting">
+          <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
+          <h1 class="admin-header__title sec-title">John Doe</h1>
+          
+        </div>
+
+        <div class="admin-header__icons">
+      <div class="admin-header__search">
+      <button type="button"
+              class="admin-header__icon-btn"
+              id="searchToggle"
+              aria-label="Search"
+              aria-expanded="false">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+
+      <!-- Hidden search form -->
+      <form class="admin-header__search-form" id="searchForm" action="/search" method="get">
+        <input type="search"
+               name="q"
+               placeholder="Search…"
+               aria-label="Search site" />
+      </form>
+    </div>
+          <button class="admin-header__icon-btn" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <button class="admin-header__icon-btn" aria-label="Messages">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <figure class="admin-header__profile">
+            <img src="/up/images/johnhemb.jpg" alt="John Doe profile" />
+          </figure>
+        </div>
+      </header>
+
+  <!-- Contact Details Section -->
+<section class="contact-detail">
+    <header class="contact-detail__header">
+      <h1 class="contact-detail__title">Message from John Doe</h1>
+      <p class="contact-detail__meta">Received on Oct 9, 2025, 3:45 PM</p>
+    </header>
+
+    <article class="contact-detail__body">
+      <h2 class="contact-detail__subject">Subject: Feedback about your website</h2>
+      <p class="contact-detail__message">
+        Hi, I really like your website. I wanted to ask if you offer online classes too?
+      </p>
+
+      <div class="contact-detail__info">
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Phone:</strong> +91-9876543210</p>
+      </div>
+
+      <!-- Reply Button -->
+      <button type="button" class="contact-detail__reply-toggle">
+        <i class="fa-solid fa-reply"></i> Reply
+      </button>
+
+      <!-- Reply Form -->
+      <form class="contact-detail__reply-form" method="post" action="mailto:johndoe@example.com">
+        <div class="contact-detail__reply-group">
+          <label for="reply-subject" class="contact-detail__reply-label">Subject</label>
+          <input type="text" id="reply-subject" class="contact-detail__reply-input" placeholder="Re: Feedback about your website">
+        </div>
+
+        <div class="contact-detail__reply-group">
+          <label for="reply-message" class="contact-detail__reply-label">Message</label>
+          <textarea id="reply-message" class="contact-detail__reply-textarea" rows="6" placeholder="Write your reply..."></textarea>
+        </div>
+
+        <div class="contact-detail__reply-actions">
+          <button type="submit" class="contact-detail__send">Send Reply</button>
+          <button type="button" class="contact-detail__cancel">Cancel</button>
+        </div>
+      </form>
+    </article>
+  </section>
+
+
+
+  </main>
+  <script src="js/admin.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const replyToggle = document.querySelector(".contact-detail__reply-toggle");
+  const replyForm = document.querySelector(".contact-detail__reply-form");
+  const cancelReply = document.querySelector(".contact-detail__cancel");
+
+  if (!replyToggle || !replyForm || !cancelReply) {
+    console.warn("Reply elements not found on this page.");
+    return;
+  }
+
+  replyToggle.addEventListener("click", function () {
+    replyForm.classList.toggle("active");
+    replyToggle.style.display = replyForm.classList.contains("active")
+      ? "none"
+      : "inline-block";
+  });
+
+  cancelReply.addEventListener("click", function () {
+    replyForm.classList.remove("active");
+    replyToggle.style.display = "inline-block";
+  });
+});
+
+  </script>
+</body>
+</html>
