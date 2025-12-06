@@ -14,7 +14,10 @@
       referrerpolicy="no-referrer"
     />
     <!-- Quilleditor -->
-     <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+    <link
+      href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="up/css/admin-style.css" />
   </head>
@@ -26,18 +29,90 @@
       </a>
 
       <ul class="admin-nav__links">
+        <!-- Dashboard -->
         <li>
-          <a href="admin.html" class="admin-nav__link admin-nav__link--active">
+          <a
+            href="admin-dashboard.html"
+            class="admin-nav__link admin-nav__link--active"
+          >
             <i class="fa-solid fa-house-chimney"></i>
             <span>Dashboard</span>
           </a>
         </li>
-        <li>
-          <a href="admin-blogs.html" class="admin-nav__link">
-            <i class="fa-solid fa-blog"></i>
-            <span>News</span>
-          </a>
+
+        <!-- Homepage (Accordion) -->
+        <li class="admin-nav__item admin-nav__item--has-children">
+          <button class="admin-nav__link admin-nav__toggle">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Homepage</span>
+            <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
+          </button>
+
+          <ul class="admin-subnav">
+            <li><a href="admin-notices.html">Notices</a></li>
+            <li><a href="admin-leadership.html">Leadership</a></li>
+            <li><a href="admin-principal.html">Principal Message</a></li>
+            <li><a href="admin-homegallery.html">Homepage Gallery</a></li>
+            <li><a href="admin-testimonials.html">Testimonials</a></li>
+          </ul>
         </li>
+
+        <!-- Academics -->
+        <li class="admin-nav__item admin-nav__item--has-children">
+          <button class="admin-nav__link admin-nav__toggle">
+            <i class="fa-solid fa-user-graduate"></i>
+            <span>Academics</span>
+            <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
+          </button>
+
+          <ul class="admin-subnav">
+            <li><a href="admin-teachers.html">Teachers</a></li>
+          </ul>
+        </li>
+
+        <!-- News & Events -->
+        <li class="admin-nav__item admin-nav__item--has-children">
+          <button class="admin-nav__link admin-nav__toggle">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>News & Events</span>
+            <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
+          </button>
+
+          <ul class="admin-subnav">
+            <li><a href="admin-news.html">News</a></li>
+            <li><a href="admin-events.html">Events</a></li>
+          </ul>
+        </li>
+
+        <!-- Gallery -->
+        <li class="admin-nav__item admin-nav__item--has-children">
+          <button class="admin-nav__link admin-nav__toggle">
+            <i class="fa-solid fa-images"></i>
+            <span>Gallery</span>
+            <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
+          </button>
+
+          <ul class="admin-subnav">
+            <li><a href="admin-gallery-categories.html">Categories</a></li>
+            <li><a href="admin-gallery-photos.html">Photos</a></li>
+          </ul>
+        </li>
+
+        <!-- Admissions -->
+        <li class="admin-nav__item admin-nav__item--has-children">
+          <button class="admin-nav__link admin-nav__toggle">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Admissions</span>
+            <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
+          </button>
+
+          <ul class="admin-subnav">
+            <li><a href="admin-admission-files.html">Admission Files</a></li>
+            <li><a href="admin-faqs.html">FAQs</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact — no dropdown -->
         <li>
           <a href="admin-contacts.html" class="admin-nav__link">
             <i class="fa-solid fa-address-book"></i>
@@ -46,7 +121,7 @@
         </li>
       </ul>
 
-      <!-- Logout link at bottom -->
+      <!-- Logout -->
       <ul class="admin-nav__links admin-nav__links--bottom">
         <li>
           <a href="/logout.php" class="admin-nav__link">
@@ -105,13 +180,9 @@
         </div>
       </header>
 
-      <!-- Stats/Dates Section -->
+      <!-- Dashboard Cards Section -->
       <section class="admin-stats padd-h">
-        <p class="admin-stats__title sec-sub-para">
-          School Portal Overview
-        </p>
-
-
+        <p class="admin-stats__title sec-sub-para">School Portal Overview</p>
       </section>
 
       <!-- Charts Section -->
@@ -160,6 +231,10 @@
       </section>
     </main>
 
+        <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+    <!-- imageResize MOdule -->
+    <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
     <script src="up/js/admin.js"></script>
   </body>
 </html>

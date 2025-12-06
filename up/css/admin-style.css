@@ -143,6 +143,7 @@ textarea {
   }
 }
 
+/* Sidebar Root */
 .admin-nav {
   grid-column: container-start/span 2;
   grid-row: 1/-1;
@@ -153,10 +154,17 @@ textarea {
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  /* Logo */
+  /* Main UL wrapper */
+  /* Base link style (Dashboard + Contact + Logout + ANY clickable) */
+  /* Parent items that have children */
+  /* Submenu */
+  /* Logout section */
+  /* Responsive Sidebar */
 }
 .admin-nav__logo {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .admin-nav__logo .logo {
@@ -166,35 +174,35 @@ textarea {
 }
 .admin-nav__links {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 .admin-nav__links li {
   width: 100%;
 }
-.admin-nav__link {
+.admin-nav__link, .admin-nav__item--has-children .admin-nav__toggle {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1.2rem 1.5rem;
   color: #a0a3bd;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-left: 3px solid transparent;
   font-size: 1.5rem;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
 }
-.admin-nav__link i {
+.admin-nav__link i, .admin-nav__item--has-children .admin-nav__toggle i {
   font-size: 1.8rem;
   width: 24px;
   text-align: center;
 }
-.admin-nav__link span {
+.admin-nav__link span, .admin-nav__item--has-children .admin-nav__toggle span {
   font-weight: 500;
 }
-.admin-nav__link:hover {
+.admin-nav__link:hover, .admin-nav__item--has-children .admin-nav__toggle:hover {
   background: rgba(255, 255, 255, 0.05);
   color: #707284;
 }
@@ -203,7 +211,51 @@ textarea {
   color: #6366f1;
   border-left-color: #6366f1;
 }
-.admin-nav .admin-nav__links--bottom {
+.admin-nav__item--has-children .admin-nav__toggle {
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+}
+.admin-nav__item--has-children .admin-nav__toggle .admin-nav__arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+.admin-nav__item--has-children .admin-nav__toggle.open .admin-nav__arrow {
+  transform: rotate(180deg);
+}
+.admin-nav .admin-subnav {
+  list-style: none;
+  margin: 0;
+  padding-left: 3.8rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.admin-nav .admin-subnav.open {
+  max-height: 500px;
+}
+.admin-nav .admin-subnav a {
+  color: #d1d2e0;
+  font-size: 1.35rem;
+  padding: 0.6rem 0;
+  text-decoration: none;
+  display: block;
+  transition: color 0.2s ease;
+}
+.admin-nav .admin-subnav a:hover {
+  color: #fff;
+}
+.admin-nav .admin-subnav a.active {
+  color: #6366f1;
+  font-weight: 600;
+}
+.admin-nav__links--bottom {
   margin-top: auto;
   padding-bottom: 2rem;
 }
@@ -213,9 +265,10 @@ textarea {
     grid-row: 1;
     height: auto;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    /* Hide text labels on mobile */
+    /* Subnav on mobile (smaller text) */
   }
   .admin-nav__logo {
     margin-bottom: 0;
@@ -227,15 +280,20 @@ textarea {
     flex-direction: row;
     gap: 0.5rem;
   }
-  .admin-nav__link {
+  .admin-nav__link, .admin-nav__item--has-children .admin-nav__toggle {
     padding: 1rem;
-    font-size: 1.3rem;
   }
-  .admin-nav__link i {
+  .admin-nav__link span, .admin-nav__item--has-children .admin-nav__toggle span {
+    display: none;
+  }
+  .admin-nav__link i, .admin-nav__item--has-children .admin-nav__toggle i {
     font-size: 2rem;
   }
-  .admin-nav__link span {
-    display: none;
+  .admin-nav .admin-subnav {
+    padding-left: 2rem;
+  }
+  .admin-nav .admin-subnav a {
+    font-size: 1.2rem;
   }
 }
 

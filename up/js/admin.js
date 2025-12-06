@@ -42,51 +42,68 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // ------------------------------------------------------
 // ======== Quill INIT ==========
-// ======== Toolbar Options ==========
-const toolbarOptions = [
-  [{ font: [] }],
-  [{ header: [1, 2, 3, false] }],
-  ["bold", "italic", "underline", "strike"],
-  [{ color: [] }, { background: [] }],
-  [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
-  ["blockquote", "code-block"],
-  ["link", "image", "video"],
-  [{ align: [] }],
-];
+// -------------- Quill + Editor features (SAFE) --------------
+const editorContainer = document.querySelector('#editor-container');
 
-// ======== Quill Init (NO FLOAT REGISTRATION) ==========
-const quill = new Quill("#editor-container", {
-  theme: "snow",
-  placeholder: "Write your blog content here...",
-  modules: {
-    toolbar: toolbarOptions,
+if (editorContainer && typeof Quill !== 'undefined') {
 
-    // WORKS PERFECTLY
-    imageResize: {
-      modules: ["Resize", "DisplaySize" , "ImageResize"]
+  const toolbarOptions = [
+    [{ font: [] }],
+    [{ header: [1, 2, 3, false] }],
+    ["bold", "italic", "underline", "strike"],
+    [{ color: [] }, { background: [] }],
+    [{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+    ["blockquote", "code-block"],
+    ["link", "image", "video"],
+    [{ align: [] }],
+  ];
+
+  const quill = new Quill("#editor-container", {
+    theme: "snow",
+    placeholder: "Write your blog content here...",
+    modules: {
+      toolbar: toolbarOptions,
+      imageResize: {
+        modules: ["Resize", "DisplaySize", "ImageResize"]
+      },
     },
-  },
-});
+  });
 
-// ======== Preview Toggle ==========
-const previewBtn = document.querySelector("#preview-button");
-const previewBox = document.querySelector("#editor-preview");
+  const previewBtn = document.querySelector("#preview-button");
+  const previewBox = document.querySelector("#editor-preview");
 
-previewBtn.addEventListener("click", () => {
-  const html = quill.root.innerHTML;
+  if (previewBtn && previewBox) {
+    previewBtn.addEventListener("click", () => {
+      const html = quill.root.innerHTML;
 
-  if (previewBox.classList.contains("active")) {
-    previewBox.classList.remove("active");
-    previewBtn.textContent = "Preview Content";
-    previewBox.innerHTML = "";
-  } else {
-    previewBox.classList.add("active");
-    previewBtn.textContent = "Hide Preview";
-    previewBox.innerHTML = html;
+      if (previewBox.classList.contains("active")) {
+        previewBox.classList.remove("active");
+        previewBtn.textContent = "Preview Content";
+        previewBox.innerHTML = "";
+      } else {
+        previewBox.classList.add("active");
+        previewBtn.textContent = "Hide Preview";
+        previewBox.innerHTML = html;
+      }
+    });
   }
-});
 
-// ======== Save On Submit ==========
-document.querySelector(".blog-form").addEventListener("submit", () => {
-  document.querySelector("#hidden-body").value = quill.root.innerHTML;
+  const form = document.querySelector(".blog-form");
+  const hiddenInput = document.querySelector("#hidden-body");
+
+  if (form && hiddenInput) {
+    form.addEventListener("submit", () => {
+      hiddenInput.value = quill.root.innerHTML;
+    });
+  }
+}
+// ----------------------------------------------------------------------
+// Admin Nav Toggle
+
+
+document.querySelectorAll(".admin-nav__toggle").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("open");
+    btn.nextElementSibling.classList.toggle("open");
+  });
 });

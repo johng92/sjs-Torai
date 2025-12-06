@@ -3,12 +3,10 @@
 @use "../general-styles/typography" as type;
 @use "../general-styles/gradient" as grad;
 
-// _admin-nav.scss
-// Navigation takes first 2 columns of your 12-column grid
-
+/* Sidebar Root */
 .admin-nav {
-  grid-column: container-start / span 2; // Takes first 2 columns from container-start
-  grid-row: 1 / -1; // Spans full height
+  grid-column: container-start / span 2;
+  grid-row: 1 / -1;
   background: grad.gradient("gradient-primary");
   display: flex;
   flex-direction: column;
@@ -17,10 +15,11 @@
   height: 100vh;
   overflow-y: auto;
 
+  /* Logo */
   &__logo {
     display: block;
-    margin-bottom: 3rem;
-    text-align: center; //logo centered
+    margin-bottom: 2rem;
+    text-align: center;
 
     .logo {
       width: 100%;
@@ -29,29 +28,31 @@
     }
   }
 
+  /* Main UL wrapper */
   &__links {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.3rem;
 
     li {
       width: 100%;
     }
   }
 
+  /* Base link style (Dashboard + Contact + Logout + ANY clickable) */
   &__link {
     display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1.2rem 1.5rem;
     color: #a0a3bd;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
     font-size: 1.5rem;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
 
     i {
       font-size: 1.8rem;
@@ -75,25 +76,81 @@
     }
   }
 
-  .admin-nav__links--bottom {
-  margin-top: auto; // push to the bottom of the sidebar
-  padding-bottom: 2rem; // optional spacing
-}
+  /* Parent items that have children */
+  &__item--has-children {
+    .admin-nav__toggle {
+      @extend .admin-nav__link;
+      cursor: pointer;
+      border: none;
+      background: none;
+      width: 100%;
+      text-align: left;
+      display: flex;
 
+      .admin-nav__arrow {
+        margin-left: auto;
+        transition: transform 0.3s ease;
+      }
 
-  // Responsive
+      &.open .admin-nav__arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  /* Submenu */
+  .admin-subnav {
+    list-style: none;
+    margin: 0;
+    padding-left: 3.8rem;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &.open {
+      max-height: 500px; // enough for all items
+    }
+
+    a {
+      color: #d1d2e0;
+      font-size: 1.35rem;
+      padding: 0.6rem 0;
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.active {
+        color: #6366f1;
+        font-weight: 600;
+      }
+    }
+  }
+
+  /* Logout section */
+  &__links--bottom {
+    margin-top: auto;
+    padding-bottom: 2rem;
+  }
+
+  /* Responsive Sidebar */
   @media (max-width: 968px) {
     grid-column: container-start / container-end;
     grid-row: 1;
     height: auto;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
 
     &__logo {
       margin-bottom: 0;
-      
+
       .logo {
         max-width: 80px;
       }
@@ -104,16 +161,25 @@
       gap: 0.5rem;
     }
 
+    /* Hide text labels on mobile */
     &__link {
       padding: 1rem;
-      font-size: 1.3rem;
-      
+
+      span {
+        display: none;
+      }
+
       i {
         font-size: 2rem;
       }
-      
-      span {
-        display: none; // Hide text on mobile
+    }
+
+    /* Subnav on mobile (smaller text) */
+    .admin-subnav {
+      padding-left: 2rem;
+
+      a {
+        font-size: 1.2rem;
       }
     }
   }
