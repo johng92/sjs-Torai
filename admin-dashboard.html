@@ -22,8 +22,12 @@
     <link rel="stylesheet" href="up/css/admin-style.css" />
   </head>
   <body class="container">
+
+    <!-- Mobile Overlay -->
+    <div class="admin-nav__overlay" id="adminNavOverlay"></div>
+    
     <!-- Left Sidebar Navigation -->
-    <nav class="admin-nav padd">
+    <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
         <img src="up/images/sjsToraiLogo1.png" alt="Logo" class="logo" />
       </a>
@@ -40,14 +44,13 @@
           </a>
         </li>
 
-        <!-- Homepage (Accordion) -->
+        <!-- Homepage -->
         <li class="admin-nav__item admin-nav__item--has-children">
-          <button class="admin-nav__link admin-nav__toggle">
+          <button type="button" class="admin-nav__link admin-nav__toggle">
             <i class="fa-solid fa-layer-group"></i>
             <span>Homepage</span>
             <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
           </button>
-
           <ul class="admin-subnav">
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
@@ -59,12 +62,11 @@
 
         <!-- Academics -->
         <li class="admin-nav__item admin-nav__item--has-children">
-          <button class="admin-nav__link admin-nav__toggle">
+          <button type="button" class="admin-nav__link admin-nav__toggle">
             <i class="fa-solid fa-user-graduate"></i>
             <span>Academics</span>
             <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
           </button>
-
           <ul class="admin-subnav">
             <li><a href="admin-teachers.html">Teachers</a></li>
           </ul>
@@ -72,12 +74,11 @@
 
         <!-- News & Events -->
         <li class="admin-nav__item admin-nav__item--has-children">
-          <button class="admin-nav__link admin-nav__toggle">
+          <button type="button" class="admin-nav__link admin-nav__toggle">
             <i class="fa-solid fa-newspaper"></i>
             <span>News & Events</span>
             <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
           </button>
-
           <ul class="admin-subnav">
             <li><a href="admin-news.html">News</a></li>
             <li><a href="admin-events.html">Events</a></li>
@@ -86,12 +87,11 @@
 
         <!-- Gallery -->
         <li class="admin-nav__item admin-nav__item--has-children">
-          <button class="admin-nav__link admin-nav__toggle">
+          <button type="button" class="admin-nav__link admin-nav__toggle">
             <i class="fa-solid fa-images"></i>
             <span>Gallery</span>
             <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
           </button>
-
           <ul class="admin-subnav">
             <li><a href="admin-gallery-categories.html">Categories</a></li>
             <li><a href="admin-gallery-photos.html">Photos</a></li>
@@ -100,19 +100,18 @@
 
         <!-- Admissions -->
         <li class="admin-nav__item admin-nav__item--has-children">
-          <button class="admin-nav__link admin-nav__toggle">
+          <button type="button" class="admin-nav__link admin-nav__toggle">
             <i class="fa-solid fa-folder-open"></i>
             <span>Admissions</span>
             <i class="fa-solid fa-chevron-down admin-nav__arrow"></i>
           </button>
-
           <ul class="admin-subnav">
             <li><a href="admin-admission-files.html">Admission Files</a></li>
             <li><a href="admin-faqs.html">FAQs</a></li>
           </ul>
         </li>
 
-        <!-- Contact — no dropdown -->
+        <!-- Contact -->
         <li>
           <a href="admin-contacts.html" class="admin-nav__link">
             <i class="fa-solid fa-address-book"></i>
@@ -121,7 +120,6 @@
         </li>
       </ul>
 
-      <!-- Logout -->
       <ul class="admin-nav__links admin-nav__links--bottom">
         <li>
           <a href="/logout.php" class="admin-nav__link">
@@ -140,6 +138,15 @@
           <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
           <h1 class="admin-header__title sec-title">Fr. Charls</h1>
         </div>
+
+        <!-- HAMBURGER FOR MOBILE -->
+        <button
+          class="admin-nav__hamburger"
+          id="adminNavToggle"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
 
         <div class="admin-header__icons">
           <div class="admin-header__search">
@@ -231,7 +238,7 @@
       </section>
     </main>
 
-        <!-- Include the Quill library -->
+    <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
     <!-- imageResize MOdule -->
     <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>

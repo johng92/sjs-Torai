@@ -143,7 +143,9 @@ textarea {
   }
 }
 
-/* Sidebar Root */
+/* ---------------------------------------------------
+   DESKTOP SIDEBAR
+--------------------------------------------------- */
 .admin-nav {
   grid-column: container-start/span 2;
   grid-row: 1/-1;
@@ -154,23 +156,28 @@ textarea {
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  z-index: 300;
+  /* Default visible (desktop) */
+  transform: translateX(0);
+  transition: transform 0.35s ease;
+  /* Mobile hidden state */
   /* Logo */
-  /* Main UL wrapper */
-  /* Base link style (Dashboard + Contact + Logout + ANY clickable) */
-  /* Parent items that have children */
-  /* Submenu */
-  /* Logout section */
-  /* Responsive Sidebar */
+  /* Normal Links Wrapper */
+  /* Sidebar Links */
+  /* Accordion Parent */
+  /* Sub-navigation */
+  /* Bottom section (Logout) */
+}
+.admin-nav--hidden {
+  transform: translateX(-100%);
 }
 .admin-nav__logo {
-  display: block;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 .admin-nav__logo .logo {
   width: 100%;
   max-width: 120px;
-  height: auto;
 }
 .admin-nav__links {
   list-style: none;
@@ -178,36 +185,33 @@ textarea {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-}
-.admin-nav__links li {
-  width: 100%;
+  gap: 0.4rem;
 }
 .admin-nav__link, .admin-nav__item--has-children .admin-nav__toggle {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 1.2rem 1.5rem;
-  color: #a0a3bd;
-  font-size: 1.5rem;
   text-decoration: none;
+  color: #c9cad6;
+  font-size: 1.5rem;
   border-left: 3px solid transparent;
-  transition: all 0.3s ease;
+  transition: 0.25s ease;
 }
 .admin-nav__link i, .admin-nav__item--has-children .admin-nav__toggle i {
-  font-size: 1.8rem;
   width: 24px;
+  font-size: 1.8rem;
   text-align: center;
 }
 .admin-nav__link span, .admin-nav__item--has-children .admin-nav__toggle span {
   font-weight: 500;
 }
 .admin-nav__link:hover, .admin-nav__item--has-children .admin-nav__toggle:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #707284;
+  background: rgba(255, 255, 255, 0.08);
+  color: #aaa8a8;
 }
 .admin-nav__link--active {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.15);
   color: #6366f1;
   border-left-color: #6366f1;
 }
@@ -216,8 +220,6 @@ textarea {
   border: none;
   background: none;
   width: 100%;
-  text-align: left;
-  display: flex;
 }
 .admin-nav__item--has-children .admin-nav__toggle .admin-nav__arrow {
   margin-left: auto;
@@ -228,75 +230,102 @@ textarea {
 }
 .admin-nav .admin-subnav {
   list-style: none;
-  margin: 0;
   padding-left: 3.8rem;
+  margin: 0;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: max-height 0.35s ease, opacity 0.25s ease, transform 0.25s ease;
 }
 .admin-nav .admin-subnav.open {
-  max-height: 500px;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
 }
 .admin-nav .admin-subnav a {
-  color: #d1d2e0;
-  font-size: 1.35rem;
-  padding: 0.6rem 0;
-  text-decoration: none;
   display: block;
-  transition: color 0.2s ease;
+  padding: 0.6rem 0;
+  font-size: 1.35rem;
+  color: #bdbdbe;
+  text-decoration: none;
 }
 .admin-nav .admin-subnav a:hover {
-  color: #fff;
-}
-.admin-nav .admin-subnav a.active {
-  color: #6366f1;
-  font-weight: 600;
+  color: #8c8b8b;
 }
 .admin-nav__links--bottom {
   margin-top: auto;
-  padding-bottom: 2rem;
-}
-@media (max-width: 968px) {
-  .admin-nav {
-    grid-column: container-start/container-end;
-    grid-row: 1;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* Hide text labels on mobile */
-    /* Subnav on mobile (smaller text) */
-  }
-  .admin-nav__logo {
-    margin-bottom: 0;
-  }
-  .admin-nav__logo .logo {
-    max-width: 80px;
-  }
-  .admin-nav__links {
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-  .admin-nav__link, .admin-nav__item--has-children .admin-nav__toggle {
-    padding: 1rem;
-  }
-  .admin-nav__link span, .admin-nav__item--has-children .admin-nav__toggle span {
-    display: none;
-  }
-  .admin-nav__link i, .admin-nav__item--has-children .admin-nav__toggle i {
-    font-size: 2rem;
-  }
-  .admin-nav .admin-subnav {
-    padding-left: 2rem;
-  }
-  .admin-nav .admin-subnav a {
-    font-size: 1.2rem;
-  }
+  padding-bottom: 1rem;
 }
 
+/* ---------------------------------------------------
+   MOBILE OVERLAY
+--------------------------------------------------- */
+.admin-nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 200;
+}
+.admin-nav__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------------------------------------------------
+   HAMBURGER BUTTON (only visible on mobile)
+--------------------------------------------------- */
+.admin-nav__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.6rem;
+  color: #374151;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   MOBILE SIDEBAR BEHAVIOR
+--------------------------------------------------- */
+@media (max-width: 968px) {
+  .admin-nav:not(.admin-nav--hidden) {
+    transform: translateX(0) !important;
+  }
+  /* Sidebar becomes a drawer */
+  .admin-nav {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    grid-column: auto;
+    grid-row: auto;
+    transform: translateX(-100%); /* hidden by default */
+    transition: transform 0.35s ease;
+  }
+  /* Show burger icon in header */
+  .admin-nav__hamburger {
+    display: block !important;
+  }
+}
+/* ---------------------------------------------------
+   DESKTOP SAFETY RESET
+--------------------------------------------------- */
+@media (min-width: 969px) {
+  .admin-nav {
+    transform: translateX(0); /* Always visible */
+  }
+  .admin-nav--hidden {
+    transform: translateX(0); /* Hidden state ignored on desktop */
+    transition: none;
+  }
+}
 .admin-main {
   grid-column: 3/container-end;
   position: relative;
@@ -304,7 +333,6 @@ textarea {
 
 /* When body has .sticky, pin the header */
 .admin-main.sticky .admin-header {
-  position: sticky; /* or fixed if you still need offset within main */
   top: 0;
   z-index: 999;
 }
@@ -452,6 +480,16 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
+  }
+  .admin-header .admin-nav__hamburger {
+    position: absolute;
+    left: 1.8rem;
+    top: 1.8rem;
+    z-index: 999;
+  }
+  .admin-header .admin-header {
+    position: relative;
+    padding-top: 4.8rem;
   }
   .admin-header__greeting {
     width: 100%;
