@@ -146,7 +146,7 @@ textarea {
 .admin-nav {
   grid-column: container-start/span 2;
   grid-row: 1/-1;
-  background: #1a1d29;
+  background: linear-gradient(to right, #e2f4f4, #f2fafa);
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -157,6 +157,7 @@ textarea {
 .admin-nav__logo {
   display: block;
   margin-bottom: 3rem;
+  text-align: center;
 }
 .admin-nav__logo .logo {
   width: 100%;
@@ -195,7 +196,7 @@ textarea {
 }
 .admin-nav__link:hover {
   background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  color: #707284;
 }
 .admin-nav__link--active {
   background: rgba(99, 102, 241, 0.1);
@@ -517,7 +518,7 @@ textarea {
 }
 
 .admin-stats__title {
-  padding-bottom: 1rem;
+  padding-top: 2rem;
   font-size: 2rem;
 }
 

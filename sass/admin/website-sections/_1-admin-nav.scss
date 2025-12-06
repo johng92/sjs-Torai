@@ -1,6 +1,7 @@
 @use "../general-styles/colors" as clrs;
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
+@use "../general-styles/gradient" as grad;
 
 // _admin-nav.scss
 // Navigation takes first 2 columns of your 12-column grid
@@ -8,7 +9,7 @@
 .admin-nav {
   grid-column: container-start / span 2; // Takes first 2 columns from container-start
   grid-row: 1 / -1; // Spans full height
-  background: #1a1d29;
+  background: grad.gradient("gradient-primary");
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -19,6 +20,7 @@
   &__logo {
     display: block;
     margin-bottom: 3rem;
+    text-align: center; //logo centered
 
     .logo {
       width: 100%;
@@ -63,7 +65,7 @@
 
     &:hover {
       background: rgba(255, 255, 255, 0.05);
-      color: #fff;
+      color: #707284;
     }
 
     &--active {

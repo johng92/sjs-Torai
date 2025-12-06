@@ -1,7 +1,7 @@
 @use "sass:map";
 // Sass Gradient (part-vii)
 $gradients: (
-  "gradient-primary": linear-gradient(45deg, hsla(253 82% 42% / 0.9), hsla(327 97% 48% / 0.7)),
+  "gradient-primary": linear-gradient(to right, #e2f4f4 , #f2fafa),
 );
 
 @function gradient($grad) {
