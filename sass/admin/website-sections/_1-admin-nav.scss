@@ -57,7 +57,7 @@
     padding: 1.2rem 1.5rem;
     text-decoration: none;
     color: #9a9ba2;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     border-left: 3px solid transparent;
     transition: .25s ease;
     justify-content: flex-start;
@@ -125,7 +125,8 @@
     a {
       display: block;
       padding: .6rem 0;
-      font-size: 1.35rem;
+      font-size: 1.40rem;
+      font-weight: type.font-weight(semibold);
       color: #7f7f83;
       text-decoration: none;
       text-align: left;
