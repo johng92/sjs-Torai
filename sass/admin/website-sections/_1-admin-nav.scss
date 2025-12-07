@@ -56,10 +56,11 @@
     gap: 1rem;
     padding: 1.2rem 1.5rem;
     text-decoration: none;
-    color: #c9cad6;
+    color: #9a9ba2;
     font-size: 1.5rem;
     border-left: 3px solid transparent;
     transition: .25s ease;
+    justify-content: flex-start;
 
     i {
       width: 24px;
@@ -69,11 +70,13 @@
 
     span {
       font-weight: 500;
+      text-align: left;
     }
 
     &:hover {
       background: rgba(255,255,255,0.08);
-      color: #aaa8a8;
+      color: #6366f1;
+      font-weight: type.font-weight(bold);
     }
 
     &--active {
@@ -123,11 +126,12 @@
       display: block;
       padding: .6rem 0;
       font-size: 1.35rem;
-      color: #bdbdbe;
+      color: #7f7f83;
       text-decoration: none;
+      text-align: left;
 
       &:hover {
-        color: #8c8b8b;
+        color: #6366f1;
       }
     }
   }
