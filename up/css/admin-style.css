@@ -155,7 +155,7 @@ textarea {
   position: sticky;
   top: 0;
   height: 100vh;
-  overflow-y: auto;
+  overflow: hidden;
   z-index: 300;
   /* Default visible (desktop) */
   transform: translateX(0);
@@ -180,6 +180,7 @@ textarea {
   max-width: 90px;
 }
 .admin-nav__links {
+  flex: 1;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -254,6 +255,9 @@ textarea {
   color: #8c8b8b;
 }
 .admin-nav__links--bottom {
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
   margin-top: auto;
   padding-bottom: 1rem;
 }
