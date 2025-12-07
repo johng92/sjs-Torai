@@ -316,6 +316,8 @@ textarea {
   /* Show burger icon in header */
   .admin-nav__hamburger {
     display: block !important;
+    position: fixed;
+    z-index: 9999;
   }
 }
 /* ---------------------------------------------------
@@ -486,9 +488,9 @@ textarea {
     gap: 2rem;
   }
   .admin-header .admin-nav__hamburger {
-    position: absolute;
-    left: 1.8rem;
-    top: 1.8rem;
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
     z-index: 999;
   }
   .admin-header .admin-header {

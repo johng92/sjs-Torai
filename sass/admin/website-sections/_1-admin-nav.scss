@@ -201,6 +201,9 @@
   /* Show burger icon in header */
   .admin-nav__hamburger {
     display: block !important;
+    position: fixed;
+    z-index: 9999;
+
   }
 }
 

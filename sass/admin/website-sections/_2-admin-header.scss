@@ -183,9 +183,9 @@
 
   @media (max-width: 968px) {
     .admin-nav__hamburger {
-    position: absolute;
-    left: 1.8rem;
-    top: 1.8rem;
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
     z-index: 999;
   }
 
