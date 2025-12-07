@@ -140,7 +140,7 @@
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: #fff;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
@@ -222,7 +222,7 @@
 
   // Email Section
   &__email-section {
-    flex: 0 0 220px;
+    flex: 0 0 200px;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
@@ -255,7 +255,7 @@
 
   // Phone Section
   &__phone-section {
-    flex: 0 0 180px;
+    flex: 0 0 175px;
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
