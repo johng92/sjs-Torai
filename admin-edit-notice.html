@@ -173,61 +173,40 @@
         </div>
       </header>
 
+    <!-- ========================= -->
+      <!--ADD  NOTICE SECTION HEADER     -->
       <!-- ========================= -->
-      <!-- NOTICE SECTION HEADER     -->
-      <!-- ========================= -->
-<!-- Notice Section -->
-<section class="admin-notices">
+      <section class="admin-notice-add padd">
+        <!-- Section Header -->
+        <div class="notice-header">
+          <h2 class="notice-header__title">Edit Notice</h2>
+          <p class="notice-header__subtitle">
+            Edit an existing notice for the homepage
+          </p>
+        </div>
 
-  <!-- SECTION HEADER -->
-  <div class="admin-notices__header">
-    <h2 class="admin-notices__title">Notices</h2>
+        <!-- Notice Form -->
+        <form class="notice-form" action="notice-save.php" method="POST">
+          <!-- Notice Text -->
+          <div class="notice-form__group">
+            <label for="noticeText" class="notice-form__label"
+              >Edit Notice Text</label
+            >
 
-    <a href="admin-add-notice.html" class="admin-notices__add-btn">
-      <i class="fa-solid fa-plus"></i> Add Notice
-    </a>
-  </div>
+            <input
+              type="text"
+              id="noticeText"
+              name="notice_text"
+              class="notice-form__input"
+              placeholder="Enter notice like 'Christmas gathering this Saturday'"
+              required
+            />
+          </div>
 
-  <!-- NOTICE LIST -->
-  <ul class="notice-list">
-
-    <!-- NOTICE ITEM -->
-    <li class="notice-item">
-      <p class="notice-item__text">
-        Christmas gathering this Saturday.
-      </p>
-      <span class="notice-item__time">2 hours ago</span>
-
-      <div class="notice-item__actions">
-        <a href="admin-edit-notice.html" class="notice-item__edit">
-          <i class="fa-solid fa-pen"></i>
-        </a>
-        <button class="notice-item__delete">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
-    </li>
-
-    <!-- Duplicate for more notices -->
-    <li class="notice-item">
-      <p class="notice-item__text">
-        Unit test will start from Monday.
-      </p>
-      <span class="notice-item__time">1 day ago</span>
-
-      <div class="notice-item__actions">
-        <a href="admin-edit-notice.html" class="notice-item__edit">
-          <i class="fa-solid fa-pen"></i>
-        </a>
-        <button class="notice-item__delete">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </div>
-    </li>
-
-  </ul>
-</section>
-
+          <!-- Submit -->
+          <button type="submit" class="notice-form__submit">Save Notice</button>
+        </form>
+      </section>
     </main>
 
     <!-- Include the Quill library -->
