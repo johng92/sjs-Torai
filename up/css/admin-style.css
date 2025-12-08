@@ -143,6 +143,78 @@ textarea {
   }
 }
 
+.alert {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  animation: fadeSlideDown 0.35s ease forwards;
+}
+.alert i {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+.alert__text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* SUCCESS */
+.alert-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+}
+.alert-success i {
+  color: #059669;
+}
+
+/* ERROR */
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+}
+.alert-error i {
+  color: #ef4444;
+}
+
+/* INFO (optional) */
+.alert-info {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid #3b82f6;
+}
+.alert-info i {
+  color: #2563eb;
+}
+
+/* WARNING (optional) */
+.alert-warning {
+  background: #fff7ed;
+  color: #b45309;
+  border-left: 4px solid #f59e0b;
+}
+.alert-warning i {
+  color: #d97706;
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ---------------------------------------------------
    DESKTOP SIDEBAR
 --------------------------------------------------- */
@@ -2549,6 +2621,146 @@ textarea {
 }
 @media (max-width: 600px) {
   .leadership-form__submit {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ================================
+   PRINCIPAL SECTION WRAPPER
+================================ */
+.admin-principal {
+  grid-column: 3/container-end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (max-width: 968px) {
+  .admin-principal {
+    grid-column: container-start/container-end;
+  }
+}
+
+/* HEADER */
+.admin-principal__header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.admin-principal__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* ================================
+   FORM CARD (same as leadership card)
+================================ */
+.principal-card {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+@media (max-width: 768px) {
+  .principal-card {
+    padding: 1.5rem;
+  }
+}
+
+.principal-card__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.principal-card__label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* PHOTO FIELD */
+.principal-card__photo-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  .principal-card__photo-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.principal-card__photo {
+  width: 95px;
+  height: 95px;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .principal-card__photo {
+    align-self: center;
+  }
+}
+
+.principal-card__input {
+  border: 2px solid #e5e7eb;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.7rem;
+  font-size: 1.35rem;
+  transition: all 0.25s ease;
+}
+.principal-card__input:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* TEXTAREA */
+.principal-card__textarea {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  padding: 1rem 1.2rem;
+  border-radius: 0.7rem;
+  font-size: 1.35rem;
+  resize: vertical;
+  transition: all 0.25s ease;
+}
+.principal-card__textarea:focus {
+  border-color: #6366f1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* SUBMIT BUTTON */
+.principal-card__submit {
+  align-self: flex-start;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: background 0.25s ease;
+}
+.principal-card__submit:hover {
+  background: #4338ca;
+}
+@media (max-width: 768px) {
+  .principal-card__submit {
     width: 100%;
     justify-content: center;
   }

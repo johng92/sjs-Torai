@@ -1,0 +1,80 @@
+// sass/utility-classes/_alerts.scss
+
+.alert {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  border-radius: .8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  animation: fadeSlideDown .35s ease forwards;
+
+  i {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+/* SUCCESS */
+.alert-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border-left: 4px solid #10b981;
+
+  i {
+    color: #059669;
+  }
+}
+
+/* ERROR */
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border-left: 4px solid #ef4444;
+
+  i {
+    color: #ef4444;
+  }
+}
+
+/* INFO (optional) */
+.alert-info {
+  background: #eff6ff;
+  color: #1e40af;
+  border-left: 4px solid #3b82f6;
+
+  i {
+    color: #2563eb;
+  }
+}
+
+/* WARNING (optional) */
+.alert-warning {
+  background: #fff7ed;
+  color: #b45309;
+  border-left: 4px solid #f59e0b;
+
+  i {
+    color: #d97706;
+  }
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,141 @@
+// sass/admin/admin-sections/_admin-principal.scss
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+/* ================================
+   PRINCIPAL SECTION WRAPPER
+================================ */
+.admin-principal {
+  grid-column: 3 / container-end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-column: container-start / container-end;
+  }
+}
+
+/* HEADER */
+.admin-principal__header {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.admin-principal__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* ================================
+   FORM CARD (same as leadership card)
+================================ */
+.principal-card {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+  }
+}
+
+.principal-card__group {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.principal-card__label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* PHOTO FIELD */
+.principal-card__photo-box {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.principal-card__photo {
+  width: 95px;
+  height: 95px;
+  border-radius: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  @media (max-width: 768px) {
+    align-self: center;
+  }
+}
+
+.principal-card__input {
+  border: 2px solid #e5e7eb;
+  padding: .9rem 1.2rem;
+  border-radius: .7rem;
+  font-size: 1.35rem;
+  transition: all .25s ease;
+
+  &:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+  }
+}
+
+/* TEXTAREA */
+.principal-card__textarea {
+  width: 100%;
+  border: 2px solid #e5e7eb;
+  padding: 1rem 1.2rem;
+  border-radius: .7rem;
+  font-size: 1.35rem;
+  resize: vertical;
+  transition: all .25s ease;
+
+  &:focus {
+    border-color: #6366f1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+  }
+}
+
+/* SUBMIT BUTTON */
+.principal-card__submit {
+  align-self: flex-start;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: .9rem 1.6rem;
+  border-radius: .6rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+  transition: background .25s ease;
+
+  &:hover {
+    background: #4338ca;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+  }
+}

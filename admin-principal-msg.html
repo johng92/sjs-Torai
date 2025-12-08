@@ -53,7 +53,7 @@
           <ul class="admin-subnav">
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
-            <li><a href="admin-principal-msg.html">Principal Message</a></li>
+            <li><a href="admin-principal.html">Principal Message</a></li>
             <li><a href="admin-homegallery.html">Homepage Gallery</a></li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
@@ -173,87 +173,72 @@
         </div>
       </header>
 
-      <!-- =================================== -->
-      <!-- ADD LEADERSHIP MEMBER FORM SECTION -->
-      <!-- =================================== -->
+      <!-- SUCCESS ALERT (appears here) -->
+      <div class="alert alert-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p class="alert__text">Principal message updated successfully.</p>
+      </div>
 
-      <section class="admin-leadership-add">
-        <!-- HEADER -->
-        <div class="admin-leadership-add__header">
-          <h2 class="admin-leadership-add__title">Edit Leadership Member</h2>
-
-          <a
-            href="admin-leadership.html"
-            class="admin-leadership-add__back-btn"
-          >
-            <i class="fa-solid fa-arrow-left"></i> Back
-          </a>
+      <!-- ============================ -->
+      <!-- PRINCIPAL MESSAGE EDIT FORM -->
+      <!-- ============================ -->
+      <section class="admin-principal">
+        <!-- SECTION HEADER -->
+        <div class="admin-principal__header">
+          <h2 class="admin-principal__title">Principal Message</h2>
         </div>
 
-        <!-- ADD leadership FORM -->
+        <!-- FORM CARD -->
         <form
-          action="save-leadership.php"
+          action="save-principal.php"
           method="post"
           enctype="multipart/form-data"
-          class="leadership-form"
+          class="principal-card"
         >
-          <!-- PHOTO -->
-          <div class="leadership-form__group">
-            <label for="photo" class="leadership-form__label">Photo</label>
-            <input
-              type="file"
-              id="photo"
-              name="photo"
-              class="leadership-form__input"
-              accept="image/*"
-              required
-            />
+          <!-- IMAGE FIELD -->
+          <div class="principal-card__group">
+            <label class="principal-card__label">Principal Photo</label>
+
+            <div class="principal-card__photo-box">
+              <img
+                src="up/images/principal.jpg"
+                class="principal-card__photo"
+                alt="Principal"
+              />
+
+              <input
+                type="file"
+                class="principal-card__input"
+                name="photo"
+                accept="image/*"
+              />
+            </div>
           </div>
 
           <!-- NAME -->
-          <div class="leadership-form__group">
-            <label for="name" class="leadership-form__label">Full Name</label>
+          <div class="principal-card__group">
+            <label class="principal-card__label">Principal Name</label>
             <input
               type="text"
-              id="name"
               name="name"
-              class="leadership-form__input"
-              placeholder="Enter member name"
-              required
+              class="principal-card__input"
+              placeholder="Enter name"
+              value="Fr. John Doe"
             />
           </div>
 
-          <!-- DESIGNATION -->
-          <div class="leadership-form__group">
-            <label for="designation" class="leadership-form__label"
-              >Designation</label
+          <!-- MESSAGE -->
+          <div class="principal-card__group">
+            <label class="principal-card__label">Message</label>
+            <textarea class="principal-card__textarea" name="message" rows="6">
+Welcome to St. Joseph’s School...</textarea
             >
-            <input
-              type="text"
-              id="designation"
-              name="designation"
-              class="leadership-form__input"
-              placeholder="e.g. Principal"
-              required
-            />
           </div>
 
-          <!-- QUOTE -->
-          <div class="leadership-form__group">
-            <label for="quote" class="leadership-form__label">Quote</label>
-            <textarea
-              id="quote"
-              name="quote"
-              rows="4"
-              class="leadership-form__textarea"
-              placeholder="Enter inspirational quote…"
-              required
-            ></textarea>
-          </div>
-
-          <!-- SUBMIT BUTTON -->
-          <button type="submit" class="leadership-form__submit">
-            <i class="fa-solid fa-floppy-disk"></i> Save Member
+          <!-- SAVE BUTTON -->
+          <button type="submit" class="principal-card__submit">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save Changes
           </button>
         </form>
       </section>
