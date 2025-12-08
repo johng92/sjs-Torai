@@ -190,6 +190,9 @@
     transform: translateX(0) !important;
   }
 
+  .admin-main {
+    grid-column: container-start / container-end !important;
+  }
   /* Sidebar becomes a drawer */
   .admin-nav {
     position: fixed !important;
