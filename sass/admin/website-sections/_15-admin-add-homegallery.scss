@@ -1,0 +1,134 @@
+// sass/admin/admin-sections/_admin-homegallery-add.scss
+
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+/* ================================
+   ADD HOMEPAGE GALLERY SECTION
+================================ */
+
+.admin-homegallery-add {
+  grid-column: 3 / container-end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-column: container-start / container-end;
+  }
+}
+
+/* HEADER */
+.admin-homegallery-add__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.admin-homegallery-add__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.admin-homegallery-add__back {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  transition: background .25s ease;
+
+  &:hover {
+    background: #d1d5db;
+  }
+
+  i {
+    font-size: 1.3rem;
+  }
+}
+
+/* ================================
+   FORM STYLING
+================================ */
+
+.homegallery-form {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 600px) {
+    padding: 1.6rem;
+  }
+}
+
+.homegallery-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.homegallery-form__label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.homegallery-form__input,
+.homegallery-form__select {
+  padding: 1rem 1.3rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  transition: all .25s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99,102,241,.15);
+  }
+}
+
+/* SUBMIT BUTTON */
+.homegallery-form__submit {
+  margin-top: 1rem;
+  background: #4f46e5;
+  color: #fff;
+  padding: 1.1rem 1.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.45rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-self: start;
+  gap: .8rem;
+  transition: background .25s ease;
+
+  &:hover {
+    background: #4338ca;
+  }
+
+  i {
+    font-size: 1.4rem;
+  }
+}
