@@ -3,13 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin - Add blog</title>
-    <!-- Quilleditor -->
-    <link
-      href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
-      rel="stylesheet"
-    />
-<!-- Fontawesome -->
+    <title>SJS Admin - Dashboard</title>
+
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -17,15 +13,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Custom style -->
+    <!-- Quilleditor -->
+    <link
+      href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="up/css/admin-style.css" />
-
   </head>
   <body class="container">
-
-        <!-- Mobile Overlay -->
+    <!-- Mobile Overlay -->
     <div class="admin-nav__overlay" id="adminNavOverlay"></div>
-    
+
     <!-- Left Sidebar Navigation -->
     <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
@@ -54,8 +53,8 @@
           <ul class="admin-subnav">
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
-            <li><a href="admin-principal-msg.html">Principal Message</a></li>
-            <li><a href="admin-homegallery-listing.html">Homepage Gallery</a></li>
+            <li><a href="admin-principal.html">Principal Message</a></li>
+            <li><a href="admin-homegallery.html">Homepage Gallery</a></li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
         </li>
@@ -132,14 +131,14 @@
 
     <!-- Main Content Area -->
     <main class="admin-main page-width padd">
-      <!-- Header with greeting and icons -->
+      <!-- ADMIN HEADER -->
       <header class="admin-header padd">
         <div class="admin-header__greeting">
           <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
           <h1 class="admin-header__title sec-title">Fr. Charls</h1>
         </div>
 
-                <!-- HAMBURGER FOR MOBILE -->
+        <!-- Mobile hamburger -->
         <button
           class="admin-nav__hamburger"
           id="adminNavToggle"
@@ -147,151 +146,115 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button>
-        
+
         <div class="admin-header__icons">
           <div class="admin-header__search">
             <button
               type="button"
               class="admin-header__icon-btn"
               id="searchToggle"
-              aria-label="Search"
               aria-expanded="false"
             >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
-            <!-- Hidden search form -->
-            <form
-              class="admin-header__search-form"
-              id="searchForm"
-              action="/search"
-              method="get"
-            >
-              <input
-                type="search"
-                name="q"
-                placeholder="Search…"
-                aria-label="Search site"
-              />
+            <form class="admin-header__search-form" id="searchForm">
+              <input type="search" placeholder="Search…" />
             </form>
           </div>
-          <button class="admin-header__icon-btn" aria-label="Notifications">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-bell"></i>
           </button>
-          <button class="admin-header__icon-btn" aria-label="Messages">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-envelope"></i>
           </button>
           <figure class="admin-header__profile">
-            <img src="/up/images/johnhemb.jpg" alt="John Doe profile" />
+            <img src="up/images/principal.jpg" alt="Admin profile" />
           </figure>
         </div>
       </header>
 
-      <!-- Blog Add Form Section -->
-      <section class="admin-blog padd">
-        <h2 class="admin-blog__title sec-sub-title">Create News Post</h2>
+      <!-- ========================= -->
+      <!-- HOMEPAGE GALLERY LISTING  -->
+      <!-- ========================= -->
 
-        <form class="blog-form">
-          <!-- Blog Title -->
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input
-              id="title"
-              name="title"
-              type="text"
-              placeholder="Enter blog title"
-              required
-            />
-          </div>
+      <section class="admin-homegallery">
+        <!-- SECTION HEADER -->
+        <div class="admin-homegallery__header">
+          <h2 class="admin-homegallery__title">Homepage Gallery</h2>
 
-          <!-- Slug -->
-          <div class="form-group">
-            <label for="slug">Slug</label>
-            <input
-              id="slug"
-              name="slug"
-              type="text"
-              placeholder="auto-generated or custom-slug"
-            />
-          </div>
+          <a
+            href="admin-add-homegallery.html"
+            class="admin-homegallery__add-btn"
+          >
+            <i class="fa-solid fa-plus"></i> Add Image
+          </a>
+        </div>
 
-          <!-- Category -->
-          <div class="form-group">
-            <label for="category">Category</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="tech">Tech</option>
-              <option value="news">News</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="gadgets">Gadgets</option>
-            </select>
-          </div>
+        <!-- LIST -->
+        <ul class="homegallery-list">
+          <!-- ITEM -->
+          <li class="homegallery-item">
+            <div class="homegallery-item__thumb">
+              <img src="up/images/cultural2.jpg" alt="Gallery Image" />
+            </div>
 
-          <!-- Description -->
-          <div class="form-group form-group--description">
-            <label for="description">Short Description</label>
-            <textarea id="description" name="description"></textarea>
-          </div>
+            <div class="homegallery-item__info">
+              <span class="homegallery-item__badge">Festival</span>
+              <p class="homegallery-item__text">Christmas Celebration 2024</p>
+              <span class="homegallery-item__link">
+                Opens linked page: <strong>Festival Gallery</strong>
+              </span>
+            </div>
 
-          <!-- Blog Body -->
-          <div class="form-group admin-blog-editor">
-            <label for="editor-container">Body</label>
+            <div class="homegallery-item__actions">
+              <a
+                href="admin-edit-homegallery.php?id=1"
+                class="homegallery-item__edit"
+              >
+                <i class="fa-solid fa-pen"></i>
+              </a>
 
-            <!-- Quill Editor -->
-            <div id="editor-container"></div>
+              <button class="homegallery-item__delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </li>
 
-            <!-- Hidden field for backend -->
-            <input type="hidden" name="body" id="hidden-body" />
+          <!-- Another ITEM -->
+          <li class="homegallery-item">
+            <div class="homegallery-item__thumb">
+              <img src="up/images/rangoli.jpg" alt="Gallery Image" />
+            </div>
 
-            <!-- Preview Toggle -->
-            <button
-              type="button"
-              class="preview-toggle-btn"
-              id="preview-button"
-            >
-              Preview Content
-            </button>
+            <div class="homegallery-item__info">
+              <span class="homegallery-item__badge">Sports</span>
+              <p class="homegallery-item__text">Annual Sports Day</p>
+              <span class="homegallery-item__link">
+                Opens linked page: <strong>Festival Gallery</strong>
+              </span>
+            </div>
 
-            <!-- Collapsible Preview Box -->
-            <div id="editor-preview" class="editor-preview"></div>
-          </div>
+            <div class="homegallery-item__actions">
+              <a
+                href="admin-edit-homegallery.php?id=2"
+                class="homegallery-item__edit"
+              >
+                <i class="fa-solid fa-pen"></i>
+              </a>
 
-          <!-- Image Upload -->
-          <div class="form-group">
-            <label for="image">Upload Image</label>
-            <input id="image" name="image" type="file" />
-          </div>
-
-          <!-- Featured -->
-          <div class="form-group form-check">
-            <label for="featured">
-              <input type="checkbox" id="featured" name="featured" />
-              Mark as Featured
-            </label>
-          </div>
-
-          <!-- Status -->
-          <div class="form-group">
-            <label for="status">Status</label>
-            <select id="status" name="status">
-              <option value="draft">Draft</option>
-              <option value="publish">Publish</option>
-            </select>
-          </div>
-
-          <!-- Submit -->
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Publish</button>
-            <button type="reset" class="btn-secondary">Clear</button>
-          </div>
-        </form>
+              <button class="homegallery-item__delete">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
+
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
     <!-- imageResize MOdule -->
     <script src="https://cdn.jsdelivr.net/npm/quill-image-resize-module@3.0.0/image-resize.min.js"></script>
-    <!-- <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"> DidntWrok</script> -->
     <script src="up/js/admin.js"></script>
   </body>
 </html>
