@@ -22,10 +22,9 @@
     <link rel="stylesheet" href="up/css/admin-style.css" />
   </head>
   <body class="container">
-
     <!-- Mobile Overlay -->
     <div class="admin-nav__overlay" id="adminNavOverlay"></div>
-    
+
     <!-- Left Sidebar Navigation -->
     <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
@@ -132,14 +131,14 @@
 
     <!-- Main Content Area -->
     <main class="admin-main page-width padd">
-      <!-- Header with greeting and icons -->
+      <!-- ADMIN HEADER -->
       <header class="admin-header padd">
         <div class="admin-header__greeting">
           <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
           <h1 class="admin-header__title sec-title">Fr. Charls</h1>
         </div>
 
-        <!-- HAMBURGER FOR MOBILE -->
+        <!-- Mobile hamburger -->
         <button
           class="admin-nav__hamburger"
           id="adminNavToggle"
@@ -154,87 +153,109 @@
               type="button"
               class="admin-header__icon-btn"
               id="searchToggle"
-              aria-label="Search"
               aria-expanded="false"
             >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
-            <!-- Hidden search form -->
-            <form
-              class="admin-header__search-form"
-              id="searchForm"
-              action="/search"
-              method="get"
-            >
-              <input
-                type="search"
-                name="q"
-                placeholder="Search…"
-                aria-label="Search site"
-              />
+            <form class="admin-header__search-form" id="searchForm">
+              <input type="search" placeholder="Search…" />
             </form>
           </div>
-          <button class="admin-header__icon-btn" aria-label="Notifications">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-bell"></i>
           </button>
-          <button class="admin-header__icon-btn" aria-label="Messages">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-envelope"></i>
           </button>
           <figure class="admin-header__profile">
-            <img src="up/images/principal.jpg" alt="Fr. Charls Image" />
+            <img src="up/images/principal.jpg" alt="Admin profile" />
           </figure>
         </div>
       </header>
 
-      <!-- Dashboard Cards Section -->
-      <section class="admin-stats padd-h">
-        <p class="admin-stats__title sec-sub-para">School Portal Overview</p>
-      </section>
+      <!-- =================================== -->
+      <!-- ADD LEADERSHIP MEMBER FORM SECTION -->
+      <!-- =================================== -->
 
-      <!-- Charts Section -->
-      <section class="admin-charts padd">
-        <div class="chart-card-container responsive-grid">
-          <!-- Total Posts -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Notice</p>
-            <h1 class="chart-card__value">128</h1>
-            <span class="chart-card__change chart-card__change--up">+12%</span>
-            <canvas class="chart-card__spark" id="postsSpark"></canvas>
-          </div>
+      <section class="admin-leadership-add">
+        <!-- HEADER -->
+        <div class="admin-leadership-add__header">
+          <h2 class="admin-leadership-add__title">Edit Leadership Member</h2>
 
-          <!-- Published vs Drafts -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total News</p>
-            <h1 class="chart-card__value">95 / 33</h1>
-            <span class="chart-card__change chart-card__change--up">+8%</span>
-            <canvas class="chart-card__spark" id="pubDraftsSpark"></canvas>
-          </div>
-
-          <!-- Total Comments -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Messages</p>
-            <h1 class="chart-card__value">542</h1>
-            <span class="chart-card__change chart-card__change--up">+5%</span>
-            <canvas class="chart-card__spark" id="commentsSpark"></canvas>
-          </div>
-
-          <!-- Unique Visitors / Pageviews -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Admission Files</p>
-            <h1 class="chart-card__value">7,688</h1>
-            <span class="chart-card__change chart-card__change--up">+8%</span>
-            <canvas class="chart-card__spark" id="visitorsSpark"></canvas>
-          </div>
-
-          <!-- Subscribers / Newsletter -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Page Views</p>
-            <h1 class="chart-card__value">1,245</h1>
-            <span class="chart-card__change chart-card__change--up">+3%</span>
-            <canvas class="chart-card__spark" id="subscribersSpark"></canvas>
-          </div>
+          <a
+            href="admin-leadership.html"
+            class="admin-leadership-add__back-btn"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </a>
         </div>
+
+        <!-- ADD leadership FORM -->
+        <form
+          action="save-leadership.php"
+          method="post"
+          enctype="multipart/form-data"
+          class="leadership-form"
+        >
+          <!-- PHOTO -->
+          <div class="leadership-form__group">
+            <label for="photo" class="leadership-form__label">Photo</label>
+            <input
+              type="file"
+              id="photo"
+              name="photo"
+              class="leadership-form__input"
+              accept="image/*"
+              required
+            />
+          </div>
+
+          <!-- NAME -->
+          <div class="leadership-form__group">
+            <label for="name" class="leadership-form__label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="leadership-form__input"
+              placeholder="Enter member name"
+              required
+            />
+          </div>
+
+          <!-- DESIGNATION -->
+          <div class="leadership-form__group">
+            <label for="designation" class="leadership-form__label"
+              >Designation</label
+            >
+            <input
+              type="text"
+              id="designation"
+              name="designation"
+              class="leadership-form__input"
+              placeholder="e.g. Principal"
+              required
+            />
+          </div>
+
+          <!-- QUOTE -->
+          <div class="leadership-form__group">
+            <label for="quote" class="leadership-form__label">Quote</label>
+            <textarea
+              id="quote"
+              name="quote"
+              rows="4"
+              class="leadership-form__textarea"
+              placeholder="Enter inspirational quote…"
+              required
+            ></textarea>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <button type="submit" class="leadership-form__submit">
+            <i class="fa-solid fa-floppy-disk"></i> Save Member
+          </button>
+        </form>
       </section>
     </main>
 
