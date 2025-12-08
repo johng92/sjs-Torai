@@ -168,60 +168,94 @@
             <i class="fa-solid fa-envelope"></i>
           </button>
           <figure class="admin-header__profile">
-            <img src="/up/images/johnhemb.jpg" alt="Admin profile" />
+            <img src="up/images/principal.jpg" alt="Admin profile" />
           </figure>
         </div>
       </header>
 
-      <!-- ================================= -->
-      <!-- LEADERSHIP SECTION (LISTING PAGE) -->
-      <!-- ================================= -->
+      <!-- =================================== -->
+      <!-- ADD LEADERSHIP MEMBER FORM SECTION -->
+      <!-- =================================== -->
 
-      <section class="admin-leadership">
+      <section class="admin-leadership-add">
         <!-- HEADER -->
-        <div class="admin-leadership__header">
-          <h2 class="admin-leadership__title">Leadership</h2>
+        <div class="admin-leadership-add__header">
+          <h2 class="admin-leadership-add__title">Add Leadership Member</h2>
 
-          <a href="admin-leadership-add.html" class="admin-leadership__add-btn">
-            <i class="fa-solid fa-plus"></i> Add Member
+          <a
+            href="admin-leadership.html"
+            class="admin-leadership-add__back-btn"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- LIST -->
-        <ul class="leadership-list">
-          <!-- ITEM -->
-          <li class="leadership-item">
-            <figure class="leadership-item__photo">
-              <img src="up/images/principal.jpg" alt="Principal photo" />
-            </figure>
+        <!-- ADD leadership FORM -->
+        <form
+          action="save-leadership.php"
+          method="post"
+          enctype="multipart/form-data"
+          class="leadership-form"
+        >
+          <!-- PHOTO -->
+          <div class="leadership-form__group">
+            <label for="photo" class="leadership-form__label">Photo</label>
+            <input
+              type="file"
+              id="photo"
+              name="photo"
+              class="leadership-form__input"
+              accept="image/*"
+              required
+            />
+          </div>
 
-            <div class="leadership-item__info">
-              <h3 class="leadership-item__name">Fr. Charls Tudu</h3>
-              <p class="leadership-item__designation">Principal</p>
-              <blockquote class="leadership-item__quote">
-                “Education is the most powerful tool to change the world.”
-              </blockquote>
-            </div>
+          <!-- NAME -->
+          <div class="leadership-form__group">
+            <label for="name" class="leadership-form__label">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="leadership-form__input"
+              placeholder="Enter member name"
+              required
+            />
+          </div>
 
-            <div class="leadership-item__actions">
-              <a
-                href="admin-edit-leadership.php?id=1"
-                class="leadership-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
+          <!-- DESIGNATION -->
+          <div class="leadership-form__group">
+            <label for="designation" class="leadership-form__label"
+              >Designation</label
+            >
+            <input
+              type="text"
+              id="designation"
+              name="designation"
+              class="leadership-form__input"
+              placeholder="e.g. Principal"
+              required
+            />
+          </div>
 
-              <form action="delete-leadership.php" method="post">
-                <input type="hidden" name="id" value="1" />
-                <button class="leadership-item__delete">
-                  <i class="fa-solid fa-trash"></i>
-                </button>
-              </form>
-            </div>
-          </li>
+          <!-- QUOTE -->
+          <div class="leadership-form__group">
+            <label for="quote" class="leadership-form__label">Quote</label>
+            <textarea
+              id="quote"
+              name="quote"
+              rows="4"
+              class="leadership-form__textarea"
+              placeholder="Enter inspirational quote…"
+              required
+            ></textarea>
+          </div>
 
-          <!-- Duplicate items as needed -->
-        </ul>
+          <!-- SUBMIT BUTTON -->
+          <button type="submit" class="leadership-form__submit">
+            <i class="fa-solid fa-floppy-disk"></i> Save Member
+          </button>
+        </form>
       </section>
     </main>
 
