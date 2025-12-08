@@ -173,72 +173,93 @@
         </div>
       </header>
 
-      <!-- SUCCESS ALERT (appears here) -->
+      <!-- ========================= -->
+      <!-- ADMIN – ADD HOMEPAGE GALLERY ITEM -->
+      <!-- ========================= -->
+
+      <section class="admin-homegallery-add">
+        <!-- SECTION HEADER -->
+        <div class="admin-homegallery-add__header">
+          <h2 class="admin-homegallery-add__title">
+            Edit Homepage Gallery Item
+          </h2>
+
+          <a
+            href="admin-homegallery-listing.html"
+            class="admin-homegallery-add__back"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Back to Gallery
+          </a>
+        </div>
+
+         <!-- SUCCESS ALERT (appears here) -->
       <div class="alert alert-success">
         <i class="fa-solid fa-circle-check"></i>
         <p class="alert__text">Principal message updated successfully.</p>
       </div>
-
-      <!-- ============================ -->
-      <!-- PRINCIPAL MESSAGE EDIT FORM -->
-      <!-- ============================ -->
-      <section class="admin-principal">
-        <!-- SECTION HEADER -->
-        <div class="admin-principal__header">
-          <h2 class="admin-principal__title">Principal Message</h2>
-        </div>
-
-        <!-- FORM CARD -->
+        <!-- FORM START -->
         <form
-          action="save-principal.php"
-          method="post"
+          action="admin-homegallery-insert.php"
+          method="POST"
           enctype="multipart/form-data"
-          class="principal-card"
+          class="homegallery-form"
         >
-          <!-- IMAGE FIELD -->
-          <div class="principal-card__group">
-            <label class="principal-card__label">Principal Photo</label>
-
-            <div class="principal-card__photo-box">
-              <img
-                src="up/images/principal.jpg"
-                class="principal-card__photo"
-                alt="Principal"
-              />
-
-              <input
-                type="file"
-                class="principal-card__input"
-                name="photo"
-                accept="image/*"
-              />
-            </div>
-          </div>
-
-          <!-- NAME -->
-          <div class="principal-card__group">
-            <label class="principal-card__label">Principal Name</label>
+          <!-- IMAGE UPLOAD -->
+          <div class="homegallery-form__group">
+            <label class="homegallery-form__label">Gallery Image</label>
             <input
-              type="text"
-              name="name"
-              class="principal-card__input"
-              placeholder="Enter name"
-              value="Fr. John Doe"
+              type="file"
+              name="gallery_image"
+              class="homegallery-form__input"
+              accept="image/*"
+              required
             />
           </div>
 
-          <!-- MESSAGE -->
-          <div class="principal-card__group">
-            <label class="principal-card__label">Message</label>
-            <textarea class="principal-card__textarea" name="message" rows="6">
-Welcome to St. Joseph’s School...</textarea
-            >
+          <!-- BADGE / CATEGORY TEXT -->
+          <div class="homegallery-form__group">
+            <label class="homegallery-form__label">Badge Text (Category)</label>
+            <input
+              type="text"
+              name="gallery_badge"
+              placeholder="e.g., Festival, Sports"
+              class="homegallery-form__input"
+              required
+            />
           </div>
 
-          <!-- SAVE BUTTON -->
-          <button type="submit" class="principal-card__submit">
-            <i class="fa-solid fa-floppy-disk"></i>
-            Save Changes
+          <!-- SHORT TEXT / DESCRIPTION -->
+          <div class="homegallery-form__group">
+            <label class="homegallery-form__label">Short Info Text</label>
+            <input
+              type="text"
+              name="gallery_text"
+              placeholder="e.g., Christmas Celebration 2024"
+              class="homegallery-form__input"
+              required
+            />
+          </div>
+
+          <!-- DROPDOWN -->
+          <div class="homegallery-form__group">
+            <label class="homegallery-form__label">Gallery Page Link</label>
+
+            <select
+              name="gallery_link"
+              class="homegallery-form__select"
+              required
+            >
+              <option value="">Select Gallery Page</option>
+              <option value="/gallery-festival.php">Festival Gallery</option>
+              <option value="/gallery-sports.php">Sports Gallery</option>
+              <option value="/gallery-events.php">Events Gallery</option>
+              <option value="/gallery-annualday.php">Annual Day Gallery</option>
+            </select>
+          </div>
+
+          <!-- SUBMIT -->
+          <button type="submit" class="homegallery-form__submit">
+            <i class="fa-solid fa-plus"></i> Update Image
           </button>
         </form>
       </section>
