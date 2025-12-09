@@ -173,65 +173,92 @@
         </div>
       </header>
 
-      <section class="admin-gallerycats">
+      <!-- SUCCESS ALERT (appears here) -->
+      <div class="alert alert-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p class="alert__text">Gallery category updated successfully.</p>
+      </div>
+
+      <section class="admin-add-gallerycat">
         <!-- HEADER -->
-        <div class="admin-gallerycats__header">
-          <h2 class="admin-gallerycats__title">Gallery Categories</h2>
+        <div class="admin-add-gallerycat__header">
+          <h2 class="admin-add-gallerycat__title">Update Gallery Category</h2>
 
           <a
-            href="admin-add-gallery-category.html"
-            class="admin-gallerycats__add-btn"
+            href="admin-gallery-categories.html"
+            class="admin-add-gallerycat__back-btn"
           >
-            <i class="fa-solid fa-plus"></i> Add Category
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- CATEGORY LIST -->
-        <ul class="gallerycats-list">
-          <!-- CATEGORY ITEM -->
-          <li class="gallerycats-item">
-            <div class="gallerycats-item__info">
-              <p class="gallerycats-item__name">Sports</p>
-              <!-- <span class="gallerycats-item__slug">Slug: sports-gallery</span> -->
-            </div>
 
-            <div class="gallerycats-item__actions">
-              <a
-                href="admin-edit-gallery-category.html"
-                class="gallerycats-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
+        <!-- FORM -->
+        <form
+          action="gallery-category-insert.php"
+          method="POST"
+          enctype="multipart/form-data"
+          class="gallerycat-form"
+        >
+          <!-- CATEGORY NAME -->
+          <div class="form-group">
+            <label class="form-label">Category Name</label>
+            <input
+              type="text"
+              name="category_name"
+              id="categoryName"
+              class="form-input"
+              placeholder="e.g., Sports, Festivals, Events"
+              required
+            />
+          </div>
 
-              <button class="gallerycats-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
+          <!-- SLUG (AUTO-GENERATED) -->
+          <div class="form-group">
+            <label class="form-label">URL (auto-generated)</label>
+            <input
+              type="text"
+              name="category_slug"
+              id="categorySlug"
+              class="form-input"
+              placeholder="auto-generated"
+              required
+            />
+          </div>
 
-          <!-- ITEM 2 -->
-          <li class="gallerycats-item">
-            <div class="gallerycats-item__info">
-              <p class="gallerycats-item__name">Festival</p>
-              <!-- <span class="gallerycats-item__slug">Slug: festival-gallery</span> -->
-            </div>
+          <!-- OPTIONAL COVER IMAGE (I'll add this in UPDATE2026)-->
+          <!-- <div class="form-group">
+      <label class="form-label">Cover Image (optional)</label>
+      <input 
+        type="file"
+        name="category_cover"
+        class="form-input"
+        accept="image/*"
+      />
+    </div> -->
 
-            <div class="gallerycats-item__actions">
-              <a
-                href="admin-edit-gallery-category.html"
-                class="gallerycats-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
-
-              <button class="gallerycats-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-        </ul>
+          <!-- SUBMIT -->
+          <button type="submit" class="gallerycat-form__submit">
+            <i class="fa-solid fa-plus"></i> Save Changes
+          </button>
+        </form>
       </section>
 
+      <!-- SLUG AUTO-GENERATOR -->
+      <script>
+        const nameInput = document.getElementById("categoryName");
+        const slugInput = document.getElementById("categorySlug");
+
+        nameInput.addEventListener("input", function () {
+          const slug = this.value
+            .toLowerCase()
+            .trim()
+            .replace(/[^a-z0-9\s-]/g, "")
+            .replace(/\s+/g, "-");
+
+          slugInput.value = slug;
+        });
+      </script>
     </main>
 
     <!-- Include the Quill library -->
