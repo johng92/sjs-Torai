@@ -11,7 +11,7 @@
   grid-column: 3 / container-end;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  // gap: 2rem;
 
   @media (max-width: 968px) {
     grid-column: container-start / container-end;

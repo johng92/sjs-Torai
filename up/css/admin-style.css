@@ -3602,7 +3602,6 @@ textarea {
   grid-column: 3/container-end;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
 @media (max-width: 968px) {
   .admin-add-teacher {
