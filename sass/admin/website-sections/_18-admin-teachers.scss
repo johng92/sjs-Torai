@@ -1,0 +1,187 @@
+// sass/admin/admin-sections/_admin-teachers.scss
+
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+/* ================================
+   TEACHERS LISTING
+================================ */
+
+.admin-teachers {
+  grid-column: 3 / container-end;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media (max-width: 968px) {
+    grid-column: container-start / container-end;
+  }
+}
+
+/* HEADER */
+.admin-teachers__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.admin-teachers__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.admin-teachers__add-btn {
+  background: #4f46e5;
+  color: #fff;
+  padding: 0.9rem 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  transition: background .25s ease;
+
+  &:hover {
+    background: #4338ca;
+  }
+
+  i {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* ================================
+   LIST + ITEMS
+================================ */
+
+.teachers-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+/* TEACHER ITEM */
+.teacher-item {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform .2s ease, box-shadow .2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+  }
+}
+
+
+/* PHOTO */
+.teacher-item__photo {
+  width: 85px;
+  height: 85px;
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: .5rem;
+  }
+}
+
+
+/* INFO SECTION */
+.teacher-item__info {
+  flex: 1;
+}
+
+.teacher-item__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: .3rem;
+}
+
+.teacher-item__subject {
+  font-size: 1.35rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+
+/* ACTION BUTTONS */
+.teacher-item__actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.teacher-item__edit,
+.teacher-item__delete {
+  width: 42px;
+  height: 42px;
+  border-radius: .6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: transform .2s ease;
+}
+
+.teacher-item__edit {
+  background: #dbeafe;
+  color: #1e40af;
+
+  &:hover {
+    background: #bfdbfe;
+    transform: translateY(-2px);
+  }
+}
+
+.teacher-item__delete {
+  background: #fee2e2;
+  color: #dc2626;
+
+  &:hover {
+    background: #fecaca;
+    transform: translateY(-2px);
+  }
+}
