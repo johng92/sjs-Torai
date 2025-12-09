@@ -902,6 +902,46 @@ textarea {
   }
 }
 
+/* HEADER for edit page */
+.admin-blog-edit__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .admin-blog-edit__header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+.admin-blog-edit__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.admin-blog-edit__back-btn {
+  background: #e5e7eb;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  color: #374151;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  transition: background 0.25s ease;
+}
+.admin-blog-edit__back-btn:hover {
+  background: #d1d5db;
+}
+
 /* Ensures Quill stays inside form-group */
 .admin-blog-editor {
   display: flex;
