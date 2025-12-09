@@ -173,143 +173,92 @@
         </div>
       </header>
 
-      <!-- ======================= -->
-      <!-- ADMIN — UPCOMING EVENTS -->
-      <!-- ======================= -->
+      <!-- ============================= -->
+      <!-- ADMIN — EDIT EVENT PAGE   -->
+      <!-- ============================= -->
+      <!-- ========================= -->
+      <!-- ADMIN — EDIT EVENT ITEM  -->
+      <!-- ========================= -->
 
-      <section class="admin-events">
+      <section class="admin-edit-event">
         <!-- HEADER -->
-        <div class="admin-events__header">
-          <h2 class="admin-events__title">Upcoming Events</h2>
+        <div class="admin-edit-event__header">
+          <h2 class="admin-edit-event__title">Edit Event</h2>
 
-          <a href="admin-add-eventday.html" class="admin-events__add-btn">
-            <i class="fa-solid fa-plus"></i> Add Event Day
+          <a href="admin-events.html" class="admin-edit-event__back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- ------------------------- -->
-        <!-- EVENTS LIST -->
-        <!-- ------------------------- -->
-        <ul class="eventday-list">
-          <!-- EVENT DAY ITEM -->
-          <li class="eventday-item">
-            <!-- DATE BLOCK -->
-            <div class="eventday-item__date-block">
-              <p class="eventday-item__date">November 14, 2024</p>
-              <span class="eventday-item__day">Thursday</span>
-            </div>
+        <!-- FORM -->
+        <form action="event-update.php" method="POST" class="event-form">
+          <!-- Hidden Event ID -->
+          <input type="hidden" name="event_id" value="1" />
 
-            <!-- EVENTS UNDER THIS DATE -->
-            <ul class="eventday-item__events">
-              <li class="event-item">
-                <span class="event-item__time">7:00am – 2:00pm</span>
-                <span class="event-item__dot"></span>
-                <p class="event-item__title">Bal Diwas Celebration</p>
+          <!-- TIME -->
+          <div class="form-group">
+            <label class="form-label">Event Time</label>
+            <input
+              type="text"
+              name="event_time"
+              class="form-input"
+              placeholder="Ex: 7:00am – 2:00pm"
+              required
+            />
+          </div>
 
-                <div class="event-item__actions">
-                  <a href="admin-edit-event.html" class="event-item__edit">
-                    <i class="fa-solid fa-pen"></i>
-                  </a>
-                  <button class="event-item__delete">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </li>
+          <!-- TITLE -->
+          <div class="form-group">
+            <label class="form-label">Event Title</label>
+            <input
+              type="text"
+              name="event_title"
+              class="form-input"
+              placeholder="Ex: Bal Diwas Celebration"
+              required
+            />
+          </div>
 
-              <li class="event-item">
-                <span class="event-item__time">3:00pm – 4:00pm</span>
-                <span class="event-item__dot"></span>
-                <p class="event-item__title">Cultural Rehearsal</p>
-
-                <div class="event-item__actions">
-                  <a href="admin-edit-event.html" class="event-item__edit">
-                    <i class="fa-solid fa-pen"></i>
-                  </a>
-                  <button class="event-item__delete">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </li>
-            </ul>
-
-            <!-- DAY ACTIONS -->
-            <div class="eventday-item__day-actions">
-              <a
-                href="admin-edit-event-day.php?id=1"
-                class="eventday-item__btn eventday-item__btn--edit"
-              >
-                <i class="fa-solid fa-pen"></i> Edit Day
-              </a>
-
-              <button class="eventday-item__btn eventday-item__btn--delete">
-                <i class="fa-solid fa-trash"></i> Delete Day
-              </button>
-            </div>
-          </li>
-
-          <!--Second Event  -->
-          <li class="eventday-item">
-            <!-- DATE BLOCK -->
-            <div class="eventday-item__date-block">
-              <p class="eventday-item__date">December 25, 2024</p>
-              <span class="eventday-item__day">Wednesday</span>
-            </div>
-
-            <!-- EVENTS UNDER THIS DATE -->
-            <ul class="eventday-item__events">
-              <li class="event-item">
-                <span class="event-item__time">9:00am – 12:00pm</span>
-                <span class="event-item__dot"></span>
-                <p class="event-item__title">
-                  Christmas Gathering & Celebration
-                </p>
-
-                <div class="event-item__actions">
-                  <a href="admin-edit-event.php?id=7" class="event-item__edit">
-                    <i class="fa-solid fa-pen"></i>
-                  </a>
-                  <button class="event-item__delete">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </li>
-
-              <li class="event-item">
-                <span class="event-item__time">12:00pm – 1:00pm</span>
-                <span class="event-item__dot"></span>
-                <p class="event-item__title">
-                  Special Christmas Lunch (All Students)
-                </p>
-
-                <div class="event-item__actions">
-                  <a href="admin-edit-event.php?id=8" class="event-item__edit">
-                    <i class="fa-solid fa-pen"></i>
-                  </a>
-                  <button class="event-item__delete">
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </div>
-              </li>
-            </ul>
-
-            <!-- DAY ACTIONS -->
-            <div class="eventday-item__day-actions">
-              <a
-                href="admin-edit-event-day.php?id=3"
-                class="eventday-item__btn eventday-item__btn--edit"
-              >
-                <i class="fa-solid fa-pen"></i> Edit Day
-              </a>
-
-              <button class="eventday-item__btn eventday-item__btn--delete">
-                <i class="fa-solid fa-trash"></i> Delete Day
-              </button>
-            </div>
-          </li>
-
-          <!-- Additional event days will follow the same structure -->
-        </ul>
+          <!-- SUBMIT -->
+          <button type="submit" class="form-submit-btn">
+            <i class="fa-solid fa-save"></i> Update Event
+          </button>
+        </form>
       </section>
+
+      <!-- JS for Dynamic Event Items -->
+      <script>
+        const wrapper = document.getElementById("eventItemsWrapper");
+        const addBtn = document.getElementById("addEventBtn");
+
+        addBtn.addEventListener("click", () => {
+          const block = document.createElement("div");
+          block.className = "event-item-block";
+          block.innerHTML = `
+      <div class="form-group">
+        <label class="form-label">Time</label>
+        <input type="text" name="event_time[]" class="form-input" placeholder="Ex: 1:00pm – 2:00pm" required />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Event Title</label>
+        <input type="text" name="event_title[]" class="form-input" placeholder="Ex: Cultural Dance" required />
+      </div>
+
+      <button type="button" class="event-item-block__remove">
+        <i class="fa-solid fa-trash"></i> Remove
+      </button>
+    `;
+
+          wrapper.appendChild(block);
+        });
+
+        wrapper.addEventListener("click", (e) => {
+          if (e.target.closest(".event-item-block__remove")) {
+            e.target.closest(".event-item-block").remove();
+          }
+        });
+      </script>
     </main>
 
     <!-- Include the Quill library -->
