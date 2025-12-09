@@ -145,7 +145,7 @@ textarea {
 }
 
 .alert {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   width: 100%;
   padding: 1.2rem 1.6rem;
   border-radius: 0.8rem;
@@ -3500,6 +3500,7 @@ textarea {
 }
 
 .admin-teachers__add-btn {
+  align-self: flex-start;
   background: #4f46e5;
   color: #fff;
   padding: 0.9rem 1.6rem;
@@ -3674,6 +3675,7 @@ textarea {
 }
 
 .admin-add-teacher__back-btn {
+  align-self: flex-start;
   background: #e5e7eb;
   padding: 0.8rem 1.6rem;
   border-radius: 0.6rem;
