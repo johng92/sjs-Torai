@@ -145,7 +145,7 @@ textarea {
 }
 
 .alert {
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   width: 100%;
   padding: 1.2rem 1.6rem;
   border-radius: 0.8rem;
@@ -783,10 +783,10 @@ textarea {
 }
 @media (max-width: 576px) {
   .chart-card__value {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   .chart-card__label {
-    font-size: 0.75rem;
+    font-size: 1.4rem;
   }
   .chart-card__spark {
     height: 25px;
@@ -2539,7 +2539,6 @@ textarea {
   grid-column: 3/container-end;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
 }
 @media (max-width: 968px) {
   .admin-leadership-add {
@@ -2595,6 +2594,7 @@ textarea {
    FORM STYLING
 ===================================== */
 .leadership-form {
+  max-width: 650px;
   background: #fff;
   padding: 2rem 2.5rem;
   border-radius: 1rem;
@@ -3664,7 +3664,6 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  padding-bottom: 1rem;
 }
 @media (max-width: 600px) {
   .admin-add-teacher__header {
@@ -3703,6 +3702,7 @@ textarea {
    FORM LAYOUT
 ================================ */
 .teacher-form {
+  max-width: 650px;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
@@ -4103,6 +4103,7 @@ textarea {
 
 /* Form */
 .eventday-form {
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
@@ -4141,7 +4142,7 @@ textarea {
   padding: 0.9rem 1.6rem;
   border-radius: 0.6rem;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
   width: -moz-fit-content;

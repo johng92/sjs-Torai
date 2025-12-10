@@ -12,7 +12,6 @@
   grid-column: 3 / container-end;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
 
   @media (max-width: 968px) {
     grid-column: container-start / container-end;
@@ -69,6 +68,7 @@
 ===================================== */
 
 .leadership-form {
+  max-width: 650px;
   background: #fff;
   padding: 2rem 2.5rem;
   border-radius: 1rem;

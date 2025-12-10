@@ -24,7 +24,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  padding-bottom: 1rem;
+
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -65,6 +65,7 @@
 ================================ */
 
 .teacher-form {
+  max-width: 650px;
   background: #fff;
   padding: 2rem;
   border-radius: 1rem;
