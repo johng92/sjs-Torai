@@ -2395,6 +2395,7 @@ textarea {
   align-items: center;
   gap: 0.8rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-leadership__add-btn:hover {
   background: #4338ca;
@@ -2581,6 +2582,7 @@ textarea {
   gap: 0.6rem;
   font-weight: 600;
   transition: all 0.25s ease;
+  align-self: flex-start;
 }
 .admin-leadership-add__back-btn:hover {
   background: #d1d5db;
@@ -2858,6 +2860,7 @@ textarea {
   align-items: center;
   gap: 0.8rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-homegallery__add-btn:hover {
   background: #4338ca;
@@ -3055,6 +3058,7 @@ textarea {
   align-items: center;
   gap: 0.7rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-homegallery-add__back:hover {
   background: #d1d5db;
@@ -3181,6 +3185,7 @@ textarea {
   align-items: center;
   gap: 0.8rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-testimonials__add-btn:hover {
   background: #4338ca;
@@ -3372,6 +3377,7 @@ textarea {
   align-items: center;
   gap: 0.8rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-add-testimonial__back-btn:hover {
   background: #d1d5db;
