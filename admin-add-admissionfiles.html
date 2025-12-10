@@ -173,107 +173,112 @@
         </div>
       </header>
 
-      <section class="admin-admissionfiles">
+      <section class="admin-add-admissionfile">
         <!-- HEADER -->
-        <div class="admin-admissionfiles__header">
-          <h2 class="admin-admissionfiles__title">Admission Files</h2>
+        <div class="admin-add-admissionfile__header">
+          <h2 class="admin-add-admissionfile__title">Add Admission File</h2>
 
           <a
-            href="admin-add-admissionfiles.html"
-            class="admin-admissionfiles__add-btn"
+            href="admin-admission-files.html"
+            class="admin-add-admissionfile__back-btn"
           >
-            <i class="fa-solid fa-plus"></i> Add File
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- LIST -->
-        <ul class="admissionfiles-list">
-          <!-- ITEM -->
-          <li class="admissionfiles-item">
-            <div class="admissionfiles-item__icon">
-              <i class="fa-solid fa-file-invoice"></i>
+        <!-- FORM -->
+        <form
+          action="admin-admissionfile-insert.php"
+          method="POST"
+          enctype="multipart/form-data"
+          class="admissionfile-form"
+        >
+          <!-- FILE TYPE -->
+          <div class="admissionfile-form__group">
+            <label class="admissionfile-form__label">Select File Type</label>
+
+            <select
+              name="file_type"
+              class="admissionfile-form__select"
+              required
+            >
+              <option value="">Choose type</option>
+              <option value="fee_structure">Fee Structure</option>
+              <option value="prospectus">School Prospectus</option>
+              <option value="admission_form">Admission Form</option>
+            </select>
+          </div>
+
+          <!-- OPTIONAL TITLE -->
+          <div class="admissionfile-form__group">
+            <label class="admissionfile-form__label">Title (optional)</label>
+            <input
+              type="text"
+              name="file_title"
+              placeholder="Fee Structure 2025, Prospectus 2024, etc."
+              class="admissionfile-form__input"
+            />
+          </div>
+
+          <!-- FILE UPLOAD WITH FILE SIZE INFO -->
+          <div class="admissionfile-form__group">
+            <label class="admissionfile-form__label">Upload PDF File</label>
+
+            <div class="admissionfile-uploadrow">
+              <input
+                type="file"
+                name="file_upload"
+                id="admissionFileInput"
+                accept="application/pdf"
+                class="admissionfile-form__input"
+                required
+              />
+
+              <!-- File Info Box -->
+              <div class="admissionfile-fileinfo" id="fileInfoBox">
+                <p class="fileinfo__name">No file selected</p>
+                <p class="fileinfo__size">File size: —</p>
+                <p class="fileinfo__note">Allowed: PDF only</p>
+              </div>
             </div>
+          </div>
 
-            <div class="admissionfiles-item__info">
-              <p class="admissionfiles-item__title">Fee Structure</p>
-              <span class="admissionfiles-item__desc">Download PDF</span>
-              <span class="admissionfiles-item__file"
-                >file: fee_structure.pdf</span
-              >
-            </div>
-
-            <div class="admissionfiles-item__actions">
-              <a
-                href="admin-edit-admissionfile.php?id=1"
-                class="admissionfiles-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
-
-              <button class="admissionfiles-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-
-          <!-- DUPLICATE FOR MORE ITEMS -->
-          <li class="admissionfiles-item">
-            <div class="admissionfiles-item__icon">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-
-            <div class="admissionfiles-item__info">
-              <p class="admissionfiles-item__title">School Prospectus</p>
-              <span class="admissionfiles-item__desc">Download PDF</span>
-              <span class="admissionfiles-item__file"
-                >file: prospectus.pdf</span
-              >
-            </div>
-
-            <div class="admissionfiles-item__actions">
-              <a
-                href="admin-edit-admissionfile.php?id=2"
-                class="admissionfiles-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
-
-              <button class="admissionfiles-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-
-                    <!-- DUPLICATE FOR MORE ITEMS -->
-          <li class="admissionfiles-item">
-            <div class="admissionfiles-item__icon">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-
-            <div class="admissionfiles-item__info">
-              <p class="admissionfiles-item__title">Admission Form</p>
-              <span class="admissionfiles-item__desc">Download PDF</span>
-              <span class="admissionfiles-item__file"
-                >file: admissoin_form.pdf</span
-              >
-            </div>
-
-            <div class="admissionfiles-item__actions">
-              <a
-                href="admin-edit-admissionfile.php?id=2"
-                class="admissionfiles-item__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
-
-              <button class="admissionfiles-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-
-        </ul>
+          <!-- SUBMIT -->
+          <button type="submit" class="admissionfile-form__submit">
+            <i class="fa-solid fa-upload"></i> Upload File
+          </button>
+        </form>
       </section>
+
+      <!-- FILE SIZE SCRIPT -->
+      <script>
+        const fileInput = document.getElementById("admissionFileInput");
+        const fileInfoBox = document.getElementById("fileInfoBox");
+
+        fileInput.addEventListener("change", () => {
+          const file = fileInput.files[0];
+
+          if (!file) {
+            fileInfoBox.querySelector(".fileinfo__name").textContent =
+              "No file selected";
+            fileInfoBox.querySelector(".fileinfo__size").textContent =
+              "File size: —";
+            return;
+          }
+
+          // File name
+          fileInfoBox.querySelector(".fileinfo__name").textContent = file.name;
+
+          // File size in KB/MB
+          const sizeKB = (file.size / 1024).toFixed(1);
+          const sizeMB = (file.size / (1024 * 1024)).toFixed(2);
+
+          fileInfoBox.querySelector(".fileinfo__size").textContent =
+            file.size < 1024 * 1024
+              ? `File size: ${sizeKB} KB`
+              : `File size: ${sizeMB} MB`;
+        });
+      </script>
     </main>
 
     <!-- Include the Quill library -->
