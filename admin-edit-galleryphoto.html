@@ -173,82 +173,116 @@
         </div>
       </header>
 
-      <section class="admin-galleryphotos">
+                  <!-- SUCCESS ALERT (appears here) -->
+      <div class="alert alert-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p class="alert__text">Gallery photo updated successfully.</p>
+      </div>
+
+      
+      <section class="admin-add-galleryphoto">
         <!-- HEADER -->
-        <div class="admin-galleryphotos__header">
-          <h2 class="admin-galleryphotos__title">Gallery Photos</h2>
+        <div class="admin-add-galleryphoto__header">
+          <h2 class="admin-add-galleryphoto__title">Add Gallery Photo</h2>
 
           <a
-            href="admin-add-galleryphoto.html"
-            class="admin-galleryphotos__add-btn"
+            href="admin-gallery-photos.html"
+            class="admin-add-galleryphoto__back-btn"
           >
-            <i class="fa-solid fa-plus"></i> Add Photo
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- PHOTOS GRID -->
-        <ul class="galleryphotos-grid">
-          <!-- PHOTO ITEM -->
-          <li class="galleryphoto-card">
-            <div class="galleryphoto-card__image">
-              <img src="up/images/events.jpg" alt="Gallery Image" />
-              <span class="galleryphoto-card__badge">Festival</span>
-            </div>
+        <!-- FORM -->
+        <form
+          action="galleryphoto-insert.php"
+          method="POST"
+          enctype="multipart/form-data"
+          class="galleryphoto-form"
+        >
+          <!-- IMAGE UPLOAD -->
+          <div class="galleryphoto-form__group">
+            <label class="galleryphoto-form__label">Gallery Image</label>
 
-            <div class="galleryphoto-card__info">
-              <p class="galleryphoto-card__text">Aadiwas Diwas Celebration</p>
+            <div class="galleryphoto-form__image-upload">
+              <input
+                type="file"
+                name="photo_image"
+                id="photoImage"
+                accept="image/*"
+                required
+              />
 
-              <!-- UPDATED: Human-friendly label -->
-              <span class="galleryphoto-card__linktext">
-                Category: <strong>Festival</strong>
-              </span>
-            </div>
-
-            <div class="galleryphoto-card__actions">
-              <a
-                href="admin-edit-galleryphoto.html"
-                class="galleryphoto-card__edit"
+              <div
+                class="galleryphoto-form__image-preview"
+                id="photoImagePreview"
               >
-                <i class="fa-solid fa-pen"></i>
-              </a>
-
-              <button class="galleryphoto-card__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
+                <span>No image selected</span>
+              </div>
             </div>
-          </li>
+          </div>
 
-          <!-- DUPLICATE ITEM -->
-          <li class="galleryphoto-card">
-            <div class="galleryphoto-card__image">
-              <img src="up/images/sports.jpg" alt="Gallery Image" />
-              <span class="galleryphoto-card__badge">Sports</span>
-            </div>
+          <!-- CATEGORY DROPDOWN -->
+          <div class="galleryphoto-form__group">
+            <label class="galleryphoto-form__label">Select Category</label>
 
-            <div class="galleryphoto-card__info">
-              <p class="galleryphoto-card__text">Annual Sports 2024</p>
+            <select
+              name="category_id"
+              class="galleryphoto-form__select"
+              required
+            >
+              <option value="">Choose Category</option>
 
-              <!-- UPDATED: Human-friendly label -->
-              <span class="galleryphoto-card__linktext">
-                Category: <strong>Sports</strong>
-              </span>
-            </div>
+              <option value="1">Festival</option>
+              <option value="2">Sports</option>
+              <option value="3">Events</option>
+              <!-- PHP Example -->
+              <!--
+        <?php foreach($categories as $cat): ?>
+          <option value="<?= $cat['id']; ?>">
+            <?= $cat['category_name']; ?>
+          </option>
+        <?php endforeach; ?>
+        -->
+            </select>
+          </div>
 
-            <div class="galleryphoto-card__actions">
-              <a
-                href="admin-edit-galleryphoto.html"
-                class="galleryphoto-card__edit"
-              >
-                <i class="fa-solid fa-pen"></i>
-              </a>
+          <!-- TEXT / CAPTION -->
+          <div class="galleryphoto-form__group">
+            <label class="galleryphoto-form__label">Short Info Text</label>
+            <input
+              type="text"
+              name="photo_text"
+              placeholder="Christmas Celebration 2024"
+              class="galleryphoto-form__input"
+              required
+            />
+          </div>
 
-              <button class="galleryphoto-card__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-        </ul>
+          <!-- SUBMIT BUTTON -->
+          <button type="submit" class="galleryphoto-form__submit">
+            <i class="fa-solid fa-plus"></i> Add Photo
+          </button>
+        </form>
       </section>
+
+      <!-- IMAGE PREVIEW SCRIPT -->
+      <script>
+        const imgInput = document.getElementById("photoImage");
+        const imgPreview = document.getElementById("photoImagePreview");
+
+        imgInput.addEventListener("change", function () {
+          const file = this.files[0];
+
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              imgPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+      </script>
     </main>
 
     <!-- Include the Quill library -->
