@@ -480,6 +480,8 @@ textarea {
   transition: all 0.3s ease;
   position: relative;
   flex-shrink: 0;
+  /* Universal notification badge */
+  /* Visible badge only when count > 0 */
 }
 .admin-header__icon-btn i {
   font-size: 1.8rem;
@@ -493,25 +495,31 @@ textarea {
 .admin-header__icon-btn:hover i {
   color: #374151;
 }
-.admin-header__icon-btn:active {
-  transform: translateY(0);
-}
 .admin-header__icon-btn::after {
-  content: "";
+  content: attr(data-count);
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 8px;
-  height: 8px;
+  top: -2px;
+  right: -2px;
   background: #ef4444;
-  border-radius: 50%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  width: auto;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
   border: 2px solid #fff;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: scale(0.6);
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 .admin-header__icon-btn.has-notification::after {
   opacity: 1;
-  animation: pulse 2s ease-in-out infinite;
+  transform: scale(1);
 }
 .admin-header__profile {
   margin: 0;

@@ -98,30 +98,42 @@
       }
     }
 
-    &:active {
-      transform: translateY(0);
-    }
+ /* Universal notification badge */
+  &::after {
+    content: attr(data-count);
+    position: absolute;
+    top: -2px;
+    right: -2px;
 
-    // Notification badge (optional)
-    &::after {
-      content: '';
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      width: 8px;
-      height: 8px;
-      background: #ef4444;
-      border-radius: 50%;
-      border: 2px solid #fff;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+    background: #ef4444;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
 
-    &.has-notification::after {
-      opacity: 1;
-      animation: pulse 2s ease-in-out infinite;
-    }
+    width: auto;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 999px;
+    border: 2px solid #fff;
+
+    opacity: 0;
+    transform: scale(0.6);
+    transition: opacity 0.25s ease, transform 0.25s ease;
   }
+
+  /* Visible badge only when count > 0 */
+  &.has-notification::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+  
 
   &__profile {
     margin: 0;

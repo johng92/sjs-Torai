@@ -152,4 +152,25 @@ adminNavOverlay?.addEventListener("click", () => {
   adminNavOverlay.classList.remove("active");
 });
 
+// ===============================================================
+// 🚀 BADGE UPDATE SYSTEM (Add this at the end of admin.js)
+// ===============================================================
+document.addEventListener("DOMContentLoaded", () => {
 
+  function updateBadge(buttonId, count) {
+    const btn = document.getElementById(buttonId);
+    if (!btn) return;
+
+    btn.setAttribute("data-count", count);
+
+    if (count > 0) {
+      btn.classList.add("has-notification");
+    } else {
+      btn.classList.remove("has-notification");
+    }
+  }
+
+  // DEMO NUMBERS — replace with PHP later
+  updateBadge("notifBtn", 5); 
+  updateBadge("inboxBtn", 2); 
+});
