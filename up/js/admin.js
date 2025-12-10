@@ -142,17 +142,14 @@ const adminNavOverlay = document.getElementById("adminNavOverlay");
 
 // open mobile sidebar
 adminNavToggle?.addEventListener("click", () => {
-  adminNav.classList.remove("admin-nav--hidden");
+  adminNav.classList.add("open");
   adminNavOverlay.classList.add("active");
 });
 
 // close sidebar
 adminNavOverlay?.addEventListener("click", () => {
-  adminNav.classList.add("admin-nav--hidden");
+  adminNav.classList.remove("open");
   adminNavOverlay.classList.remove("active");
 });
 
-// hide sidebar by default on small screens
-if (window.innerWidth <= 968) {
-  adminNav.classList.add("admin-nav--hidden");
-}
+

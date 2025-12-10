@@ -375,25 +375,26 @@ textarea {
    MOBILE SIDEBAR BEHAVIOR
 --------------------------------------------------- */
 @media (max-width: 968px) {
-  .admin-nav:not(.admin-nav--hidden) {
-    transform: translateX(0) !important;
-  }
   .admin-main {
     grid-column: container-start/container-end !important;
   }
-  /* Sidebar becomes a drawer */
+  /* Sidebar becomes mobile drawer */
   .admin-nav {
     position: fixed !important;
     left: 0;
     top: 0;
     width: 260px;
     height: 100vh;
-    grid-column: auto;
-    grid-row: auto;
-    transform: translateX(-100%); /* hidden by default */
+    transform: translateX(-100%); /* always hidden on load */
     transition: transform 0.35s ease;
+    visibility: hidden; /* prevents flashing */
+    z-index: 300;
   }
-  /* Show burger icon in header */
+  .admin-nav.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  /* Show burger button */
   .admin-nav__hamburger {
     display: block !important;
     position: fixed;
