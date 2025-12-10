@@ -52,6 +52,7 @@
   font-weight: 500;
   font-size: 1.4rem;
   transition: background .25s ease;
+  align-self: flex-start;
 
   &:hover {
     background: #d1d5db;
