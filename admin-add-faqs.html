@@ -173,60 +173,46 @@
         </div>
       </header>
 
-      <section class="admin-faqs">
+      <section class="admin-add-faq">
         <!-- HEADER -->
-        <div class="admin-faqs__header">
-          <h2 class="admin-faqs__title">Frequently Asked Questions</h2>
+        <div class="admin-add-faq__header">
+          <h2 class="admin-add-faq__title">Add New FAQ</h2>
 
-          <a href="admin-add-faqs.html" class="admin-faqs__add-btn">
-            <i class="fa-solid fa-plus"></i> Add FAQ
+          <a href="admin-faqs.html" class="admin-add-faq__back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back
           </a>
         </div>
 
-        <!-- FAQ LIST -->
-        <ul class="faq-list">
-          <!-- FAQ ITEM -->
-          <li class="faq-item">
-            <div class="faq-item__content">
-              <p class="faq-item__question">
-                What is the minimum age for admission?
-              </p>
-              <p class="faq-item__answer">
-                Children must be at least 3 years old for Nursery admission.
-              </p>
-            </div>
+        <!-- FORM -->
+        <form action="faq-insert.php" method="POST" class="faq-form">
+          <!-- QUESTION -->
+          <div class="form-group">
+            <label class="form-label">FAQ Question</label>
+            <input
+              type="text"
+              name="faq_question"
+              class="form-input"
+              placeholder="Enter the question"
+              required
+            />
+          </div>
 
-            <div class="faq-item__actions">
-              <a href="admin-edit-faq.php?id=1" class="faq-item__edit">
-                <i class="fa-solid fa-pen"></i>
-              </a>
-              <button class="faq-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
+          <!-- ANSWER -->
+          <div class="form-group">
+            <label class="form-label">FAQ Answer</label>
+            <textarea
+              name="faq_answer"
+              class="form-input form-textarea"
+              placeholder="Enter the answer"
+              required
+            ></textarea>
+          </div>
 
-          <!-- FAQ ITEM 2 -->
-          <li class="faq-item">
-            <div class="faq-item__content">
-              <p class="faq-item__question">
-                When does the admission process start?
-              </p>
-              <p class="faq-item__answer">
-                Admission usually starts in January every year.
-              </p>
-            </div>
-
-            <div class="faq-item__actions">
-              <a href="admin-edit-faq.php?id=2" class="faq-item__edit">
-                <i class="fa-solid fa-pen"></i>
-              </a>
-              <button class="faq-item__delete">
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </div>
-          </li>
-        </ul>
+          <!-- SUBMIT -->
+          <button type="submit" class="form-submit-btn">
+            <i class="fa-solid fa-plus"></i> Add FAQ
+          </button>
+        </form>
       </section>
     </main>
 
