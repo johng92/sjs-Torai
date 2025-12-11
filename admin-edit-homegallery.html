@@ -54,7 +54,9 @@
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
             <li><a href="admin-principal-msg.html">Principal Message</a></li>
-            <li><a href="admin-homegallery-listing.html">Homepage Gallery</a></li>
+            <li>
+              <a href="admin-homegallery-listing.html">Homepage Gallery</a>
+            </li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
         </li>
@@ -192,11 +194,11 @@
           </a>
         </div>
 
-         <!-- SUCCESS ALERT (appears here) -->
-      <div class="alert alert-success">
-        <i class="fa-solid fa-circle-check"></i>
-        <p class="alert__text">Gallery updated successfully.</p>
-      </div>
+        <!-- SUCCESS ALERT (appears here) -->
+        <div class="alert alert-success">
+          <i class="fa-solid fa-circle-check"></i>
+          <p class="alert__text">Gallery updated successfully.</p>
+        </div>
         <!-- FORM START -->
         <form
           action="admin-homegallery-insert.php"
@@ -216,16 +218,25 @@
             />
           </div>
 
-          <!-- BADGE / CATEGORY TEXT -->
+          <!-- CATEGORY (DUMMY DROPDOWN) -->
           <div class="homegallery-form__group">
-            <label class="homegallery-form__label">Badge Text (Category)</label>
-            <input
-              type="text"
-              name="gallery_badge"
-              placeholder="e.g., Festival, Sports"
-              class="homegallery-form__input"
+            <label class="homegallery-form__label">Category</label>
+
+            <select
+              name="category_id"
+              class="homegallery-form__select"
               required
-            />
+            >
+              <option value="">Select Category</option>
+              <option value="1">Festival</option>
+              <option value="2">Sports</option>
+              <option value="3">Events</option>
+              <option value="4">Annual Day</option>
+            </select>
+
+            <p class="homegallery-form__hint">
+              Category badge & link will auto-match the selected category.
+            </p>
           </div>
 
           <!-- SHORT TEXT / DESCRIPTION -->
@@ -240,22 +251,6 @@
             />
           </div>
 
-          <!-- DROPDOWN -->
-          <div class="homegallery-form__group">
-            <label class="homegallery-form__label">Gallery Page Link</label>
-
-            <select
-              name="gallery_link"
-              class="homegallery-form__select"
-              required
-            >
-              <option value="">Select Gallery Page</option>
-              <option value="/gallery-festival.php">Festival Gallery</option>
-              <option value="/gallery-sports.php">Sports Gallery</option>
-              <option value="/gallery-events.php">Events Gallery</option>
-              <option value="/gallery-annualday.php">Annual Day Gallery</option>
-            </select>
-          </div>
 
           <!-- SUBMIT -->
           <button type="submit" class="homegallery-form__submit">
