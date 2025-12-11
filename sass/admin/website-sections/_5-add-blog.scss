@@ -287,5 +287,17 @@
 
 
 
+#editor-preview {
+  background: #fff !important;
+}
 
+#editor-preview .ql-editor {
+  background: #fff !important;
+}
+
+#editor-preview blockquote {
+  border-left: 5px solid rgba(0,0,0,0.3);
+  margin: 0 0 0 0.5rem;
+  padding-left: 1rem;
+}
 
