@@ -83,7 +83,7 @@ if (editorContainer && typeof Quill !== 'undefined') {
       } else {
         previewBox.classList.add("active");
         previewBtn.textContent = "Hide Preview";
-        previewBox.innerHTML = html;
+        previewBox.innerHTML = `<div class="ql-editor">${html}</div>`;
       }
     });
   }
