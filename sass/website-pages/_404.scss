@@ -1,0 +1,58 @@
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+.error-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.error-card {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  max-width: 420px;
+  width: 100%;
+}
+
+.error-card__title {
+  font-size: 6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #d9534f; // soft red tone
+}
+
+.error-card__subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #f1f1f1;
+  color: #333;
+}
