@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin - Dashboard</title>
     <link rel="stylesheet" href="up/css/admin-style.css" />
+    <link rel="stylesheet" href="up/css/main-style.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -16,7 +17,33 @@
   </head>
 <body class="container">
 
+      <header class="header page-width padd">
+      <a class="header__logo-link" href="index.html">
+        <img src="up/images/sjsToraiLogo1.png" alt="" class="header__logo" />
+      </a>
+
+      <nav class="header__nav">
+        <li><a class="header__nav-link" href="#">Home</a></li>
+        <li>
+          <a class="header__nav-link" href="admin-dashboard.html">Admin</a>
+        </li>
+        <li><a class="header__nav-link" href="aboutus.html">About</a></li>
+        <li><a class="header__nav-link" href="admin-login.html">login</a></li>
+        <li><a class="header__nav-link" href="gallery.html">Gallery</a></li>
+        <li><a class="header__nav-link" href="news-listing.html">News</a></li>
+        <li><a class="header__nav-link" href="#">Contact</a></li>
+        <li><a class="cta" href="admission.html">Admission</a></li>
+      </nav>
+
+      <div class="hamburger">
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+        <div class="hamburger__line"></div>
+      </div>
+    </header>
   <main class="admin-main page-width padd login-main">
+
+
     <div class="login-card">
       <h2 class="login-card__title">Welcome Back</h2>
       <p class="login-card__subtitle">Please login to your account</p>
@@ -55,4 +82,5 @@
 
   
     <script src="up/js/admin.js"></script>
+    <script src="up/js/app.js"></script>
 </body>
