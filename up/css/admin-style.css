@@ -947,6 +947,7 @@ textarea {
   align-items: center;
   gap: 0.7rem;
   transition: background 0.25s ease;
+  align-self: flex-start;
 }
 .admin-blog-edit__back-btn:hover {
   background: #d1d5db;

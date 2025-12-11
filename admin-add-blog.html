@@ -9,7 +9,7 @@
       href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
       rel="stylesheet"
     />
-<!-- Fontawesome -->
+    <!-- Fontawesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -19,13 +19,11 @@
     />
     <!-- Custom style -->
     <link rel="stylesheet" href="up/css/admin-style.css" />
-
   </head>
   <body class="container">
-
-        <!-- Mobile Overlay -->
+    <!-- Mobile Overlay -->
     <div class="admin-nav__overlay" id="adminNavOverlay"></div>
-    
+
     <!-- Left Sidebar Navigation -->
     <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
@@ -55,7 +53,9 @@
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
             <li><a href="admin-principal-msg.html">Principal Message</a></li>
-            <li><a href="admin-homegallery-listing.html">Homepage Gallery</a></li>
+            <li>
+              <a href="admin-homegallery-listing.html">Homepage Gallery</a>
+            </li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
         </li>
@@ -139,7 +139,7 @@
           <h1 class="admin-header__title sec-title">Fr. Charls</h1>
         </div>
 
-                <!-- HAMBURGER FOR MOBILE -->
+        <!-- HAMBURGER FOR MOBILE -->
         <button
           class="admin-nav__hamburger"
           id="adminNavToggle"
@@ -147,7 +147,7 @@
         >
           <i class="fa-solid fa-bars"></i>
         </button>
-        
+
         <div class="admin-header__icons">
           <div class="admin-header__search">
             <button
@@ -191,100 +191,126 @@
       <section class="admin-blog padd">
         <h2 class="admin-blog__title sec-sub-title">Create News Post</h2>
 
-        <form class="blog-form">
-          <!-- Blog Title -->
-          <div class="form-group">
-            <label for="title">Title</label>
-            <input
-              id="title"
-              name="title"
-              type="text"
-              placeholder="Enter blog title"
-              required
-            />
-          </div>
+        <!-- Blog Add Form Section -->
+        <section class="admin-blog padd">
+          <h2 class="admin-blog__title sec-sub-title">Create News Post</h2>
 
-          <!-- Slug -->
-          <div class="form-group">
-            <label for="slug">Slug</label>
-            <input
-              id="slug"
-              name="slug"
-              type="text"
-              placeholder="auto-generated or custom-slug"
-            />
-          </div>
+          <form class="blog-form">
+            <!-- Blog Title -->
+            <div class="form-group">
+              <label for="blogTitleInput">Title</label>
+              <input
+                id="blogTitleInput"
+                name="title"
+                type="text"
+                placeholder="Enter blog title"
+                required
+              />
+            </div>
 
-          <!-- Category -->
-          <div class="form-group">
-            <label for="category">Category</label>
-            <select id="category" name="category">
-              <option value="">Select category</option>
-              <option value="tech">Tech</option>
-              <option value="news">News</option>
-              <option value="lifestyle">Lifestyle</option>
-              <option value="gadgets">Gadgets</option>
-            </select>
-          </div>
+            <!-- Slug (Auto-generated) -->
+            <div class="form-group">
+              <label for="blogSlugInput">URL (auto-generated)</label>
+              <input
+                id="blogSlugInput"
+                name="slug"
+                type="text"
+                placeholder="auto-generated or edit manually"
+              />
+            </div>
 
-          <!-- Description -->
-          <div class="form-group form-group--description">
-            <label for="description">Short Description</label>
-            <textarea id="description" name="description"></textarea>
-          </div>
+            <!-- Category -->
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="">Select category</option>
+                <option value="tech">Tech</option>
+                <option value="news">News</option>
+                <option value="lifestyle">Lifestyle</option>
+                <option value="gadgets">Gadgets</option>
+              </select>
+            </div>
 
-          <!-- Blog Body -->
-          <div class="form-group admin-blog-editor">
-            <label for="editor-container">Body</label>
+            <!-- Short Description -->
+            <div class="form-group form-group--description">
+              <label for="description">Short Description</label>
+              <textarea id="description" name="description"></textarea>
+            </div>
 
-            <!-- Quill Editor -->
-            <div id="editor-container"></div>
+            <!-- Blog Body -->
+            <div class="form-group admin-blog-editor">
+              <label for="editor-container">Body</label>
 
-            <!-- Hidden field for backend -->
-            <input type="hidden" name="body" id="hidden-body" />
+              <div id="editor-container"></div>
 
-            <!-- Preview Toggle -->
-            <button
-              type="button"
-              class="preview-toggle-btn"
-              id="preview-button"
-            >
-              Preview Content
-            </button>
+              <input type="hidden" name="body" id="hidden-body" />
 
-            <!-- Collapsible Preview Box -->
-            <div id="editor-preview" class="editor-preview"></div>
-          </div>
+              <button
+                type="button"
+                class="preview-toggle-btn"
+                id="preview-button"
+              >
+                Preview Content
+              </button>
 
-          <!-- Image Upload -->
-          <div class="form-group">
-            <label for="image">Upload Image</label>
-            <input id="image" name="image" type="file" />
-          </div>
+              <div id="editor-preview" class="editor-preview"></div>
+            </div>
 
-          <!-- Featured -->
-          <div class="form-group form-check">
-            <label for="featured">
-              <input type="checkbox" id="featured" name="featured" />
-              Mark as Featured
-            </label>
-          </div>
+            <!-- Image Upload -->
+            <div class="form-group">
+              <label for="image">Upload Image</label>
+              <input id="image" name="image" type="file" />
+            </div>
 
-          <!-- Status -->
-          <div class="form-group">
-            <label for="status">Status</label>
-            <select id="status" name="status">
-              <option value="draft">Draft</option>
-              <option value="publish">Publish</option>
-            </select>
-          </div>
+            <!-- Featured -->
+            <div class="form-group form-check">
+              <label for="featured">
+                <input type="checkbox" id="featured" name="featured" />
+                Mark as Featured
+              </label>
+            </div>
 
-          <!-- Submit -->
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Publish</button>
-            <button type="reset" class="btn-secondary">Clear</button>
-          </div>
-        </form>
+            <!-- Status -->
+            <div class="form-group">
+              <label for="status">Status</label>
+              <select id="status" name="status">
+                <option value="draft">Draft</option>
+                <option value="publish">Publish</option>
+              </select>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Publish</button>
+              <button type="reset" class="btn-secondary">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <script>
+  const blogTitleInput = document.getElementById("blogTitleInput");
+  const blogSlugInput = document.getElementById("blogSlugInput");
+
+  let slugEditedManually = false;
+
+  // Detect manual slug changes — stop auto update
+  blogSlugInput.addEventListener("input", () => {
+    slugEditedManually = true;
+  });
+
+  blogTitleInput.addEventListener("input", function () {
+    if (slugEditedManually) return; // stop auto-update after manual edit
+
+    const slug = this.value
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
+
+    blogSlugInput.value = slug;
+  });
+</script>
+
       </section>
     </main>
     <!-- Include the Quill library -->

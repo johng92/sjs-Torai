@@ -162,6 +162,7 @@
   align-items: center;
   gap: .7rem;
   transition: background .25s ease;
+  align-self: flex-start;
 
   &:hover {
     background: #d1d5db;
