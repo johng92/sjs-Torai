@@ -2,7 +2,7 @@
 @use "../general-styles/padding" as pad;
 @use "../general-styles/typography" as type;
 
-.gallery-details {
+.gallery-category {
   background: var(--gradient-cyan);
 
   &__grid {
@@ -22,7 +22,7 @@
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     cursor: zoom-in;
     transition: transform .2s ease;
-    
+
     &:hover {
       transform: scale(1.02);
     }
@@ -38,13 +38,13 @@
 
 /* Responsive Columns */
 @media (min-width: 600px) {
-  .gallery-details__grid {
+  .gallery-category__grid {
     columns: 2;
   }
 }
 
 @media (min-width: 900px) {
-  .gallery-details__grid {
+  .gallery-category__grid {
     columns: 3;
   }
 }
