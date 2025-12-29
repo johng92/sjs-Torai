@@ -1,0 +1,137 @@
+// sass/admin/admin-sections/_admin-news-category-list.scss
+
+@use "../general-styles/colors" as clrs;
+@use "../general-styles/padding" as pad;
+@use "../general-styles/typography" as type;
+
+/* ================================
+   NEWS CATEGORY LIST
+================================ */
+
+.admin-newscat-list {
+  grid-column: 3 / container-end;
+  background: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+
+  @media (max-width: 968px) {
+    grid-column: container-start / container-end;
+  }
+}
+
+/* HEADER */
+.admin-newscat-list__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.8rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: stretch;
+  }
+}
+
+.admin-newscat-list__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.admin-newscat-list__subtitle {
+  font-size: 1.35rem;
+  color: #6b7280;
+  margin-top: .3rem;
+}
+
+.admin-newscat-list__add-btn {
+  padding: .9rem 1.6rem;
+  background: #4f46e5;
+  color: #fff;
+  border-radius: .6rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  align-self: flex-start;
+  transition: background .25s ease;
+
+  &:hover {
+    background: #4338ca;
+  }
+}
+
+/* TABLE WRAPPER */
+.admin-newscat-list__table-wrap {
+  overflow-x: auto;
+}
+
+/* TABLE */
+.admin-newscat-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+
+  thead {
+    background: #f9fafb;
+  }
+
+  th,
+  td {
+    padding: 1.1rem 1.2rem;
+    text-align: left;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  th {
+    font-weight: 600;
+    color: #374151;
+  }
+
+  td {
+    color: #111827;
+  }
+}
+
+/* ACTIONS */
+.table-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  a,
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #4b5563;
+    padding: .4rem;
+    transition: color .2s ease;
+
+    &:hover {
+      color: #111827;
+    }
+  }
+
+  button {
+    color: #dc2626;
+
+    &:hover {
+      color: #b91c1c;
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .admin-newscat-table {
+    min-width: 100%;
+  }
+}

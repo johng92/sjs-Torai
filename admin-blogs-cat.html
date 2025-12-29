@@ -22,10 +22,9 @@
     <link rel="stylesheet" href="up/css/admin-style.css" />
   </head>
   <body class="container">
-
     <!-- Mobile Overlay -->
     <div class="admin-nav__overlay" id="adminNavOverlay"></div>
-    
+
     <!-- Left Sidebar Navigation -->
     <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
@@ -55,7 +54,9 @@
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
             <li><a href="admin-principal-msg.html">Principal Message</a></li>
-            <li><a href="admin-homegallery-listing.html">Homepage Gallery</a></li>
+            <li>
+              <a href="admin-homegallery-listing.html">Homepage Gallery</a>
+            </li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
         </li>
@@ -133,14 +134,14 @@
 
     <!-- Main Content Area -->
     <main class="admin-main page-width padd">
-      <!-- Header with greeting and icons -->
+      <!-- ADMIN HEADER -->
       <header class="admin-header padd">
         <div class="admin-header__greeting">
           <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
           <h1 class="admin-header__title sec-title">Fr. Charls</h1>
         </div>
 
-        <!-- HAMBURGER FOR MOBILE -->
+        <!-- Mobile hamburger -->
         <button
           class="admin-nav__hamburger"
           id="adminNavToggle"
@@ -155,86 +156,121 @@
               type="button"
               class="admin-header__icon-btn"
               id="searchToggle"
-              aria-label="Search"
               aria-expanded="false"
             >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-
-            <!-- Hidden search form -->
-            <form
-              class="admin-header__search-form"
-              id="searchForm"
-              action="/search"
-              method="get"
-            >
-              <input
-                type="search"
-                name="q"
-                placeholder="Search…"
-                aria-label="Search site"
-              />
+            <form class="admin-header__search-form" id="searchForm">
+              <input type="search" placeholder="Search…" />
             </form>
           </div>
-          <button class="admin-header__icon-btn" aria-label="Notifications">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-bell"></i>
           </button>
-          <button id="inboxBtn" class="admin-header__icon-btn admin-header__icon-btn--inbox has-notification" data-count="0" aria-label="Messages">
+          <button class="admin-header__icon-btn">
             <i class="fa-solid fa-envelope"></i>
           </button>
           <figure class="admin-header__profile">
-            <img src="up/images/principal.jpg" alt="Fr. Charls Image" />
+            <img src="up/images/principal.jpg" alt="Admin profile" />
           </figure>
         </div>
       </header>
 
-      <!-- Dashboard Cards Section -->
-      <section class="admin-stats padd-h">
-        <p class="admin-stats__title sec-sub-para">School Portal Overview</p>
-      </section>
+      <!-- =============================== -->
+      <!-- ADMIN – NEWS CATEGORY LIST -->
+      <!-- =============================== -->
 
-      <!-- Charts Section -->
-      <section class="admin-charts padd">
-        <div class="chart-card-container responsive-grid">
-          <!-- Total Posts -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Notice</p>
-            <h1 class="chart-card__value">128</h1>
-            <span class="chart-card__change chart-card__change--up">+12%</span>
-            <canvas class="chart-card__spark" id="postsSpark"></canvas>
+      <section class="admin-newscat-list">
+        <!-- HEADER -->
+        <div class="admin-newscat-list__header">
+          <div class="admin-newscat-list__header-left">
+            <h2 class="admin-newscat-list__title">News Categories</h2>
+            <p class="admin-newscat-list__subtitle">
+              Manage categories used for news posts
+            </p>
           </div>
 
-          <!-- Published vs Drafts -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total News</p>
-            <h1 class="chart-card__value">95 / 33</h1>
-            <span class="chart-card__change chart-card__change--up">+8%</span>
-            <canvas class="chart-card__spark" id="pubDraftsSpark"></canvas>
-          </div>
+          <a
+            href="/admin/news-categories/create"
+            class="admin-newscat-list__add-btn"
+          >
+            <i class="fa-solid fa-plus"></i> Add Category
+          </a>
+        </div>
 
-          <!-- Total Comments -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Messages</p>
-            <h1 class="chart-card__value">542</h1>
-            <span class="chart-card__change chart-card__change--up">+5%</span>
-            <canvas class="chart-card__spark" id="commentsSpark"></canvas>
-          </div>
+        <!-- TABLE -->
+        <div class="admin-newscat-list__table-wrap">
+          <table class="admin-newscat-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Category Name</th>
+                <th>Slug</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
 
-          <!-- Unique Visitors / Pageviews -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Total Admission Files</p>
-            <h1 class="chart-card__value">7,688</h1>
-            <span class="chart-card__change chart-card__change--up">+8%</span>
-            <canvas class="chart-card__spark" id="visitorsSpark"></canvas>
-          </div>
+            <tbody>
+              <!-- ROW -->
+              <tr>
+                <td>1</td>
+                <td>School News</td>
+                <td>school-news</td>
+                <td class="table-actions">
+                  <a href="/admin/news-categories/edit/1" title="Edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
 
-          <!-- Subscribers / Newsletter -->
-          <div class="chart-card chart-card--small">
-            <p class="chart-card__label">Page Views</p>
-            <h1 class="chart-card__value">1,245</h1>
-            <span class="chart-card__change chart-card__change--up">+3%</span>
-            <canvas class="chart-card__spark" id="subscribersSpark"></canvas>
-          </div>
+                  <form
+                    method="POST"
+                    onsubmit="return confirm('Delete this category?');"
+                  >
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit" title="Delete">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- ROW -->
+              <tr>
+                <td>2</td>
+                <td>Achievements</td>
+                <td>achievements</td>
+                <td class="table-actions">
+                  <a href="#">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                  </a>
+                  <button>
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
+
+              <!-- PHP LOOP EXAMPLE -->
+              <!--
+        <?php foreach ($categories as $index => $cat): ?>
+        <tr>
+          <td><?= $index + 1 ?></td>
+          <td><?= htmlspecialchars($cat['name']) ?></td>
+          <td><?= $cat['slug'] ?></td>
+          <td class="table-actions">
+            <a href="/admin/news-categories/edit/<?= $cat['id'] ?>">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </a>
+            <form method="POST">
+              <input type="hidden" name="_method" value="DELETE">
+              <button>
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </form>
+          </td>
+        </tr>
+        <?php endforeach; ?>
+        -->
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
