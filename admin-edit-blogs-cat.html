@@ -22,9 +22,10 @@
     <link rel="stylesheet" href="up/css/admin-style.css" />
   </head>
   <body class="container">
+
     <!-- Mobile Overlay -->
     <div class="admin-nav__overlay" id="adminNavOverlay"></div>
-
+    
     <!-- Left Sidebar Navigation -->
     <nav class="admin-nav padd" id="adminNav">
       <a href="admin-dashboard.html" class="admin-nav__logo">
@@ -54,9 +55,7 @@
             <li><a href="admin-notices.html">Notices</a></li>
             <li><a href="admin-leadership.html">Leadership</a></li>
             <li><a href="admin-principal-msg.html">Principal Message</a></li>
-            <li>
-              <a href="admin-homegallery-listing.html">Homepage Gallery</a>
-            </li>
+            <li><a href="admin-homegallery-listing.html">Homepage Gallery</a></li>
             <li><a href="admin-testimonials.html">Testimonials</a></li>
           </ul>
         </li>
@@ -131,10 +130,9 @@
         </li>
       </ul>
     </nav>
-
     <!-- Main Content Area -->
-    <main class="admin-main page-width padd">
-      <!-- ADMIN HEADER -->
+	<main class="admin-main page-width padd">
+	      <!-- ADMIN HEADER -->
       <header class="admin-header padd">
         <div class="admin-header__greeting">
           <h2 class="admin-header__mini-title sec-title">Good Morning</h2>
@@ -175,105 +173,87 @@
           </figure>
         </div>
       </header>
+	
+<!-- =============================== -->
+<!-- ADMIN – ADD NEWS CATEGORY -->
+<!-- =============================== -->
 
-      <!-- =============================== -->
-      <!-- ADMIN – NEWS CATEGORY LIST -->
-      <!-- =============================== -->
+<section class="admin-add-newscat">
 
-      <section class="admin-newscat-list">
-        <!-- HEADER -->
-        <div class="admin-newscat-list__header">
-          <div class="admin-newscat-list__header-left">
-            <h2 class="admin-newscat-list__title">News Categories</h2>
-            <p class="admin-newscat-list__subtitle">
-              Manage categories used for news posts
-            </p>
-          </div>
+  <!-- HEADER -->
+  <div class="admin-add-newscat__header">
+    <h2 class="admin-add-newscat__title">Edit News Category</h2>
 
-          <a
-            href="admin-add-blogs-cat.html"
-            class="admin-newscat-list__add-btn"
-          >
-            <i class="fa-solid fa-plus"></i> Add Category
-          </a>
-        </div>
+    <a href="admin-blogs-cat.html" class="admin-add-newscat__back-btn">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
+  </div>
 
-        <!-- TABLE -->
-        <div class="admin-newscat-list__table-wrap">
-          <table class="admin-newscat-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Category Name</th>
-                <th>URL</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
+<!-- SUCCESS ALERT (appears here) -->
+      <div class="alert alert-success">
+        <i class="fa-solid fa-circle-check"></i>
+        <p class="alert__text">News Category updated successfully.</p>
+      </div>
 
-            <tbody>
-              <!-- ROW -->
-              <tr>
-                <td>1</td>
-                <td>School News</td>
-                <td>school-news</td>
-                <td class="table-actions">
-                  <a href="admin-edit-blogs-cat.html" title="Edit">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </a>
+  <!-- FORM -->
+  <form
+    action="news-category-insert.php"
+    method="POST"
+    class="newscat-form"
+  >
 
-                  <form
-                    method="POST"
-                    onsubmit="return confirm('Delete this category?');"
-                  >
-                    <input type="hidden" name="_method" value="DELETE" />
-                    <button type="submit" title="Delete">
-                      <i class="fa-solid fa-trash"></i>
-                    </button>
-                  </form>
-                </td>
-              </tr>
+    <!-- CATEGORY NAME -->
+    <div class="form-group">
+      <label class="form-label">Category Name</label>
+      <input
+        type="text"
+        name="category_name"
+        id="newsCategoryName"
+        class="form-input"
+        placeholder="e.g., School News, Achievements, Announcements"
+        required
+      />
+    </div>
 
-              <!-- ROW -->
-              <tr>
-                <td>2</td>
-                <td>Achievements</td>
-                <td>achievements</td>
-                <td class="table-actions">
-                  <a href="admin-edit-blogs-cat.html">
-                    <i class="fa-solid fa-pen-to-square"></i>
-                  </a>
-                  <button>
-                    <i class="fa-solid fa-trash"></i>
-                  </button>
-                </td>
-              </tr>
+    <!-- SLUG -->
+    <div class="form-group">
+      <label class="form-label">URL (auto-generated)</label>
+      <input
+        type="text"
+        name="category_slug"
+        id="newsCategorySlug"
+        class="form-input"
+        placeholder="auto-generated"
+        required
+      />
+    </div>
 
-              <!-- PHP LOOP EXAMPLE -->
-              <!--
-        <?php foreach ($categories as $index => $cat): ?>
-        <tr>
-          <td><?= $index + 1 ?></td>
-          <td><?= htmlspecialchars($cat['name']) ?></td>
-          <td><?= $cat['slug'] ?></td>
-          <td class="table-actions">
-            <a href="/admin/news-categories/edit/<?= $cat['id'] ?>">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </a>
-            <form method="POST">
-              <input type="hidden" name="_method" value="DELETE">
-              <button>
-                <i class="fa-solid fa-trash"></i>
-              </button>
-            </form>
-          </td>
-        </tr>
-        <?php endforeach; ?>
-        -->
-            </tbody>
-          </table>
-        </div>
-      </section>
-    </main>
+    <!-- SUBMIT -->
+    <button type="submit" class="newscat-form__submit">
+      <i class="fa-solid fa-plus"></i> Add Category
+    </button>
+
+  </form>
+</section>
+
+<!-- SLUG AUTO-GENERATOR -->
+<script>
+  const newsNameInput = document.getElementById("newsCategoryName");
+  const newsSlugInput = document.getElementById("newsCategorySlug");
+
+  newsNameInput.addEventListener("input", function () {
+    const slug = this.value
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
+
+    newsSlugInput.value = slug;
+  });
+</script>
+
+
+	</main>
 
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
